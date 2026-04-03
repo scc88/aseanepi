@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amoxicillin 500 mg Capsules — ASEAN ePI Template (ASEAN ePI IG)</title>
+  <meta name="description" content="FHIR R5 ePI sample using the ASEAN Common Technical Document (CTD) template section headings — ASEAN eMedicinal Product Information IG." />
+  <!-- Shared ePI design system (Vulcan stylesheet) -->
+  <link rel="stylesheet" href="../epi-styles.css" />
+  <!-- Page-local: tab activation for this file's radio IDs -->
+  <style>
+    #t-d:checked  ~ .tabnav .tb[for="t-d"],
+    #t-c:checked  ~ .tabnav .tb[for="t-c"],
+    #t-o:checked  ~ .tabnav .tb[for="t-o"],
+    #t-p:checked  ~ .tabnav .tb[for="t-p"],
+    #t-cl:checked ~ .tabnav .tb[for="t-cl"] { color: var(--text); font-weight: 600; border-bottom-color: var(--accent); }
+    #t-d:checked  ~ #pd,
+    #t-c:checked  ~ #pc,
+    #t-o:checked  ~ #po,
+    #t-p:checked  ~ #pp,
+    #t-cl:checked ~ #pcl { display: block; }
+  </style>
+</head>
+<body>
+<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+
+<div class="crumb">
+  <span class="ig">ASEAN eMedicinal Product Information IG</span>
+  <span class="sep">&#8250;</span><span>Appendix 1 Templates</span>
+  <span class="sep">&#8250;</span><span>ASEAN Template</span>
+  <span class="badge">HL7 FHIR R5</span>
+</div>
+
+<div class="notice-bar">
+  <span class="notice-icon">&#127760;</span>
+  <span><strong>ASEAN Common Template</strong> &mdash; Section headings follow the ASEAN harmonised product information template as defined in Appendix 1 of the ASEAN ePI IG. This example uses a fictional product for illustration purposes only.</span>
+</div>
+
+<header class="hero">
+  <h1>Amoxicillin 500 mg Capsules</h1>
+  <p class="sub">Summary of Product Characteristics (SmPC) — ASEAN Template</p>
+  <div class="chips">
+    <span class="chip ch-g">&#9679; Active</span>
+    <span class="chip ch-gr">Version 1.0</span>
+    <span class="chip ch-gr">EN</span>
+    <span class="chip ch-b">ASEAN Template</span>
+    <span class="chip ch-b">ePI Type 3</span>
+    <span class="chip ch-am">&#127760; ASEAN Region</span>
+    <span class="chip ch-dk">Prescription Only</span>
+  </div>
+</header>
+
+<input type="radio" name="tabs" id="t-d" class="trd" checked>
+<input type="radio" name="tabs" id="t-c" class="trd">
+<input type="radio" name="tabs" id="t-o" class="trd">
+<input type="radio" name="tabs" id="t-p" class="trd">
+<input type="radio" name="tabs" id="t-cl" class="trd">
+
+<nav class="tabnav">
+  <div class="tabnav-inner">
+    <label class="tb" for="t-d">Document</label>
+    <label class="tb" for="t-c">Composition</label>
+    <label class="tb" for="t-o">Organization</label>
+    <label class="tb" for="t-p">Product Details</label>
+    <label class="tb" for="t-cl">Clinical Details</label>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════
+     DOCUMENT TAB
+═══════════════════════════════════════════════════════ -->
+<div id="pd" class="panel">
+
+  <div class="sc ab">
+    <div class="sc-lbl">Bundle Metadata</div>
+    <div class="sc-body">
+      <div class="dg dg4" style="margin-bottom:12px">
+        <div class="di"><label>Resource ID</label><div class="v vm">urn:uuid:a1b2c3d4-e5f6&#8230;</div></div>
+        <div class="di"><label>Status</label><div class="v"><span class="chip ch-g">active</span></div></div>
+        <div class="di"><label>Version</label><div class="v">1.0</div></div>
+        <div class="di"><label>Date</label><div class="v">2026-01-15</div></div>
+      </div>
+      <div class="dg dg4">
+        <div class="di"><label>Language</label><div class="v">EN</div></div>
+        <div class="di"><label>Jurisdiction</label><div class="v">ASEAN &#127760;</div></div>
+        <div class="di"><label>Author (MAH)</label><div class="v">ASEAN Pharma Pte Ltd</div></div>
+        <div class="di"><label>Attester (Regulator)</label><div class="v">ASEAN Regulatory Authority</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc at">
+    <div class="sc-lbl">Composition</div>
+    <div class="sc-body">
+      <div class="dg dg3" style="margin-bottom:12px">
+        <div class="di"><label>Identifier</label><div class="v vm">urn:uuid:f7a8b9c0-d1e2&#8230;</div></div>
+        <div class="di"><label>Title</label><div class="v">Amoxicillin 500 mg — ASEAN SmPC</div></div>
+        <div class="di"><label>Type</label><div class="v"><span class="chip ch-b">SmPC</span></div></div>
+      </div>
+      <div class="dg dg4">
+        <div class="di"><label>Status</label><div class="v"><span class="chip ch-g">active</span></div></div>
+        <div class="di"><label>Version</label><div class="v">1.0</div></div>
+        <div class="di"><label>Language</label><div class="v">EN</div></div>
+        <div class="di"><label>Template</label><div class="v">ASEAN (Appendix 1)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc ap">
+    <div class="sc-lbl">Contained Resources</div>
+    <div class="cc-row">
+      <div class="cc"><span class="n" style="color:var(--accent)">1</span><span class="l">Compositions</span></div>
+      <div class="cc"><span class="n" style="color:var(--teal)">2</span><span class="l">Organizations</span></div>
+      <div class="cc"><span class="n" style="color:var(--green)">1</span><span class="l">Medicinal Products</span></div>
+      <div class="cc"><span class="n" style="color:var(--amber)">2</span><span class="l">Packaged Products</span></div>
+      <div class="cc"><span class="n" style="color:var(--purple)">1</span><span class="l">Regulatory Auth.</span></div>
+      <div class="cc"><span class="n" style="color:var(--rose)">8</span><span class="l">Clinical Use Defs</span></div>
+      <div class="cc"><span class="n" style="color:var(--teal)">2</span><span class="l">Medication Knowledge</span></div>
+    </div>
+  </div>
+
+  <div class="sc aam">
+    <div class="sc-lbl">ASEAN Template Sections (Appendix 1)</div>
+    <div class="sc-body">
+      <p style="font-size:.82rem;color:var(--muted);margin-bottom:10px">
+        This composition uses the <strong>ASEAN Common Template</strong> section headings as defined in Appendix 1 of the ASEAN ePI IG. Each section maps to a <code style="font-family:ui-monospace,'SF Mono',monospace;font-size:.76rem;background:var(--sf2);padding:2px 5px;border-radius:3px">Composition.section</code> entry in the FHIR Bundle.
+      </p>
+      <div class="dg dg2" style="gap:6px;font-size:.8rem;">
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>1.</strong> Name of the Medicinal Product</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>2.</strong> Qualitative and Quantitative Composition</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>3.</strong> Pharmaceutical Form</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>4.</strong> Clinical Particulars</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>5.</strong> Pharmacological Properties</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>6.</strong> Pharmaceutical Particulars</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>7.</strong> Marketing Authorization Holder</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>8.</strong> Marketing Authorization Numbers</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>9.</strong> Date of First Authorization / Renewal</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>10.</strong> Date of Revision of the Text</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     COMPOSITION TAB — ASEAN Section Headings
+═══════════════════════════════════════════════════════ -->
+<div id="pc" class="panel">
+
+  <!-- Section 1 -->
+  <div class="ns ab">
+    <h3>1. Name of the Medicinal Product</h3>
+    <div class="dg dg3" style="margin-top:10px">
+      <div class="di"><label>1.1 Product name</label><div class="v">Amoxicillin</div></div>
+      <div class="di"><label>1.2 Strength</label><div class="v">500 mg</div></div>
+      <div class="di"><label>1.3 Pharmaceutical dosage form</label><div class="v">Capsule, hard</div></div>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="ns at">
+    <h3>2. Qualitative and Quantitative Composition</h3>
+    <p><strong>2.1 Qualitative declaration</strong></p>
+    <p>Each hard capsule contains amoxicillin trihydrate equivalent to amoxicillin 500 mg as the active substance. Excipients: magnesium stearate, sodium starch glycolate, colloidal silicon dioxide.</p>
+    <p><strong>2.2 Quantitative declaration</strong></p>
+    <p>Each hard capsule contains amoxicillin trihydrate 574.0 mg, equivalent to <strong>amoxicillin 500 mg</strong>. For the full list of excipients, see section 6.1.</p>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="ns">
+    <h3>3. Pharmaceutical Form</h3>
+    <p>Hard capsule. Size 0 capsule with an opaque white cap and opaque white body, filled with white to off-white powder.</p>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="ns ab">
+    <h3>4. Clinical Particulars</h3>
+
+    <p><strong>4.1 Therapeutic indication</strong></p>
+    <p>Amoxicillin 500 mg capsules are indicated for the treatment of the following infections caused by susceptible bacteria in adults and children:</p>
+    <ul>
+      <li>Acute bacterial sinusitis</li>
+      <li>Acute otitis media</li>
+      <li>Acute streptococcal tonsillitis and pharyngitis</li>
+      <li>Community-acquired pneumonia (CAP)</li>
+      <li>Skin and soft tissue infections</li>
+      <li>Uncomplicated urinary tract infections</li>
+    </ul>
+
+    <p style="margin-top:12px"><strong>4.2 Posology and method of administration</strong></p>
+    <p><em>Adults and adolescents (&ge;18 years):</em> 500 mg three times daily for 5–10 days depending on the type and severity of infection. Severe infections: 1,000 mg three times daily.</p>
+    <p><em>Route of administration:</em> Oral. Capsules should be swallowed whole with sufficient fluid. May be taken with or without food.</p>
+
+    <p style="margin-top:12px"><strong>4.3 Contraindication</strong></p>
+    <ul>
+      <li>Hypersensitivity to amoxicillin, any penicillin, or any of the excipients.</li>
+      <li>Previous severe immediate hypersensitivity reaction (e.g., anaphylaxis) to another beta-lactam antibiotic (e.g., a cephalosporin, carbapenem, or monobactam).</li>
+    </ul>
+
+    <p style="margin-top:12px"><strong>4.4 Special warning and precautions for use</strong></p>
+    <p>Before initiating amoxicillin therapy, careful enquiry should be made concerning previous hypersensitivity reactions to penicillins, cephalosporins, or other allergens. Serious and occasionally fatal hypersensitivity (anaphylactic) reactions have been reported in patients receiving penicillin therapy. Administer with caution in patients with renal impairment — dose reduction may be necessary.</p>
+
+    <p style="margin-top:12px"><strong>4.5 Interactions with other medicinal products and other forms of interactions</strong></p>
+    <p><em>Probenecid:</em> decreases renal tubular secretion of amoxicillin, resulting in increased and prolonged blood levels. <em>Methotrexate:</em> penicillins may reduce renal clearance of methotrexate; concurrent use should be carefully monitored. <em>Anticoagulants:</em> prolongation of prothrombin time has been reported rarely; monitor INR when co-administered with warfarin.</p>
+
+    <p style="margin-top:12px"><strong>4.6 Pregnancy and lactation</strong></p>
+    <p><em>Pregnancy:</em> Animal studies do not indicate direct or indirect harmful effects with respect to reproductive toxicity. As a precautionary measure, it is preferable to avoid the use of amoxicillin during pregnancy unless clearly necessary.</p>
+    <p><em>Breastfeeding:</em> Amoxicillin is excreted in breast milk in small amounts. Possible effects on the breastfed infant include diarrhoea and fungal infections of the mucous membranes. A decision must be made whether to discontinue breastfeeding or to discontinue/abstain from amoxicillin therapy.</p>
+
+    <p style="margin-top:12px"><strong>4.7 Effects on ability to drive and use machine</strong></p>
+    <p>Amoxicillin 500 mg capsules have no known effect on the ability to drive or use machines. However, adverse reactions such as dizziness and convulsions may affect the ability to drive or use machines.</p>
+
+    <p style="margin-top:12px"><strong>4.8 Undesirable effects</strong></p>
+    <p>The very common side effects (&ge;1/10): diarrhoea. Common (&ge;1/100 to &lt;1/10): nausea, vomiting, skin rash. Uncommon (&ge;1/1,000 to &lt;1/100): urticaria, dizziness. Rare (&ge;1/10,000 to &lt;1/1,000): reversible hyperactivity, convulsions. Very rare (&lt;1/10,000): crystalluria, haemolytic anaemia, prolonged prothrombin time. Not known: Stevens-Johnson syndrome, toxic epidermal necrolysis, anaphylaxis.</p>
+
+    <p style="margin-top:12px"><strong>4.9 Overdose</strong></p>
+    <p>Symptoms of amoxicillin overdosage include gastrointestinal symptoms, crystalluria, and in some cases, interstitial nephritis. In the event of overdose, discontinue amoxicillin, treat symptomatically, and institute supportive measures as required. Amoxicillin can be removed from the circulation by haemodialysis.</p>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="ns ap">
+    <h3>5. Pharmacological Properties</h3>
+
+    <p><strong>5.1 Pharmacodynamic properties</strong></p>
+    <p><em>Pharmacotherapeutic group:</em> Antibacterials for systemic use, penicillins with extended spectrum. ATC code: J01CA04.</p>
+    <p>Amoxicillin is a semi-synthetic broad-spectrum aminopenicillin with bactericidal activity against many gram-positive and gram-negative micro-organisms. It acts by inhibition of bacterial cell wall synthesis. Amoxicillin is susceptible to degradation by beta-lactamases produced by resistant bacteria.</p>
+
+    <p style="margin-top:12px"><strong>5.2 Pharmacokinetic properties</strong></p>
+    <p><em>Absorption:</em> Oral amoxicillin is well absorbed, rapidly and completely. Peak plasma concentrations of 7–14 mg/L are reached 1–2 hours after oral administration of a 500 mg dose. Food has no significant effect on absorption. <em>Distribution:</em> Protein binding is approximately 17%. Widely distributed to most tissues and body fluids. <em>Metabolism:</em> Partially metabolised to penicilloic acid. <em>Elimination:</em> Excreted primarily in the urine. Elimination half-life is approximately 1 hour in adults with normal renal function.</p>
+
+    <p style="margin-top:12px"><strong>5.3 Preclinical safety data</strong></p>
+    <p>Amoxicillin has been assessed in a series of genotoxicity tests and was found to be non-mutagenic. No carcinogenicity studies have been performed with amoxicillin. Animal reproductive and developmental studies have not revealed evidence of impaired fertility or harm to the foetus.</p>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="ns ag">
+    <h3>6. Pharmaceutical Particulars</h3>
+
+    <p><strong>6.1 List of excipients</strong></p>
+    <ul>
+      <li>Magnesium stearate</li>
+      <li>Sodium starch glycolate (Type A)</li>
+      <li>Colloidal silicon dioxide</li>
+      <li>Hard capsule shell: gelatin, titanium dioxide (E171)</li>
+    </ul>
+
+    <p style="margin-top:12px"><strong>6.2 Incompatibilities</strong></p>
+    <p>Not applicable. Amoxicillin should not be mixed with blood products or other proteinaceous fluids in any injectable formulation.</p>
+
+    <p style="margin-top:12px"><strong>6.3 Shelf life</strong></p>
+    <p>24 months. Shelf life after first opening the container: 6 months.</p>
+
+    <p style="margin-top:12px"><strong>6.4 Special precautions for storage</strong></p>
+    <p>Store below 25°C. Keep in the original packaging in order to protect from moisture. Keep out of the reach and sight of children.</p>
+
+    <p style="margin-top:12px"><strong>6.5 Nature and contents of container</strong></p>
+    <p>Amber glass bottle (Type III) with aluminium screw cap containing 16, 21, or 24 capsules. Not all pack sizes may be marketed.</p>
+    <p>HDPE bottle with child-resistant cap containing 100, 250, or 500 capsules (hospital packs).</p>
+  </div>
+
+  <!-- Section 7 -->
+  <div class="ns aam">
+    <h3>7. Marketing Authorization Holder</h3>
+    <p><strong>ASEAN Pharma Pte Ltd</strong><br>
+    10 Pharma Crescent<br>
+    Singapore 138668<br>
+    Singapore<br>
+    Tel: +65 6123 4567<br>
+    Email: regulatory@aseanpharma.com</p>
+  </div>
+
+  <!-- Section 8 -->
+  <div class="ns">
+    <h3>8. Marketing Authorization Numbers</h3>
+    <div class="dg dg3" style="margin-top:10px">
+      <div class="di"><label>Singapore</label><div class="v vm">SIN-MA-20260001</div></div>
+      <div class="di"><label>Thailand</label><div class="v vm">THA-MA-20260042</div></div>
+      <div class="di"><label>Malaysia</label><div class="v vm">MAL-MA-20261234</div></div>
+      <div class="di"><label>Philippines</label><div class="v vm">PHL-MA-20260789</div></div>
+      <div class="di"><label>Indonesia</label><div class="v vm">IDN-MA-20260055</div></div>
+      <div class="di"><label>Vietnam</label><div class="v vm">VNM-MA-20260310</div></div>
+    </div>
+  </div>
+
+  <!-- Section 9 -->
+  <div class="ns at">
+    <h3>9. Date of First Authorization / Renewal of the Authorization</h3>
+    <div class="dg dg2" style="margin-top:10px">
+      <div class="di"><label>Date of First Authorization</label><div class="v">15 January 2020</div></div>
+      <div class="di"><label>Date of Latest Renewal</label><div class="v">15 January 2025</div></div>
+    </div>
+  </div>
+
+  <!-- Section 10 -->
+  <div class="ns">
+    <h3>10. Date of Revision of the Text</h3>
+    <div class="dg dg2" style="margin-top:10px">
+      <div class="di"><label>First Published</label><div class="v">15 January 2020</div></div>
+      <div class="di"><label>Last Revised</label><div class="v"><strong>15 January 2026</strong></div></div>
+    </div>
+    <p style="margin-top:8px;font-size:.81rem;color:var(--muted)">Detailed information on this medicinal product is available on the website of the ASEAN regulatory agency at <strong>www.asean-dra.org</strong>.</p>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     ORGANIZATION TAB
+═══════════════════════════════════════════════════════ -->
+<div id="po" class="panel">
+  <div class="og">
+    <div class="oc" style="border-left:3px solid var(--accent)">
+      <div class="och">
+        <div class="role" style="color:var(--accent)">Marketing Authorization Holder</div>
+        <div class="name">ASEAN Pharma Pte Ltd</div>
+      </div>
+      <div class="ocb">
+        <div class="or"><span class="ol">Identifier</span><span class="ov ovm">ORG-ASEANPHARMA-001 (OMS)</span></div>
+        <div class="or"><span class="ol">Type</span><span class="ov"><span class="chip ch-b">MAH</span></span></div>
+        <div class="or"><span class="ol">Address</span><span class="ov">10 Pharma Crescent, Singapore 138668</span></div>
+        <div class="or"><span class="ol">Country</span><span class="ov">Singapore &#127480;&#127468;</span></div>
+        <div class="or"><span class="ol">Email</span><span class="ov">regulatory@aseanpharma.com</span></div>
+        <div class="or"><span class="ol">Phone</span><span class="ov">+65 6123 4567</span></div>
+      </div>
+    </div>
+    <div class="oc" style="border-left:3px solid var(--green)">
+      <div class="och">
+        <div class="role" style="color:var(--green)">Manufacturer</div>
+        <div class="name">Regional Manufacturing Solutions Sdn Bhd</div>
+      </div>
+      <div class="ocb">
+        <div class="or"><span class="ol">Identifier</span><span class="ov ovm">ORG-RMS-MYS-002 (OMS)</span></div>
+        <div class="or"><span class="ol">Type</span><span class="ov"><span class="chip ch-t">Manufacturer</span></span></div>
+        <div class="or"><span class="ol">Address</span><span class="ov">Lot 5, Jalan Industri 3/5, Rawang Industrial Park, 48000 Rawang, Selangor</span></div>
+        <div class="or"><span class="ol">Country</span><span class="ov">Malaysia &#127474;&#127486;</span></div>
+        <div class="or"><span class="ol">Email</span><span class="ov">manufacturing@rms.com.my</span></div>
+      </div>
+    </div>
+  </div>
+  <p class="onote">Organization data sourced from the OMS (Organisation Management Service) identifier system.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     PRODUCT DETAILS TAB
+═══════════════════════════════════════════════════════ -->
+<div id="pp" class="panel">
+  <div class="ps-row">
+    <span>1 Medicinal Product &middot; 2 Package Configurations</span>
+    <input class="pf" type="text" placeholder="Filter by substance or strength&#8230;" />
+  </div>
+
+  <defs><radialGradient id="cg1" cx="40%" cy="35%" r="55%"><stop offset="0%" stop-color="#fff" /><stop offset="100%" stop-color="#e0e9f5" /></radialGradient></defs>
+
+  <details class="pa" open="open">
+    <summary class="pah">
+      <span class="pnum">1</span>
+      <span class="pname">Amoxicillin 500 mg Capsules</span><span class="psub">Amoxicillin trihydrate</span>
+      <div class="pbadges"><span class="chip ch-g">Active</span><span class="chip ch-gr">Oral &middot; Capsule</span></div>
+      <span class="pchev">&#9660;</span>
+    </summary>
+    <div class="pc">
+
+      <div class="is"><div class="isl">Substance &amp; Form</div><div class="isb"><div class="ifs">
+        <div class="inf"><span class="il">Active Substance</span><span class="iv">Amoxicillin</span></div>
+        <div class="inf"><span class="il">Salt / Base</span><span class="iv">Trihydrate</span></div>
+        <div class="inf"><span class="il">Strength</span><span class="iv">500 mg</span></div>
+        <div class="inf"><span class="il">Dose Form</span><span class="iv">Hard Capsule</span></div>
+        <div class="inf"><span class="il">Route</span><span class="iv">Oral</span></div>
+        <div class="inf"><span class="il">ATC Code</span><span class="iv">J01CA04</span></div>
+      </div></div></div>
+
+      <div class="is"><div class="isl">Excipients</div><div class="isb"><div class="ec">
+        <div class="ei">Magnesium stearate</div><div class="ei">Colloidal silicon dioxide</div>
+        <div class="ei">Sodium starch glycolate (Type A)</div><div class="ei">Gelatin (capsule shell)</div>
+        <div class="ei">Titanium dioxide E171 (capsule shell)</div><div class="ei"></div>
+      </div></div></div>
+
+      <div class="is"><div class="isl">Physical Appearance</div><div class="isb"><div class="ap-in">
+        <div class="ap-data">
+          <div class="apf"><span class="al">Colour</span><span class="av">White / White</span></div>
+          <div class="apf"><span class="al">Shape</span><span class="av">Capsule (Size 0)</span></div>
+          <div class="apf"><span class="al">Imprint</span><span class="av">AMOX 500</span></div>
+          <div class="apf"><span class="al">Fill</span><span class="av">White powder</span></div>
+        </div>
+        <div class="tab-svgs">
+          <figure class="tab-fig">
+            <svg width="80" height="40" viewBox="0 0 80 40">
+              <rect x="1" y="8" width="78" height="24" rx="12" fill="url(#cg1)" stroke="#d1d5db" stroke-width="1.2"/>
+              <line x1="40" y1="8" x2="40" y2="32" stroke="#d1d5db" stroke-width="1" stroke-dasharray="2,2"/>
+            </svg>
+            <figcaption>Capsule</figcaption>
+          </figure>
+        </div>
+      </div></div></div>
+
+      <div class="is"><div class="isl">Packaging (2)</div><div class="isb"><div class="pkgs">
+        <div class="pkg">
+          <div class="pkg-row">
+            <div class="pki">
+              <div class="pn">Amber Glass Bottle — 21 Capsules</div>
+              <div class="pt" style="font-family:ui-monospace,'SF Mono',monospace;font-size:10px;margin-bottom:10px;">
+                GTIN: 09501234560021 &nbsp;|&nbsp; SKU: AMX500-BTL-21
+              </div>
+              <div class="pkt">
+                <span class="chip ch-g">Active</span>
+                <span class="chip ch-gr" style="border-radius:4px;">Qty: 21</span>
+                <span class="chip ch-gr" style="border-radius:4px;font-weight:normal;">Container: Glass Bottle (Type III)</span>
+                <span class="chip ch-gr" style="border-radius:4px;font-weight:normal;">Closure: Aluminium screw cap</span>
+              </div>
+            </div>
+            <figure class="pka">
+              <div class="pka-box">
+                <svg width="40" height="38" viewBox="0 0 40 38">
+                  <rect x="10" y="1" width="20" height="36" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+                  <ellipse cx="20" cy="14" rx="9" ry="4" fill="#bfdbfe" opacity="0.6"/>
+                  <rect x="14" y="29" width="12" height="4" rx="2" fill="#bfdbfe"/>
+                </svg>
+              </div>
+              <figcaption>Bottle</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="pkg">
+          <div class="pkg-row">
+            <div class="pki">
+              <div class="pn">Blister Carton — 24 Capsules (2 × 12)</div>
+              <div class="pt" style="font-family:ui-monospace,'SF Mono',monospace;font-size:10px;margin-bottom:10px;">
+                GTIN: 09501234560024 &nbsp;|&nbsp; SKU: AMX500-BLI-24
+              </div>
+              <div class="pkt">
+                <span class="chip ch-g">Active</span>
+                <span class="chip ch-gr" style="border-radius:4px;">Qty: 24 (2 × 12)</span>
+                <span class="chip ch-gr" style="border-radius:4px;font-weight:normal;">Outer: Carton</span>
+                <span class="chip ch-gr" style="border-radius:4px;font-weight:normal;">Inner: PVC/Aluminium blister</span>
+              </div>
+            </div>
+            <figure class="pka">
+              <div class="pka-box">
+                <svg width="44" height="32" viewBox="0 0 44 32">
+                  <rect x="1" y="1" width="42" height="30" rx="3" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+                  <rect x="5" y="5" width="34" height="9" rx="2" fill="#bbf7d0"/>
+                  <text x="22" y="27" font-size="5" font-family="Arial" text-anchor="middle" fill="#6b7280">24 caps</text>
+                </svg>
+              </div>
+              <figcaption>Blister</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div></div></div>
+
+      <div class="is" style="border-left:3px solid var(--green)">
+        <div class="isl" style="padding-bottom:6px;color:var(--green)">Shelf Life &amp; Storage Conditions</div>
+        <div style="padding:8px 14px 4px;display:flex;align-items:center;gap:10px">
+          <span class="shelf-pill">
+            <span>&#128197;</span><span class="shelf-n">24</span><span style="font-size:.75rem;font-weight:600">months</span>
+          </span>
+          <span style="font-size:.8rem;color:var(--muted)">Shelf life of the medicinal product as packaged for sale</span>
+        </div>
+        <div style="font-size:9px;color:var(--faint);padding:2px 14px 8px">
+          Source: <code style="font-family:ui-monospace,'SF Mono',monospace;font-size:9px;background:var(--sf2);padding:1px 4px;border-radius:3px">PackagedProductDefinition.shelfLifeStorage.period</code>
+        </div>
+        <div class="storage-grid">
+          <div class="storage-item">
+            <span class="storage-icon">&#127777;</span>
+            <div class="storage-text"><div class="sl">Temperature</div><div class="sv">Store below 25°C</div><div class="sd">Do not freeze</div></div>
+          </div>
+          <div class="storage-item">
+            <span class="storage-icon">&#128167;</span>
+            <div class="storage-text"><div class="sl">Moisture</div><div class="sv">Keep dry</div><div class="sd">Store in original packaging</div></div>
+          </div>
+          <div class="storage-item">
+            <span class="storage-icon">&#9728;</span>
+            <div class="storage-text"><div class="sl">Light</div><div class="sv">Protect from light</div><div class="sd">Use amber bottle / keep in carton</div></div>
+          </div>
+          <div class="storage-item">
+            <span class="storage-icon">&#128100;</span>
+            <div class="storage-text"><div class="sl">Safety</div><div class="sv">Out of reach of children</div></div>
+          </div>
+        </div>
+        <div class="storage-src">
+          FHIR source: <code>PackagedProductDefinition.shelfLifeStorage</code> &rarr; type (<code>ShelfLifeType</code>) + storage condition (<code>specialPrecautionsForStorage</code>)
+        </div>
+      </div>
+
+      <div class="is"><div class="isl">Marketing Authorization</div><div class="isb"><div class="mag">
+        <div class="mai"><div class="ml">Holder</div><div class="mv">ASEAN Pharma Pte Ltd</div></div>
+        <div class="mai"><div class="ml">MA Number (SG)</div><div class="mv mvm">SIN-MA-20260001</div></div>
+        <div class="mai"><div class="ml">Region</div><div class="mv">ASEAN Region &#127760;</div></div>
+      </div></div></div>
+
+    </div>
+  </details>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     CLINICAL DETAILS TAB
+═══════════════════════════════════════════════════════ -->
+<div id="pcl" class="panel">
+
+  <!-- Summary count cards -->
+  <div class="csum">
+    <div class="cscard ci"><div><div class="csn" style="color:var(--accent)">6</div><div class="csl">Indications</div></div><div class="csi">&#127919;</div></div>
+    <div class="cscard cc"><div><div class="csn" style="color:var(--rose)">2</div><div class="csl">Contraindications</div></div><div class="csi">&#9940;</div></div>
+    <div class="cscard cx"><div><div class="csn" style="color:var(--amber)">3</div><div class="csl">Interactions</div></div><div class="csi">&#9889;</div></div>
+    <div class="cscard cu"><div><div class="csn" style="color:var(--purple)">14</div><div class="csl">Side Effects</div></div><div class="csi">&#128137;</div></div>
+    <div class="cscard cw"><div><div class="csn" style="color:#ea580c">3</div><div class="csl">Warnings</div></div><div class="csi">&#9888;</div></div>
+    <div class="cscard cd"><div><div class="csn" style="color:var(--teal)">2</div><div class="csl">Dosage Regimens</div></div><div class="csi">&#128138;</div></div>
+  </div>
+
+  <!-- Indications -->
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#127919;</span><span class="clstitle">Indications (Section 4.1)</span><span class="clscount">6</span></div>
+    <div class="clsb">
+      <table class="ctbl">
+        <thead><tr><th>Indication</th><th>Population</th><th>ICD-11 Code</th></tr></thead>
+        <tbody>
+          <tr><td>Acute bacterial sinusitis</td><td>Adults &amp; children &ge;2 years</td><td>CA0Z</td></tr>
+          <tr><td>Acute otitis media</td><td>Adults &amp; children &ge;2 months</td><td>AA40</td></tr>
+          <tr><td>Acute streptococcal tonsillitis &amp; pharyngitis</td><td>Adults &amp; children</td><td>CA01.0</td></tr>
+          <tr><td>Community-acquired pneumonia (CAP)</td><td>Adults &amp; children &ge;3 months</td><td>CA40.0Z</td></tr>
+          <tr><td>Skin and soft tissue infections</td><td>Adults &amp; children</td><td>1B70</td></tr>
+          <tr><td>Uncomplicated urinary tract infections</td><td>Adults &amp; children &ge;3 months</td><td>GC08.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Contraindications -->
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#9940;</span><span class="clstitle">Contraindications (Section 4.3)</span><span class="clscount">2</span></div>
+    <div class="clsb">
+      <div class="cxrow"><span class="cxicon">&#8856;</span><span>Hypersensitivity to amoxicillin, any penicillin, or any of the excipients listed in section 6.1.</span></div>
+      <div class="cxrow"><span class="cxicon">&#8856;</span><span>Previous severe immediate hypersensitivity reaction (e.g. anaphylaxis) to another beta-lactam antibiotic (cephalosporin, carbapenem, or monobactam).</span></div>
+    </div>
+  </div>
+
+  <!-- Interactions -->
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#9889;</span><span class="clstitle">Drug Interactions (Section 4.5)</span><span class="clscount">3</span></div>
+    <div class="clsb">
+      <table class="ctbl">
+        <thead><tr><th>Interacting Substance</th><th>Mechanism</th><th>Severity</th><th>Clinical Effect</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Probenecid</td>
+            <td>Pharmacokinetic — reduced renal tubular secretion</td>
+            <td><span class="sev-m">Moderate</span></td>
+            <td>Increased &amp; prolonged amoxicillin plasma levels</td>
+          </tr>
+          <tr>
+            <td>Methotrexate</td>
+            <td>Pharmacokinetic — reduced renal clearance</td>
+            <td><span class="sev-h">High</span></td>
+            <td>Elevated methotrexate levels; risk of toxicity — monitor closely</td>
+          </tr>
+          <tr>
+            <td>Warfarin / oral anticoagulants</td>
+            <td>Pharmacodynamic — altered gut flora / vitamin K</td>
+            <td><span class="sev-m">Moderate</span></td>
+            <td>Rare prolongation of prothrombin time; monitor INR</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Undesirable Effects -->
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#128137;</span><span class="clstitle">Undesirable Effects (Section 4.8)</span><span class="clscount">14</span></div>
+    <div class="clsb">
+      <div class="soc"><div class="soc-hdr">Gastrointestinal disorders</div>
+        <div class="soc-item"><span class="si-name">Diarrhoea</span><span class="si-freq">Very common (&ge;1/10)</span></div>
+        <div class="soc-item"><span class="si-name">Nausea</span><span class="si-freq">Common (&ge;1/100)</span></div>
+        <div class="soc-item"><span class="si-name">Vomiting</span><span class="si-freq">Common (&ge;1/100)</span></div>
+        <div class="soc-item"><span class="si-name">Indigestion</span><span class="si-freq">Uncommon (&ge;1/1,000)</span></div>
+      </div>
+      <div class="soc"><div class="soc-hdr">Skin and subcutaneous tissue disorders</div>
+        <div class="soc-item"><span class="si-name">Skin rash (maculopapular)</span><span class="si-freq">Common (&ge;1/100)</span></div>
+        <div class="soc-item"><span class="si-name">Urticaria</span><span class="si-freq">Uncommon (&ge;1/1,000)</span></div>
+        <div class="soc-item"><span class="si-name">Stevens-Johnson syndrome</span><span class="si-freq">Not known</span></div>
+        <div class="soc-item"><span class="si-name">Toxic epidermal necrolysis</span><span class="si-freq">Not known</span></div>
+      </div>
+      <div class="soc"><div class="soc-hdr">Nervous system disorders</div>
+        <div class="soc-item"><span class="si-name">Dizziness</span><span class="si-freq">Uncommon (&ge;1/1,000)</span></div>
+        <div class="soc-item"><span class="si-name">Reversible hyperactivity</span><span class="si-freq">Rare (&ge;1/10,000)</span></div>
+        <div class="soc-item"><span class="si-name">Convulsions</span><span class="si-freq">Rare (&ge;1/10,000)</span></div>
+      </div>
+      <div class="soc" style="margin-bottom:0"><div class="soc-hdr">Renal and urinary disorders</div>
+        <div class="soc-item"><span class="si-name">Crystalluria</span><span class="si-freq">Very rare (&lt;1/10,000)</span></div>
+        <div class="soc-item"><span class="si-name">Interstitial nephritis</span><span class="si-freq">Not known</span></div>
+        <div class="soc-item"><span class="si-name">Haemolytic anaemia</span><span class="si-freq">Very rare (&lt;1/10,000)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Warnings & Precautions -->
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#9888;</span><span class="clstitle">Warnings &amp; Precautions (Section 4.4)</span><span class="clscount">3</span></div>
+    <div class="clsb">
+      <div class="wbox"><span class="wicon">&#9650;</span><span><strong>Hypersensitivity / Anaphylaxis:</strong> Serious and occasionally fatal hypersensitivity reactions have been reported with penicillin therapy. Before initiating therapy, enquire about previous reactions to penicillins, cephalosporins, or other allergens. If an allergic reaction occurs, discontinue amoxicillin and institute appropriate therapy immediately.</span></div>
+      <div class="wbox"><span class="wicon">&#9650;</span><span><strong>Renal Impairment:</strong> Dose reduction is required in patients with severe renal impairment (eGFR &lt;30 mL/min/1.73 m&sup2;). Accumulation of amoxicillin may lead to CNS toxicity including convulsions in vulnerable patients.</span></div>
+      <div class="wbox"><span class="wicon">&#9650;</span><span><strong>Clostridium difficile-associated diarrhoea (CDAD):</strong> CDAD has been reported with use of nearly all antibacterial agents and may range in severity from mild diarrhoea to fatal colitis. If CDAD is suspected or confirmed, discontinue amoxicillin and initiate appropriate fluid and electrolyte management.</span></div>
+    </div>
+  </div>
+
+  <!-- Dosage Regimen (MedicationKnowledge) -->
+  <div class="cls" style="border-left:3px solid var(--teal)">
+    <div class="clsh">
+      <span class="clsicon">&#128138;</span>
+      <span class="clstitle">Dosage Regimen (Section 4.2)</span>
+      <span class="clscount">2</span><span class="chip ch-mk" style="margin-left:6px;font-size:9px">MedicationKnowledge</span>
+    </div>
+    <div class="clsb">
+      <input type="radio" name="drtabs" id="dr-adult" class="dr-trd" checked>
+      <input type="radio" name="drtabs" id="dr-ped"   class="dr-trd">
+      <div class="dr-tabs">
+        <label class="dr-tb" for="dr-adult">Adults &amp; Adolescents (&ge;18 y)</label>
+        <label class="dr-tb" for="dr-ped">Children &amp; Adolescents (3 months – 17 y)</label>
+      </div>
+
+      <!-- Adults panel -->
+      <div class="dr-panel dr-panel-adult">
+        <div class="dose-card">
+          <div class="dose-card-hdr"><span class="d-pop">Adults &amp; Adolescents (&ge;18 years)</span><span class="dose-badge">Standard</span></div>
+          <div class="dose-body">
+            <div class="dose-row"><span class="dose-label">Single dose</span><span class="dose-value">500 mg</span></div>
+            <div class="dose-row"><span class="dose-label">Dose interval</span><span class="dose-value">Every 8 hours (three times daily)</span></div>
+            <div class="dose-row"><span class="dose-label">Duration</span><span class="dose-value">5–10 days depending on infection type</span></div>
+            <div class="dose-row"><span class="dose-label">Severe infections</span><span class="dose-value">1,000 mg three times daily</span></div>
+            <div class="dose-row"><span class="dose-label">Route</span><span class="dose-value">Oral</span></div>
+            <div class="dose-row"><span class="dose-label">Administration</span><span class="dose-value">With or without food; swallow whole with sufficient fluid</span></div>
+            <div class="timing-strip">
+              <span class="timing-pill">&#128197; Morning</span>
+              <span class="timing-pill">&#127752; Midday</span>
+              <span class="timing-pill">&#127761; Evening</span>
+              <span class="timing-pill max">&#9888; Complete full course</span>
+            </div>
+          </div>
+        </div>
+        <div class="mk-src">FHIR source: <code>MedicationKnowledge/mk-amoxicillin-500mg</code> &rarr; <code>dosingGuideline[0].dosage[0]</code> (patientCharacteristic: age &ge;18y)</div>
+      </div>
+
+      <!-- Paediatric panel -->
+      <div class="dr-panel dr-panel-ped">
+        <div class="dose-card">
+          <div class="dose-card-hdr"><span class="d-pop">Children &amp; Adolescents (3 months – 17 years)</span><span class="dose-badge weight">Weight-based</span></div>
+          <div class="dose-body">
+            <div class="dose-row"><span class="dose-label">Single dose</span><span class="dose-value">25 mg/kg/day divided every 8 hours</span></div>
+            <div class="dose-row"><span class="dose-label">Maximum single dose</span><span class="dose-value">500 mg</span></div>
+            <div class="dose-row"><span class="dose-label">Maximum daily dose</span><span class="dose-value">1,500 mg/day (adult dose)</span></div>
+            <div class="dose-row"><span class="dose-label">Severe infections</span><span class="dose-value">40–45 mg/kg/day in 3 divided doses</span></div>
+            <div class="dose-row"><span class="dose-label">Route</span><span class="dose-value">Oral (suspension preferred &lt;6 years)</span></div>
+          </div>
+        </div>
+        <div class="dose-card" style="margin-top:8px">
+          <div class="dose-card-hdr"><span class="d-pop">Neonates &amp; Infants (3 months – 2 years)</span><span class="dose-badge weight">Weight-based</span></div>
+          <div class="dose-body">
+            <div class="dose-row"><span class="dose-label">Dose</span><span class="dose-value">20–30 mg/kg/day in 3 divided doses</span></div>
+            <div class="dose-row"><span class="dose-label">Maximum single dose</span><span class="dose-value">125 mg</span></div>
+            <div class="dose-row"><span class="dose-label">Formulation</span><span class="dose-value">Oral suspension recommended</span></div>
+          </div>
+        </div>
+        <div class="mk-src">FHIR source: <code>MedicationKnowledge/mk-amoxicillin-500mg</code> &rarr; <code>dosingGuideline[1].dosage[0]</code> (patientCharacteristic: age 3m–17y)</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

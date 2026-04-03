@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amoksisilin 500 mg Kapsul — Templat Indonesia (ASEAN ePI IG)</title>
+  <meta name="description" content="Contoh ePI FHIR R5 menggunakan format Informasi Produk untuk Pasien dari BPOM Indonesia — Lampiran 1 ASEAN eMedicinal Product Information IG." />
+  <link rel="stylesheet" href="../epi-styles.css" />
+  <style>
+    #t-d:checked  ~ .tabnav .tb[for="t-d"],
+    #t-c:checked  ~ .tabnav .tb[for="t-c"],
+    #t-o:checked  ~ .tabnav .tb[for="t-o"],
+    #t-p:checked  ~ .tabnav .tb[for="t-p"],
+    #t-cl:checked ~ .tabnav .tb[for="t-cl"] { color: var(--text); font-weight: 600; border-bottom-color: var(--accent); }
+    #t-d:checked  ~ #pd,
+    #t-c:checked  ~ #pc,
+    #t-o:checked  ~ #po,
+    #t-p:checked  ~ #pp,
+    #t-cl:checked ~ #pcl { display: block; }
+
+    .id-toc { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 4px; font-size: .8rem; color: var(--muted); margin-top: 8px; }
+  </style>
+</head>
+<body>
+<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+
+<div class="crumb">
+  <span class="ig">ASEAN eMedicinal Product Information IG</span>
+  <span class="sep">&#8250;</span><span>Appendix 1 Templates</span>
+  <span class="sep">&#8250;</span><span>Templat Indonesia</span>
+  <span class="badge">HL7 FHIR R5</span>
+</div>
+
+<div class="notice-bar">
+  <span class="notice-icon">&#127470;&#127465;</span>
+  <span><strong>Templat Indonesia</strong> &mdash; Bagian-bagian disusun berdasarkan format Informasi Produk untuk Pasien (25 bagian A-Y) seperti yang tertuang dalam Lampiran 1 Panduan ePI ASEAN. Contoh ini hanya untuk tujuan ilustrasi.</span>
+</div>
+
+<header class="hero">
+  <h1>Amoksisilin 500 mg Kapsul (Amoxicillin)</h1>
+  <p class="sub">Informasi Produk untuk Pasien — Templat Indonesia</p>
+  <div class="chips">
+    <span class="chip ch-g">&#9679; Aktif (Active)</span>
+    <span class="chip ch-gr">Versi 1.0</span>
+    <span class="chip ch-gr">ID</span>
+    <span class="chip ch-b">Templat Indonesia</span>
+    <span class="chip ch-b">ePI Type 3</span>
+    <span class="chip ch-am">&#127470;&#127465; Indonesia</span>
+    <span class="chip ch-dk">Obat Keras (Dengan Resep Dokter)</span>
+  </div>
+</header>
+
+<input type="radio" name="tabs" id="t-d" class="trd" checked>
+<input type="radio" name="tabs" id="t-c" class="trd">
+<input type="radio" name="tabs" id="t-o" class="trd">
+<input type="radio" name="tabs" id="t-p" class="trd">
+<input type="radio" name="tabs" id="t-cl" class="trd">
+
+<nav class="tabnav">
+  <div class="tabnav-inner">
+    <label class="tb" for="t-d">Dokumen</label>
+    <label class="tb" for="t-c">Komposisi</label>
+    <label class="tb" for="t-o">Organisasi</label>
+    <label class="tb" for="t-p">Detail Produk</label>
+    <label class="tb" for="t-cl">Detail Klinis</label>
+  </div>
+</nav>
+
+<!-- ═══════════════ DOCUMENT ═══════════════ -->
+<div id="pd" class="panel">
+  <div class="sc ab">
+    <div class="sc-lbl">Metadata Berkas (Bundle Metadata)</div>
+    <div class="sc-body">
+      <div class="dg dg4" style="margin-bottom:12px">
+        <div class="di"><label>ID Target</label><div class="v vm">urn:uuid:b2c3d4e5-f6a7&#8230;</div></div>
+        <div class="di"><label>Status</label><div class="v"><span class="chip ch-g">active</span></div></div>
+        <div class="di"><label>Versi</label><div class="v">1.0</div></div>
+        <div class="di"><label>Tanggal</label><div class="v">2026-01-15</div></div>
+      </div>
+      <div class="dg dg4">
+        <div class="di"><label>Bahasa</label><div class="v">ID (id-ID)</div></div>
+        <div class="di"><label>Wilayah Hukum</label><div class="v">Indonesia &#127470;&#127465;</div></div>
+        <div class="di"><label>Penulis Dokumen</label><div class="v">PT ASEAN Pharma Indonesia</div></div>
+        <div class="di"><label>Lembaga Pengawas</label><div class="v">BPOM RI</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc at">
+    <div class="sc-lbl">Metadata Komposisi (Composition Metadata)</div>
+    <div class="sc-body">
+      <div class="dg dg3" style="margin-bottom:12px">
+        <div class="di"><label>Pengidentifikasi</label><div class="v vm">urn:uuid:e8f9a0b1-c2d3&#8230;</div></div>
+        <div class="di"><label>Judul</label><div class="v">Informasi Produk untuk Pasien Amoksisilin 500 mg</div></div>
+        <div class="di"><label>Tipe</label><div class="v"><span class="chip ch-am">Brosur Pasien / PIL</span></div></div>
+      </div>
+      <div class="dg dg4">
+        <div class="di"><label>Status</label><div class="v"><span class="chip ch-g">active</span></div></div>
+        <div class="di"><label>Versi</label><div class="v">1.0</div></div>
+        <div class="di"><label>Bahasa</label><div class="v">ID (id-ID)</div></div>
+        <div class="di"><label>Kerangka</label><div class="v">Templat Indonesia (Appx 1)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc aam">
+    <div class="sc-lbl">Struktur Dokumen (Appendix 1)</div>
+    <div class="sc-body">
+      <p style="font-size:.82rem;color:var(--muted);margin-bottom:10px">
+        Struktur ini mengikuti 25 bagian (A-Y) dari format Informasi Produk untuk Pasien (BPOM) seperti pada Lampiran 1 ASEAN ePI IG.
+      </p>
+      <div class="dg dg3" style="gap:6px;font-size:.8rem;">
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>A.</strong> Nama Obat</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>B.</strong> Bentuk Sediaan</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>C.</strong> Komposisi Zat Aktif</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>D.</strong> Kekuatan Obat</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>E.</strong> Deskripsi Obat</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>F.</strong> Indikasi Obat</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>G.</strong> Posologi dan Cara Pemberian</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>H.</strong> Kontraindikasi</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>I.</strong> Peringatan dan Perhatian</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>J.</strong> Interaksi Obat</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>m–y.</strong> 15 bagian lainnya...</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ COMPOSITION ═══════════════ -->
+<div id="pc" class="panel">
+
+  <!-- TOC box -->
+  <div class="sc aam" style="margin-bottom:18px">
+    <div class="sc-lbl">Amoksisilin 500 mg Kapsul Keras</div>
+    <div class="sc-body">
+      <p style="font-size:.82rem;font-weight:600">Daftar Isi</p>
+      <div class="id-toc">
+        <div>A. Nama Obat</div><div>B. Bentuk Sediaan</div>
+        <div>C. Komposisi Zat Aktif</div><div>D. Kekuatan Obat</div>
+        <div>E. Deskripsi Obat</div><div>F. Indikasi Obat</div>
+        <div>G. Posologi dan Cara Pemberian</div><div>H. Kontraindikasi</div>
+        <div>I. Peringatan dan Perhatian</div><div>J. Interaksi Obat</div>
+        <div>K. Kehamilan dan Menyusui</div><div>L. Efek pada Mengemudi</div>
+        <div>M. Efek Samping</div><div>N. Overdosis dan Penanganan</div>
+        <div>O. Cara Penyimpanan</div><div>P. Batas Waktu Penggunaan</div>
+        <div>Q. Informasi Lainnya</div><div>R. Nomor Izin Edar</div>
+        <div>S. Nama Pendaftar Obat</div><div>T. Alamat Pendaftar Obat</div>
+        <div>U. Nama Produsen</div><div>V. Alamat Produsen</div>
+        <div>W. Pemberi Lisensi</div><div>Y. Peringatan Khusus</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- A to E -->
+  <div class="ns ab">
+    <h3 style="margin-bottom:6px">A. Nama Obat</h3>
+    <p style="margin-bottom:16px">Amoksisilin (setara dengan trihidrat)</p>
+
+    <h3 style="margin-bottom:6px">B. Bentuk Sediaan</h3>
+    <p style="margin-bottom:16px">Kapsul keras</p>
+
+    <h3 style="margin-bottom:6px">C. Komposisi Zat Aktif / Apa kandungan obat ini?</h3>
+    <p style="margin-bottom:16px">Zat aktif dari obat ini adalah amoksisilin trihidrat.</p>
+
+    <h3 style="margin-bottom:6px">D. Kekuatan Obat / Seberapa kuat obat ini?</h3>
+    <p style="margin-bottom:16px">Tiap kapsul mengandung amoksisilin trihidrat yang setara dengan 500 mg amoksisilin.</p>
+
+    <h3 style="margin-bottom:6px">E. Deskripsi Obat / Seperti apa bentuk obat ini?</h3>
+    <p>Kapsul gelatin keras berukuran 0, dengan tutup dan badan kapsul berwarna putih buram (opak), tercetak "AMOX 500", berisi serbuk granul berwarna putih hingga putih kekuningan.</p>
+  </div>
+
+  <!-- F to G -->
+  <div class="ns at">
+    <h3 style="margin-bottom:6px">F. Indikasi Obat / Apa tujuan obat ini?</h3>
+    <p>Amoksisilin merupakan antibiotik golongan penisilin. Obat ini digunakan untuk mengobati infeksi yang disebabkan oleh bakteri tertentu. Obat ini ditujukan untuk mengobati:</p>
+    <ul>
+      <li>Infeksi telinga, hidung, dan tenggorokan (seperti sinusitis, radang mukosa, tonsilitis)</li>
+      <li>Infeksi pernapasan bagian bawah (seperti bronkitis kronis yang kambuh, pneumonia akibat masyarakat)</li>
+      <li>Infeksi saluran kemih (sistitis tanpa komplikasi)</li>
+      <li>Infeksi kulit dan jaringan lunak</li>
+    </ul>
+
+    <h3 style="margin-bottom:6px;margin-top:16px">G. Posologi dan Cara Pemberian</h3>
+    <p>Selalu gunakan obat ini persis seperti yang diresepkan oleh dokter, apoteker, atau perawat Anda. Konsultasikan dengan dokter, apoteker, atau perawat jika Anda merasa tidak yakin. Dosis umum obat ini adalah:</p>
+    <p><strong>Dosis untuk Dewasa dan Anak-anak &ge; 40 kg:</strong><br>500 mg setiap 8 jam (tiga kali sehari). Pada infeksi parah, dokter dapat menaikkan dosis menjadi 1000 mg tiga kali sehari.</p>
+    <p><strong>Durasi terapi:</strong> Lanjutkan penggunaan obat ini sampai semua kapsul yang diresepkan habis, meskipun Anda merasa lebih baik. Menghentikan penggunaan sebelum waktunya dapat menyebabkan bakteri resisten terhadap antibiotik ini.</p>
+    <p><strong>Apabila Anda lupa meminum obat ini:</strong> Jika Anda lupa satu dosis, minumlah sesegera mungkin saat Anda ingat. Namun, apabila sudah mendekati waktu minum obat selanjutnya, lewati dosis yang terlupa. Jangan minum dosis ganda untuk mengganti dosis yang terlewat.</p>
+  </div>
+
+  <!-- H to L -->
+  <div class="ns ap">
+    <h3 style="margin-bottom:6px">H. Kontraindikasi / Pada kondisi apa obat ini tidak boleh digunakan?</h3>
+    <p>Jangan gunakan obat ini jika:</p>
+    <ul>
+      <li>Anda alergi (hipersensitif) terhadap amoksisilin, antibiotik golongan penisilin lainnya, atau salah satu bahan lain yang terkandung di dalam obat ini.</li>
+      <li>Anda memiliki riwayat reaksi alergi berlebih yang parah dan mendadak (profil anafilaksis) terhadap obat golongan beta-laktam lain (misalnya antibiotik sefalosporin atau karbapenem).</li>
+    </ul>
+
+    <h3 style="margin-bottom:6px;margin-top:16px">I. Peringatan dan Perhatian</h3>
+    <p>Beri tahu dokter, apoteker, atau perawat sebelum mengonsumsi obat ini jika Anda:</p>
+    <ul>
+      <li>Menderita gangguan ginjal, karena pengeluaran obat dari tubuh menjadi tertunda dan dosis Anda mungkin perlu disesuaikan.</li>
+      <li>Menderita demam kelenjar (mononukleosis asimtomatik), karena ruam kulit kemerahan dapat muncul.</li>
+      <li>Memiliki riwayat reaksi alergi parah, karena risiko syok anafilaktik dapat terjadi (lihat <em>Peringatan Khusus</em> di bagian bawah).</li>
+    </ul>
+
+    <h3 style="margin-bottom:6px;margin-top:16px">J. Interaksi Obat / Obat dan makanan apa yang harus dihindari dengan obat ini?</h3>
+    <p>Pengunaan bersamaan dengan probenesid (obat asam urat) dapat meningkatkan kadar amoksisilin dalam darah. Penggunaan bersamaan dengan metotreksat dapat meningkatkan toksisitas metotreksat (peningkatan risiko efek samping metotreksat yang fatal). Amoksisilin dapat memengaruhi flora usus sehingga menyebabkan pil KB menjadi kurang efektif (sebaiknya gunakan alat kontrasepsi tambahan).</p>
+
+    <h3 style="margin-bottom:6px;margin-top:16px">K. Kehamilan dan Menyusui</h3>
+    <p>Jika Anda hamil atau sedang menyusui, didiuga hamil atau merencanakan kehamilan, mintalah saran dari dokter atau apoteker Anda sebelum menggunakan obat ini.</p>
+
+    <h3 style="margin-bottom:6px;margin-top:16px">L. Efek pada Kemampuan Mengemudi dan Menjalankan Mesin</h3>
+    <p>Belum ada bukti bahwa amoksisilin memengaruhi kemampuan pasien dalam mengemudi kendaraan atau mengoperasikan mesin berat.</p>
+  </div>
+
+  <!-- M to Q -->
+  <div class="ns at">
+    <h3 style="margin-bottom:6px">M. Efek Samping / Apa kemungkinan efek tidak diinginkan dari obat ini?</h3>
+    <p>Seperti semua obat-obatan, obat ini dapat menyebabkan efek samping, meskipun tidak semua orang mengalaminya.</p>
+    <p>Hentikan penggunaan obat dan segera cari bantuan medis darurat jika Anda mengalami:<br>Reaksi alergi parah seperti pembengkakan di area wajah, bibir, lidah atau tenggorokan yang menyebabkan kesulitan bernapas atau menelan; ruam kulit yang parah dan melepuh (sindrom Stevens-Johnson).</p>
+    <p>Efek samping yang umum (dapat terjadi pada 1 dari 10 orang):</p>
+    <ul>
+      <li>Mual, muntah</li>
+      <li>Diare</li>
+      <li>Ruam kemerahan pada kulit</li>
+    </ul>
+    <p>Jika terdapat keluhan efek samping atau ketidaknyamanan selama dan setelah penggunaan obat, konsultasikan ke dokter, apoteker, atau perawat Anda. Anda juga dapat melaporkan efek samping langsung ke BPOM Republik Indonesia. Dengan melaporkan, Anda ikut memberi informasi terkait keamanan obat ini.</p>
+
+    <h3 style="margin-bottom:6px;margin-top:16px">N. Overdosis dan Penanganan</h3>
+    <p>Gejala overdosis yang dapat muncul adalah gangguan pencernaan seperti mual, muntah, atau diare, serta munculnya kristal dalam urine yang dapat terlihat sebagai kencing keruh. Jika Anda menggunakan obat ini lebih dari dosis anjuran, segera bawa sisa obat ke IGD Rumah Sakit terdekat.</p>
+
+    <h3 style="margin-bottom:6px;margin-top:16px">O. Cara Penyimpanan / Bagaimana cara menyimpan obat ini?</h3>
+    <p>Jauhkan obat ini dari pandangan dan jangkauan anak-anak. Simpan pada suhu di bawah 25°C. Simpan dalam wadah aslinya untuk melindunginya dari cahaya dan kelembapan. Jangan gunakan obat ini setelah tanggal kedaluwarsa (EXP) yang tercantum di kemasan.</p>
+
+    <h3 style="margin-bottom:6px;margin-top:16px">P. Batas Waktu Penggunaan Setelah Kemasan Dibuka</h3>
+    <p>Tidak berlaku untuk sediaan kapsul keras dalam blister, selama masa simpan belum berakhir dan disimpan sesuai aturan.</p>
+
+    <h3 style="margin-bottom:6px;margin-top:16px">Q. Informasi Lainnya</h3>
+    <p>Telan obat ini secara utuh menggunakan segelas air. Telan obat secara utuh bersamaan dengan atau tanpa makanan. Jangan mengunyah kapsul. Jika Anda memiliki pertanyaan lebih lanjut tentang penggunaan obat ini, tanyakan kepada dokter, apoteker, atau perawat Anda.</p>
+  </div>
+
+  <!-- R to Y -->
+  <div class="ns aam">
+    <h3 style="margin-bottom:6px">R. Nomor Izin Edar</h3>
+    <p style="margin-bottom:16px">DKL2600100401A1 (Registrasi di Indonesia)</p>
+
+    <div style="display:flex;flex-wrap:wrap;gap:20px;margin-bottom:16px;">
+      <div style="flex:1;min-width:260px">
+        <h3 style="margin-bottom:6px;font-size:1.1rem">S. Nama Pendaftar / Pemilik Izin Edar</h3>
+        <p>PT ASEAN Pharma Indonesia</p>
+        <h3 style="margin-bottom:6px;margin-top:16px;font-size:1.1rem">T. Alamat Pendaftar</h3>
+        <p>Gedung Menara Satrio Lt. 5, Jl. Prof. DR. Satrio,<br>Jakarta Selatan, DKI Jakarta, Indonesia.</p>
+      </div>
+      <div style="flex:1;min-width:260px">
+        <h3 style="margin-bottom:6px;font-size:1.1rem">U. Nama Produsen</h3>
+        <p>Regional Manufacturing Solutions Sdn Bhd</p>
+        <h3 style="margin-bottom:6px;margin-top:16px;font-size:1.1rem">V. Alamat Produsen</h3>
+        <p>Lot 5, Jalan Industri 3/5,<br>Taman Perindustrian Rawang, 48000 Selangor, Malaysia.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-bottom:6px">W. Nama Pemberi Lisensi</h3>
+    <p style="margin-bottom:16px">ASEAN Pharma Global Ltd.</p>
+
+    <h3 style="margin-bottom:6px">X. Alamat Pemberi Lisensi</h3>
+    <p style="margin-bottom:16px">London, Inggris (United Kingdom).</p>
+
+    <h3 style="margin-bottom:6px">Y. Peringatan Khusus</h3>
+    <div style="background:#fef2f2;border:1px solid #fecaca;border-left:3px solid var(--rose);border-radius:var(--r);padding:10px 14px;font-size:.82rem;">
+      <strong>Peringatan Khusus - BPOM:</strong> Harus DENGAN RESEP DOKTER. Peringatan terkait syok anafilaktik yang dapat berakibat fatal berlaku untuk seluruh golongan antibiotik penisilin.
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════ ORGANIZATION ═══════════════ -->
+<div id="po" class="panel">
+  <div class="og">
+    <div class="oc" style="border-left:3px solid var(--accent)">
+      <div class="och">
+        <div class="role" style="color:var(--accent)">Pendaftar / Pemilik Izin Edar (MAH)</div>
+        <div class="name">PT ASEAN Pharma Indonesia</div>
+      </div>
+      <div class="ocb">
+        <div class="or"><span class="ol">ID</span><span class="ov ovm">ORG-ASEANPHARMA-IDN-001 (OMS)</span></div>
+        <div class="or"><span class="ol">Tipe</span><span class="ov"><span class="chip ch-b">Pemilik Izin Edar</span></span></div>
+        <div class="or"><span class="ol">Alamat</span><span class="ov">Menara Satrio Lt. 5, Jl. Prof. DR. Satrio, Jakarta Selatan, DKI Jakarta</span></div>
+        <div class="or"><span class="ol">Negara</span><span class="ov">Indonesia &#127470;&#127465;</span></div>
+      </div>
+    </div>
+    <div class="oc" style="border-left:3px solid var(--green)">
+      <div class="och">
+        <div class="role" style="color:var(--green)">Produsen (Pabrik)</div>
+        <div class="name">Regional Manufacturing Solutions Sdn Bhd</div>
+      </div>
+      <div class="ocb">
+        <div class="or"><span class="ol">ID</span><span class="ov ovm">ORG-RMS-MYS-002 (OMS)</span></div>
+        <div class="or"><span class="ol">Tipe</span><span class="ov"><span class="chip ch-t">Produsen</span></span></div>
+        <div class="or"><span class="ol">Alamat</span><span class="ov">Lot 5, Jalan Industri 3/5, Selangor</span></div>
+        <div class="or"><span class="ol">Negara</span><span class="ov">Malaysia &#127474;&#127486;</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ PRODUCT DETAILS ═══════════════ -->
+<div id="pp" class="panel">
+  <div class="ps-row">
+    <span>1 Produk &middot; 2 Bentuk Kemasan</span>
+  </div>
+
+  <defs><radialGradient id="cg2" cx="40%" cy="35%" r="55%"><stop offset="0%" stop-color="#fff" /><stop offset="100%" stop-color="#e0e9f5" /></radialGradient></defs>
+
+  <details class="pa" open="open">
+    <summary class="pah">
+      <span class="pnum">1</span>
+      <span class="pname">Amoksisilin 500 mg Kapsul</span><span class="psub">Amoksisilin trihidrat</span>
+      <div class="pbadges"><span class="chip ch-g">Aktif</span><span class="chip ch-gr">Oral &middot; Kapsul Keras</span></div>
+      <span class="pchev">&#9660;</span>
+    </summary>
+    <div class="pc">
+
+      <div class="is"><div class="isl">Bentuk Sediaan &amp; Zat Aktif</div><div class="isb"><div class="ifs">
+        <div class="inf"><span class="il">Zat Aktif</span><span class="iv">Amoksisilin (Amoxicillin)</span></div>
+        <div class="inf"><span class="il">Garam / Tipe</span><span class="iv">Trihidrat</span></div>
+        <div class="inf"><span class="il">Kekuatan</span><span class="iv">500 mg</span></div>
+        <div class="inf"><span class="il">Bentuk</span><span class="iv">Kapsul Keras</span></div>
+        <div class="inf"><span class="il">Rute Pemberian</span><span class="iv">Oral</span></div>
+        <div class="inf"><span class="il">Kode ATC</span><span class="iv">J01CA04</span></div>
+      </div></div></div>
+
+      <div class="is"><div class="isl">Bahan Tambahan (Eksipien)</div><div class="isb"><div class="ec">
+        <div class="ei">Magnesium stearat</div><div class="ei">Silikon dioksida koloidal</div>
+        <div class="ei">Natrium pati glikolat (Tipe A)</div><div class="ei">Gelatin hewani (kapsul)</div>
+        <div class="ei">Titanium dioksida E171 (kapsul)</div><div class="ei"></div>
+      </div></div></div>
+
+      <div class="is"><div class="isl">Pemerian / Tampilan Fisik</div><div class="isb"><div class="ap-in">
+        <div class="ap-data">
+          <div class="apf"><span class="al">Warna</span><span class="av">Putih (White)</span></div>
+          <div class="apf"><span class="al">Bentuk</span><span class="av">Kapsul Ukuran 0</span></div>
+          <div class="apf"><span class="al">Cetak Tinta</span><span class="av">AMOX 500</span></div>
+          <div class="apf"><span class="al">Isi</span><span class="av">Serbuk Granul Putih</span></div>
+        </div>
+        <div class="tab-svgs">
+          <figure class="tab-fig">
+            <svg width="80" height="40" viewBox="0 0 80 40">
+              <rect x="1" y="8" width="78" height="24" rx="12" fill="url(#cg2)" stroke="#d1d5db" stroke-width="1.2"/>
+              <line x1="40" y1="8" x2="40" y2="32" stroke="#d1d5db" stroke-width="1" stroke-dasharray="2,2"/>
+            </svg>
+            <figcaption>Kapsul</figcaption>
+          </figure>
+        </div>
+      </div></div></div>
+
+      <div class="is"><div class="isl">Kemasan (2)</div><div class="isb"><div class="pkgs">
+        <div class="pkg">
+          <div class="pkg-row">
+            <div class="pki">
+              <div class="pn">Botol Kaca Coklat — Isi 21 Kapsul</div>
+              <div class="pt" style="font-family:ui-monospace,'SF Mono',monospace;font-size:10px;margin-bottom:10px;">GTIN: 09501234560021 &nbsp;|&nbsp; SKU: AMX500-BTL-21-ID</div>
+              <div class="pkt">
+                <span class="chip ch-g">Aktif</span>
+                <span class="chip ch-gr" style="border-radius:4px;">Jumlah: 21</span>
+                <span class="chip ch-gr" style="border-radius:4px;font-weight:normal;">Wadah: Kaca Tipe III</span>
+                <span class="chip ch-gr" style="border-radius:4px;font-weight:normal;">Tutup: Ulir Aluminium</span>
+              </div>
+            </div>
+            <figure class="pka"><div class="pka-box">
+              <svg width="40" height="38" viewBox="0 0 40 38">
+                <rect x="10" y="1" width="20" height="36" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+                <ellipse cx="20" cy="14" rx="9" ry="4" fill="#bfdbfe" opacity="0.6"/>
+                <rect x="14" y="29" width="12" height="4" rx="2" fill="#bfdbfe"/>
+              </svg>
+            </div><figcaption>Botol</figcaption></figure>
+          </div>
+        </div>
+        <div class="pkg">
+          <div class="pkg-row">
+            <div class="pki">
+              <div class="pn">Dus, Blister — Isi 24 Kapsul (2 &times; 12)</div>
+              <div class="pt" style="font-family:ui-monospace,'SF Mono',monospace;font-size:10px;margin-bottom:10px;">GTIN: 09501234560024 &nbsp;|&nbsp; SKU: AMX500-BLI-24-ID</div>
+              <div class="pkt">
+                <span class="chip ch-g">Aktif</span>
+                <span class="chip ch-gr" style="border-radius:4px;">Jumlah: 24 (2 &times; 12)</span>
+                <span class="chip ch-gr" style="border-radius:4px;font-weight:normal;">Primer: Blister PVC/Aluminium</span>
+                <span class="chip ch-gr" style="border-radius:4px;font-weight:normal;">Sekunder: Dus Karton</span>
+              </div>
+            </div>
+            <figure class="pka"><div class="pka-box">
+              <svg width="44" height="32" viewBox="0 0 44 32">
+                <rect x="1" y="1" width="42" height="30" rx="3" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+                <rect x="5" y="5" width="34" height="9" rx="2" fill="#bbf7d0"/>
+                <text x="22" y="27" font-size="5" font-family="Arial" text-anchor="middle" fill="#6b7280">24 kapsul</text>
+              </svg>
+            </div><figcaption>Blister</figcaption></figure>
+          </div>
+        </div>
+      </div></div></div>
+
+      <div class="is" style="border-left:3px solid var(--green)">
+        <div class="isl" style="padding-bottom:6px;color:var(--green)">Umur Simpan &amp; Kondisi Penyimpanan</div>
+        <div style="padding:8px 14px 4px;display:flex;align-items:center;gap:10px">
+          <span class="shelf-pill"><span>&#128197;</span><span class="shelf-n">24</span><span style="font-size:.75rem;font-weight:600">Bulan</span></span>
+          <span style="font-size:.8rem;color:var(--muted)">Masa kedaluwarsa sejak tanggal produksi</span>
+        </div>
+        <div class="storage-grid">
+          <div class="storage-item"><span class="storage-icon">&#127777;</span><div class="storage-text"><div class="sl">Suhu</div><div class="sv">Simpan di bawah 25°C</div><div class="sd">Jangan dibekukan</div></div></div>
+          <div class="storage-item"><span class="storage-icon">&#128167;</span><div class="storage-text"><div class="sl">Kelembapan</div><div class="sv">Lindungi dari kelembapan</div></div></div>
+          <div class="storage-item"><span class="storage-icon">&#9728;</span><div class="storage-text"><div class="sl">Cahaya</div><div class="sv">Lindungi dari sinar matahari</div></div></div>
+        </div>
+      </div>
+
+    </div>
+  </details>
+</div>
+
+<!-- ═══════════════ CLINICAL DETAILS ═══════════════ -->
+<div id="pcl" class="panel">
+
+  <div class="csum">
+    <div class="cscard ci"><div><div class="csn" style="color:var(--accent)">4</div><div class="csl">Indikasi</div></div><div class="csi">&#127919;</div></div>
+    <div class="cscard cc"><div><div class="csn" style="color:var(--rose)">2</div><div class="csl">Kontraindikasi</div></div><div class="csi">&#9940;</div></div>
+    <div class="cscard cx"><div><div class="csn" style="color:var(--amber)">3</div><div class="csl">Interaksi</div></div><div class="csi">&#9889;</div></div>
+    <div class="cscard cu"><div><div class="csn" style="color:var(--purple)">9</div><div class="csl">Efek Samping</div></div><div class="csi">&#128137;</div></div>
+    <div class="cscard cw"><div><div class="csn" style="color:#ea580c">3</div><div class="csl">Peringatan</div></div><div class="csi">&#9888;</div></div>
+    <div class="cscard cd"><div><div class="csn" style="color:var(--teal)">2</div><div class="csl">Dosis</div></div><div class="csi">&#128138;</div></div>
+  </div>
+
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#127919;</span><span class="clstitle">Indikasi Obat (F)</span><span class="clscount">4</span></div>
+    <div class="clsb">
+      <table class="ctbl">
+        <thead><tr><th>Indikasi Klinis</th><th>Populasi Pasien</th><th>Kode ICD-11</th></tr></thead>
+        <tbody>
+          <tr><td>Sinusitis bakterial akut</td><td>Dewasa &amp; anak</td><td>CA0Z</td></tr>
+          <tr><td>Otitis media akut (infeksi telinga tengah)</td><td>Dewasa &amp; anak</td><td>AA40</td></tr>
+          <tr><td>Pneumonia komunitas (CAP)</td><td>Dewasa &amp; anak</td><td>CA40.0Z</td></tr>
+          <tr><td>Infeksi saluran kemih ringan</td><td>Dewasa &amp; anak</td><td>GC08.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#9940;</span><span class="clstitle">Kontraindikasi (H)</span><span class="clscount">2</span></div>
+    <div class="clsb">
+      <div class="cxrow"><span class="cxicon">&#8856;</span><span>Riwayat hipersensitivitas terhadap zat aktif amoksisilin atau golongan penisilin lainnya.</span></div>
+      <div class="cxrow"><span class="cxicon">&#8856;</span><span>Riwayat syok anafilaksis yang disebabkan oleh antibiotik beta-laktam lain (sefalosporin).</span></div>
+    </div>
+  </div>
+
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#128137;</span><span class="clstitle">Rekapitulasi Efek Samping (M)</span><span class="clscount">9</span></div>
+    <div class="clsb">
+      <div class="soc"><div class="soc-hdr">Sistem Pencernaan (Gastrointestinal)</div>
+        <div class="soc-item"><span class="si-name">Diare</span><span class="si-freq">Sangat umum (&ge;1/10)</span></div>
+        <div class="soc-item"><span class="si-name">Mual, Muntah</span><span class="si-freq">Umum (&ge;1/100)</span></div>
+      </div>
+      <div class="soc"><div class="soc-hdr">Kulit dan Jaringan Subkutan</div>
+        <div class="soc-item"><span class="si-name">Ruam kulit kemerahan</span><span class="si-freq">Umum (&ge;1/100)</span></div>
+        <div class="soc-item"><span class="si-name">Gatal-gatal (Urtikaria)</span><span class="si-freq">Jarang terjadi</span></div>
+        <div class="soc-item"><span class="si-name">Sindrom Stevens-Johnson</span><span class="si-freq">Sangat jarang (Fatal)</span></div>
+      </div>
+      <div class="soc" style="margin-bottom:0"><div class="soc-hdr">Sari dan Sistem Saraf</div>
+        <div class="soc-item"><span class="si-name">Sakit atau pusing (Dizziness)</span><span class="si-freq">Jarang</span></div>
+        <div class="soc-item"><span class="si-name">Hiperaktivitas / Kejang (pada disfungsi ginjal)</span><span class="si-freq">Sangat jarang</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cls" style="border-left:3px solid var(--teal)">
+    <div class="clsh">
+      <span class="clsicon">&#128138;</span>
+      <span class="clstitle">Regimen Dosis (F)</span>
+      <span class="clscount">2</span><span class="chip ch-mk" style="margin-left:6px;font-size:9px">MedicationKnowledge</span>
+    </div>
+    <div class="clsb">
+      <input type="radio" name="drtabs" id="dr-adult" class="dr-trd" checked>
+      <input type="radio" name="drtabs" id="dr-ped"   class="dr-trd">
+      <div class="dr-tabs">
+        <label class="dr-tb" for="dr-adult">Dewasa (&ge;40 kg)</label>
+        <label class="dr-tb" for="dr-ped">Anak-anak (&lt;40 kg)</label>
+      </div>
+
+      <div class="dr-panel dr-panel-adult">
+        <div class="dose-card">
+          <div class="dose-card-hdr"><span class="d-pop">Pasien Dewasa, Lanjut Usia, dan Anak &ge; 40 kg</span><span class="dose-badge">Standar</span></div>
+          <div class="dose-body">
+            <div class="dose-row"><span class="dose-label">Dosis Tunggal</span><span class="dose-value">500 mg (1 kapsul)</span></div>
+            <div class="dose-row"><span class="dose-label">Frekuensi</span><span class="dose-value">Setiap 8 jam (3 kali sehari)</span></div>
+            <div class="dose-row"><span class="dose-label">Infeksi Berat</span><span class="dose-value">750 mg - 1000 mg setiap 8 jam</span></div>
+            <div class="dose-row"><span class="dose-label">Rute</span><span class="dose-value">Oral (Ditelan utuh menggunakan air)</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dr-panel dr-panel-ped">
+        <div class="dose-card">
+          <div class="dose-card-hdr"><span class="d-pop">Anak-anak dengan berat badan di bawah 40 kg</span><span class="dose-badge weight">Berbasis Berat Badan</span></div>
+          <div class="dose-body">
+            <div class="dose-row"><span class="dose-label">Dosis Harian</span><span class="dose-value">40 mg/kgBB hingga 90 mg/kgBB setiap hari</span></div>
+            <div class="dose-row"><span class="dose-label">Frekuensi Obat</span><span class="dose-value">Dibagi menjadi 2 atau 3 dosis per hari</span></div>
+            <div class="dose-row"><span class="dose-label">Anjuran BPOM</span><span class="dose-value">Bentuk sediaan suspensi (sirup kering) lebih disarankan</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

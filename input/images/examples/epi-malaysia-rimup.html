@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amoksisilin 500 mg Kapsul — Templat Malaysia RiMUP (ASEAN ePI IG)</title>
+  <meta name="description" content="Contoh ePI FHIR R5 menggunakan format Risalah Maklumat Ubatan Pengguna (RiMUP) Malaysia — Appendix 1 ASEAN eMedicinal Product Information IG." />
+  <link rel="stylesheet" href="../epi-styles.css" />
+  <style>
+    #t-d:checked  ~ .tabnav .tb[for="t-d"],
+    #t-c:checked  ~ .tabnav .tb[for="t-c"],
+    #t-o:checked  ~ .tabnav .tb[for="t-o"],
+    #t-p:checked  ~ .tabnav .tb[for="t-p"],
+    #t-cl:checked ~ .tabnav .tb[for="t-cl"] { color: var(--text); font-weight: 600; border-bottom-color: var(--accent); }
+    #t-d:checked  ~ #pd,
+    #t-c:checked  ~ #pc,
+    #t-o:checked  ~ #po,
+    #t-p:checked  ~ #pp,
+    #t-cl:checked ~ #pcl { display: block; }
+  </style>
+</head>
+<body>
+<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+
+<div class="crumb">
+  <span class="ig">ASEAN eMedicinal Product Information IG</span>
+  <span class="sep">&#8250;</span><span>Appendix 1 Templates</span>
+  <span class="sep">&#8250;</span><span>Templat Malaysia (RiMUP)</span>
+  <span class="badge">HL7 FHIR R5</span>
+</div>
+
+<div class="notice-bar">
+  <span class="notice-icon">&#127474;&#127486;</span>
+  <span><strong>Templat Malaysia RiMUP</strong> &mdash; Tajuk bahagian mengikut format <em>Risalah Maklumat Ubatan Pengguna</em> (RiMUP) seperti yang ditetapkan dalam Lampiran 1 Panduan ePI ASEAN. Contoh ini menggunakan produk rekaan untuk tujuan ilustrasi sahaja.</span>
+</div>
+
+<header class="hero">
+  <h1>Amoksisilin 500 mg Kapsul</h1>
+  <p class="sub">Risalah Maklumat Ubatan Pengguna (RiMUP) — Templat Malaysia</p>
+  <div class="chips">
+    <span class="chip ch-g">&#9679; Aktif</span>
+    <span class="chip ch-gr">Versi 1.0</span>
+    <span class="chip ch-gr">BM</span>
+    <span class="chip ch-b">Templat Malaysia</span>
+    <span class="chip ch-b">ePI Type 3</span>
+    <span class="chip ch-am">&#127474;&#127486; Malaysia</span>
+    <span class="chip ch-dk">Ubat Preskripsi</span>
+  </div>
+</header>
+
+<input type="radio" name="tabs" id="t-d" class="trd" checked>
+<input type="radio" name="tabs" id="t-c" class="trd">
+<input type="radio" name="tabs" id="t-o" class="trd">
+<input type="radio" name="tabs" id="t-p" class="trd">
+<input type="radio" name="tabs" id="t-cl" class="trd">
+
+<nav class="tabnav">
+  <div class="tabnav-inner">
+    <label class="tb" for="t-d">Dokumen</label>
+    <label class="tb" for="t-c">Komposisi</label>
+    <label class="tb" for="t-o">Organisasi</label>
+    <label class="tb" for="t-p">Butiran Produk</label>
+    <label class="tb" for="t-cl">Butiran Klinikal</label>
+  </div>
+</nav>
+
+<!-- ═══════════════ DOKUMEN ═══════════════ -->
+<div id="pd" class="panel">
+  <div class="sc ab">
+    <div class="sc-lbl">Bundle Metadata</div>
+    <div class="sc-body">
+      <div class="dg dg4" style="margin-bottom:12px">
+        <div class="di"><label>Resource ID</label><div class="v vm">urn:uuid:b2c3d4e5-f6a7&#8230;</div></div>
+        <div class="di"><label>Status</label><div class="v"><span class="chip ch-g">active</span></div></div>
+        <div class="di"><label>Versi</label><div class="v">1.0</div></div>
+        <div class="di"><label>Tarikh</label><div class="v">2026-01-15</div></div>
+      </div>
+      <div class="dg dg4">
+        <div class="di"><label>Bahasa</label><div class="v">BM (ms)</div></div>
+        <div class="di"><label>Bidang Kuasa</label><div class="v">Malaysia &#127474;&#127486;</div></div>
+        <div class="di"><label>Pengarang (PRH)</label><div class="v">ASEAN Pharma (M) Sdn Bhd</div></div>
+        <div class="di"><label>Pengesah (Pengawal Selia)</label><div class="v">NPRA Malaysia</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc at">
+    <div class="sc-lbl">Composition</div>
+    <div class="sc-body">
+      <div class="dg dg3" style="margin-bottom:12px">
+        <div class="di"><label>Identifier</label><div class="v vm">urn:uuid:e8f9a0b1-c2d3&#8230;</div></div>
+        <div class="di"><label>Tajuk</label><div class="v">Amoksisilin 500 mg — RiMUP</div></div>
+        <div class="di"><label>Jenis</label><div class="v"><span class="chip ch-am">RiMUP / PIL</span></div></div>
+      </div>
+      <div class="dg dg4">
+        <div class="di"><label>Status</label><div class="v"><span class="chip ch-g">active</span></div></div>
+        <div class="di"><label>Versi</label><div class="v">1.0</div></div>
+        <div class="di"><label>Bahasa</label><div class="v">BM (ms)</div></div>
+        <div class="di"><label>Templat</label><div class="v">Malaysia RiMUP (Lampiran 1)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc ap">
+    <div class="sc-lbl">Sumber Terkandung (Contained Resources)</div>
+    <div class="cc-row">
+      <div class="cc"><span class="n" style="color:var(--accent)">1</span><span class="l">Komposisi</span></div>
+      <div class="cc"><span class="n" style="color:var(--teal)">2</span><span class="l">Organisasi</span></div>
+      <div class="cc"><span class="n" style="color:var(--green)">1</span><span class="l">Produk Perubatan</span></div>
+      <div class="cc"><span class="n" style="color:var(--amber)">2</span><span class="l">Produk Berpakej</span></div>
+      <div class="cc"><span class="n" style="color:var(--purple)">1</span><span class="l">Kebenaran Pasaran</span></div>
+      <div class="cc"><span class="n" style="color:var(--rose)">6</span><span class="l">Def. Penggunaan Klinikal</span></div>
+      <div class="cc"><span class="n" style="color:var(--teal)">2</span><span class="l">MedicationKnowledge</span></div>
+    </div>
+  </div>
+
+  <div class="sc aam">
+    <div class="sc-lbl">Bahagian Templat RiMUP Malaysia (Lampiran 1)</div>
+    <div class="sc-body">
+      <p style="font-size:.82rem;color:var(--muted);margin-bottom:10px">
+        Komposisi ini menggunakan tajuk bahagian <strong>Risalah Maklumat Ubatan Pengguna (RiMUP)</strong> seperti yang ditetapkan dalam Lampiran 1 Panduan ePI ASEAN. Setiap bahagian dipetakan kepada entri <code style="font-family:ui-monospace,'SF Mono',monospace;font-size:.76rem;background:var(--sf2);padding:2px 5px;border-radius:3px">Composition.section</code> dalam FHIR Bundle.
+      </p>
+      <div class="dg dg2" style="gap:6px;font-size:.8rem;">
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>1.</strong> Untuk Apa AMOKSISILIN Digunakan</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>2.</strong> Bagaimana AMOKSISILIN Berfungsi</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>3.</strong> Sebelum Anda Menggunakan AMOKSISILIN</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>4.</strong> Cara Menggunakan AMOKSISILIN</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>5.</strong> Semasa Anda Menggunakannya</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>6.</strong> Kesan Sampingan</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>7.</strong> Penyimpanan dan Pelupusan AMOKSISILIN</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>8.</strong> Keterangan Produk</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>9.</strong> Pengilang</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>10.</strong> Pemegang Pendaftaran Produk</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>11.</strong> Tarikh Penyemakan</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>12.</strong> Nombor Siri</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ KOMPOSISI (RiMUP dalam Bahasa Malaysia) ═══════════════ -->
+<div id="pc" class="panel">
+
+  <!-- TOC box -->
+  <div class="sc aam" style="margin-bottom:18px">
+    <div class="sc-lbl">AMOKSISILIN® — amoksisilin trihidrat (500 mg) — Kapsul Keras</div>
+    <div class="sc-body">
+      <p style="font-size:.82rem;font-weight:600;margin-bottom:8px">Kandungan Risalah Ini</p>
+      <div class="dg dg2" style="gap:4px;font-size:.8rem;color:var(--muted)">
+        <div>1. Untuk Apa AMOKSISILIN Digunakan</div>
+        <div>2. Bagaimana AMOKSISILIN Berfungsi</div>
+        <div>3. Sebelum Anda Menggunakan AMOKSISILIN</div>
+        <div>4. Cara Menggunakan AMOKSISILIN</div>
+        <div>5. Semasa Anda Menggunakannya</div>
+        <div>6. Kesan Sampingan</div>
+        <div>7. Penyimpanan dan Pelupusan AMOKSISILIN</div>
+        <div>8. Keterangan Produk</div>
+        <div>9. Pengilang</div>
+        <div>10. Pemegang Pendaftaran Produk</div>
+        <div>11. Tarikh Penyemakan</div>
+        <div>12. Nombor Siri</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bahagian 1 -->
+  <div class="ns ab">
+    <h3>1. Untuk Apa AMOKSISILIN Digunakan</h3>
+    <p>AMOKSISILIN digunakan untuk merawat jangkitan yang disebabkan oleh bakteria, termasuk:</p>
+    <ul>
+      <li>Jangkitan pada saluran pernafasan atas (radang tekak streptokokus, sinusitis bakteria akut, jangkitan telinga tengah)</li>
+      <li>Jangkitan pada paru-paru (pneumonia komuniti)</li>
+      <li>Jangkitan pada kulit dan tisu lembut</li>
+      <li>Jangkitan pada saluran kencing yang tidak rumit</li>
+    </ul>
+  </div>
+
+  <!-- Bahagian 2 -->
+  <div class="ns at">
+    <h3>2. Bagaimana AMOKSISILIN Berfungsi</h3>
+    <p>AMOKSISILIN mengandungi <strong>amoksisilin</strong>, sejenis antibiotik daripada kumpulan penisilin. Ia berfungsi dengan membunuh bakteria penyebab jangkitan dengan cara menghalang pembentukan dinding sel bakteria, sehingga bakteria tersebut mati.</p>
+    <p>AMOKSISILIN tidak berkesan terhadap jangkitan yang disebabkan oleh virus seperti selesema atau COVID-19.</p>
+  </div>
+
+  <!-- Bahagian 3 -->
+  <div class="ns ab">
+    <h3>3. Sebelum Anda Menggunakan AMOKSISILIN</h3>
+
+    <p><strong>Bila Anda Tidak Boleh Menggunakannya</strong></p>
+    <p>Jangan gunakan AMOKSISILIN jika anda:</p>
+    <ul>
+      <li>Alah kepada amoksisilin, mana-mana antibiotik penisilin, atau mana-mana bahan kandungan ubat ini (sila lihat Bahagian 8 untuk senarai bahan).</li>
+      <li>Pernah mengalami tindak balas alah yang teruk (seperti anafilaksis, bengkak muka atau sesak nafas) terhadap antibiotik beta-laktam yang lain seperti sefalosporin atau karbapenem.</li>
+    </ul>
+
+    <p style="margin-top:12px"><strong>Sebelum Anda Mula Menggunakannya</strong></p>
+    <p>Beritahu doktor atau ahli farmasi anda jika anda:</p>
+    <ul>
+      <li>Mengalami masalah buah pinggang</li>
+      <li>Sedang hamil, merancang untuk hamil, atau menyusukan bayi</li>
+      <li>Mempunyai sebarang alahan terhadap ubat atau bahan lain</li>
+      <li>Menghidap penyakit meningitis</li>
+      <li>Menderita mononukleosis berjangkit (demam kelenjar)</li>
+    </ul>
+
+    <p style="margin-top:12px"><strong>Penggunaan Bersama Ubat Lain</strong></p>
+    <p>Beritahu doktor atau ahli farmasi anda jika anda sedang atau baru sahaja mengambil mana-mana ubat lain, termasuk:</p>
+    <ul>
+      <li><strong>Probenesid</strong> (ubat untuk gout) — boleh meningkatkan paras amoksisilin dalam darah</li>
+      <li><strong>Metotreksat</strong> (ubat untuk artritis atau kanser) — risiko keracunan meningkat</li>
+      <li><strong>Warfarin atau antikoagulan lain</strong> — pantau masa protrombin</li>
+    </ul>
+  </div>
+
+  <!-- Bahagian 4 -->
+  <div class="ns ap">
+    <h3>4. Cara Menggunakan AMOKSISILIN</h3>
+
+    <p><strong>Berapa Banyak Yang Perlu Digunakan</strong></p>
+    <p>Sentiasa gunakan ubat ini seperti yang diarah oleh doktor anda. Semak dengan doktor atau ahli farmasi anda jika anda tidak pasti.</p>
+    <p><em>Orang dewasa dan remaja (18 tahun ke atas):</em><br>
+    1 kapsul (500 mg) tiga kali sehari. Untuk jangkitan teruk: 2 kapsul (1,000 mg) tiga kali sehari.</p>
+
+    <p style="margin-top:12px"><strong>Bila Perlu Digunakan</strong></p>
+    <p>Boleh diambil bersama makanan atau tanpa makanan. Telan kapsul dengan air yang cukup.</p>
+
+    <p style="margin-top:12px"><strong>Berapa Lama Perlu Digunakan</strong></p>
+    <p>Biasanya 5 hingga 10 hari bergantung kepada jenis dan keterukan jangkitan. <strong>Lengkapkan keseluruhan kursus antibiotik walaupun anda sudah berasa baik.</strong> Berhenti mengambil ubat lebih awal boleh menyebabkan jangkitan berulang.</p>
+
+    <p style="margin-top:12px"><strong>Jika Anda Terlupa Menggunakannya</strong></p>
+    <p>Ambil dos yang tertinggal sebaik sahaja anda ingat, <strong>kecuali</strong> jika sudah hampir tiba masa untuk dos berikutnya. Dalam kes ini, langkau dos yang tertinggal dan sambung jadual biasa anda. Jangan ambil dos berganda untuk menggantikan dos yang tertinggal.</p>
+
+    <p style="margin-top:12px"><strong>Jika Anda Menggunakan Terlalu Banyak (Overdos)</strong></p>
+    <p>Gejala terlebih dos termasuk masalah perut dan usus serta kristal dalam air kencing. Hubungi doktor atau pergi ke hospital dengan segera. Bawa bungkusan ubat bersama anda.</p>
+  </div>
+
+  <!-- Bahagian 5 -->
+  <div class="ns at">
+    <h3>5. Semasa Anda Menggunakannya</h3>
+
+    <p><strong>Perkara Yang Perlu Anda Lakukan</strong></p>
+    <ul>
+      <li>Selesaikan keseluruhan kursus antibiotik seperti yang ditetapkan oleh doktor.</li>
+      <li>Beritahu doktor jika gejala anda tidak bertambah baik atau bertambah teruk selepas 3 hari.</li>
+      <li>Beritahu mana-mana doktor atau pakar lain yang merawat anda bahawa anda sedang mengambil antibiotik ini.</li>
+    </ul>
+
+    <p style="margin-top:12px"><strong>Perkara Yang Tidak Boleh Anda Lakukan</strong></p>
+    <ul>
+      <li>Jangan berkongsi ubat ini dengan orang lain, walaupun mereka mempunyai gejala yang sama.</li>
+      <li>Jangan gunakan untuk merawat jangkitan virus seperti selesema atau COVID-19.</li>
+      <li>Jangan berhenti mengambil ubat lebih awal tanpa nasihat doktor.</li>
+    </ul>
+
+    <p style="margin-top:12px"><strong>Perkara Yang Perlu Anda Berhati-Hati</strong></p>
+    <ul>
+      <li>Tindak balas alah yang teruk (anafilaksis) boleh berlaku walaupun jarang. Dapatkan rawatan kecemasan dengan segera jika anda mengalami sesak nafas, bengkak pada muka, bibir, atau kerongkong, atau ruam kulit yang teruk.</li>
+      <li>Cirit-birit yang teruk atau berterusan semasa atau selepas rawatan mungkin menandakan jangkitan Clostridioides difficile — beritahu doktor anda.</li>
+    </ul>
+  </div>
+
+  <!-- Bahagian 6 -->
+  <div class="ns ab">
+    <h3>6. Kesan Sampingan</h3>
+    <p>Seperti semua ubat, AMOKSISILIN boleh menyebabkan kesan sampingan, walaupun tidak semua orang mengalaminya.</p>
+
+    <p style="margin-top:10px"><strong>Sangat kerap</strong> (menjejaskan lebih daripada 1 dalam 10 pengguna):</p>
+    <ul><li>Cirit-birit</li></ul>
+
+    <p style="margin-top:8px"><strong>Kerap</strong> (menjejaskan 1 hingga 10 dalam 100 pengguna):</p>
+    <ul><li>Loya, muntah, ruam kulit</li></ul>
+
+    <p style="margin-top:8px"><strong>Tidak kerap</strong> (menjejaskan 1 hingga 10 dalam 1,000 pengguna):</p>
+    <ul><li>Gatal-gatal (urtikaria), pening</li></ul>
+
+    <p style="margin-top:8px"><strong>Jarang</strong> (menjejaskan 1 hingga 10 dalam 10,000 pengguna):</p>
+    <ul><li>Hiperaktiviti yang boleh pulih, kejang (sawan)</li></ul>
+
+    <p style="margin-top:8px"><strong>Tidak diketahui</strong> (kekerapan tidak dapat dianggarkan daripada data yang ada):</p>
+    <ul><li>Sindrom Stevens-Johnson, nekrolisis epidermal toksik, anafilaksis, jangkitan Clostridioides difficile</li></ul>
+
+    <div style="background:#f0f7ff;border:1px solid #bfdbfe;border-left:3px solid var(--accent);border-radius:var(--r);padding:10px 14px;margin-top:14px;font-size:.82rem;">
+      <p><strong>Pelaporan Kesan Sampingan</strong></p>
+      <p style="margin-top:4px">Anda boleh melaporkan apa-apa kesan sampingan atau tindak balas ubat yang tidak diingini terus kepada <strong>Pusat Kebangsaan untuk Pemantauan Tindak Balas Ubat Buruk</strong> dengan menghubungi Tel: <strong>03-78835490</strong>, atau melayari laman web <strong>npra.gov.my</strong> [Pengguna &rarr; Pelaporan Kesan Sampingan Ubat (ConSERF) atau Vaksin (AEFI)]. Dengan melaporkan kesan sampingan, anda membantu menyediakan lebih banyak maklumat mengenai keselamatan ubat ini.</p>
+    </div>
+  </div>
+
+  <!-- Bahagian 7 -->
+  <div class="ns ag">
+    <h3>7. Penyimpanan dan Pelupusan AMOKSISILIN</h3>
+
+    <p><strong>Penyimpanan</strong></p>
+    <ul>
+      <li>Simpan di bawah 25°C.</li>
+      <li>Jauhkan daripada cahaya dan lembapan. Simpan dalam pembungkusan asal.</li>
+      <li>Jauhkan daripada pandangan dan jangkauan kanak-kanak.</li>
+      <li>Jangan gunakan ubat ini selepas tarikh luput yang dinyatakan pada kotak/botol selepas "EXP". Tarikh luput merujuk kepada hari terakhir bulan tersebut.</li>
+    </ul>
+
+    <p style="margin-top:12px"><strong>Pelupusan</strong></p>
+    <ul>
+      <li>Jangan buang ubat melalui air kumbahan atau sisa domestik.</li>
+      <li>Tanya ahli farmasi anda cara membuang ubat yang tidak lagi diperlukan. Langkah-langkah ini akan membantu melindungi alam sekitar.</li>
+    </ul>
+  </div>
+
+  <!-- Bahagian 8 -->
+  <div class="ns">
+    <h3>8. Keterangan Produk</h3>
+
+    <p><strong>Rupabentuk Produk</strong></p>
+    <p>Kapsul keras saiz 0 dengan penutup dan badan berwarna putih legap, diisi dengan serbuk berwarna putih hingga putih keputihan. Tercetak "AMOX 500" pada badan kapsul.</p>
+
+    <p style="margin-top:12px"><strong>Bahan-Bahan</strong></p>
+    <p><em>Bahan Aktif:</em> amoksisilin trihidrat bersamaan dengan amoksisilin <strong>500 mg</strong></p>
+    <p><em>Bahan Tidak Aktif:</em> magnesium stearat, natrium kanji glikolat (Jenis A), silikon dioksida koloidal, gelatin (cangkang kapsul), titanium dioksida (E171)</p>
+
+    <div class="dg dg2" style="margin-top:12px">
+      <div class="di"><label>Nombor MAL</label><div class="v vm">MAL20260001X</div></div>
+      <div class="di"><label>Saiz Bungkusan</label><div class="v">21 kapsul (botol kaca), 24 kapsul (blister)</div></div>
+    </div>
+  </div>
+
+  <!-- Bahagian 9 -->
+  <div class="ns aam">
+    <h3>9. Pengilang</h3>
+    <p><strong>Regional Manufacturing Solutions Sdn Bhd</strong><br>
+    Lot 5, Jalan Industri 3/5,<br>
+    Taman Perindustrian Rawang,<br>
+    48000 Rawang, Selangor,<br>
+    Malaysia<br>
+    Tel: +60 3-6092 1234</p>
+  </div>
+
+  <!-- Bahagian 10 -->
+  <div class="ns at">
+    <h3>10. Pemegang Pendaftaran Produk</h3>
+    <p><strong>ASEAN Pharma (Malaysia) Sdn Bhd</strong><br>
+    Tingkat 12, Menara Pharma,<br>
+    No. 8, Jalan Ampang,<br>
+    50450 Kuala Lumpur,<br>
+    Malaysia<br>
+    Tel: +60 3-2161 4567<br>
+    E-mel: regulatory.my@aseanpharma.com</p>
+  </div>
+
+  <!-- Bahagian 11 -->
+  <div class="ns">
+    <h3>11. Tarikh Penyemakan</h3>
+    <div class="dg dg2" style="margin-top:10px">
+      <div class="di"><label>Tarikh Kelulusan Pertama</label><div class="v">15/01/2020</div></div>
+      <div class="di"><label>Tarikh Penyemakan Terkini</label><div class="v"><strong>15/01/2026</strong></div></div>
+    </div>
+  </div>
+
+  <!-- Bahagian 12 -->
+  <div class="ns">
+    <h3>12. Nombor Siri</h3>
+    <div class="dg dg2" style="margin-top:10px">
+      <div class="di"><label>Nombor Siri NPRA</label><div class="v vm">NPRA (Rx/8)0045832/20260019</div></div>
+      <div class="di"><label>Format</label><div class="v">NPRA (Rx/x)xxxxxx/xxxxx</div></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════ ORGANISASI ═══════════════ -->
+<div id="po" class="panel">
+  <div class="og">
+    <div class="oc" style="border-left:3px solid var(--accent)">
+      <div class="och">
+        <div class="role" style="color:var(--accent)">Pemegang Pendaftaran Produk (PRH)</div>
+        <div class="name">ASEAN Pharma (Malaysia) Sdn Bhd</div>
+      </div>
+      <div class="ocb">
+        <div class="or"><span class="ol">Identifier</span><span class="ov ovm">ORG-ASEANPHARMA-MYS-001 (OMS)</span></div>
+        <div class="or"><span class="ol">Jenis</span><span class="ov"><span class="chip ch-b">PRH / MAH</span></span></div>
+        <div class="or"><span class="ol">Alamat</span><span class="ov">Tingkat 12, Menara Pharma, No. 8, Jalan Ampang, 50450 Kuala Lumpur</span></div>
+        <div class="or"><span class="ol">Negara</span><span class="ov">Malaysia &#127474;&#127486;</span></div>
+        <div class="or"><span class="ol">E-mel</span><span class="ov">regulatory.my@aseanpharma.com</span></div>
+        <div class="or"><span class="ol">Tel</span><span class="ov">+60 3-2161 4567</span></div>
+      </div>
+    </div>
+    <div class="oc" style="border-left:3px solid var(--green)">
+      <div class="och">
+        <div class="role" style="color:var(--green)">Pengilang</div>
+        <div class="name">Regional Manufacturing Solutions Sdn Bhd</div>
+      </div>
+      <div class="ocb">
+        <div class="or"><span class="ol">Identifier</span><span class="ov ovm">ORG-RMS-MYS-002 (OMS)</span></div>
+        <div class="or"><span class="ol">Jenis</span><span class="ov"><span class="chip ch-t">Pengilang</span></span></div>
+        <div class="or"><span class="ol">Alamat</span><span class="ov">Lot 5, Jalan Industri 3/5, Taman Perindustrian Rawang, 48000 Rawang, Selangor</span></div>
+        <div class="or"><span class="ol">Negara</span><span class="ov">Malaysia &#127474;&#127486;</span></div>
+        <div class="or"><span class="ol">Tel</span><span class="ov">+60 3-6092 1234</span></div>
+      </div>
+    </div>
+  </div>
+  <p class="onote">Data organisasi bersumber daripada sistem identifier OMS (Organisation Management Service).</p>
+</div>
+
+<!-- ═══════════════ BUTIRAN PRODUK ═══════════════ -->
+<div id="pp" class="panel">
+  <div class="ps-row">
+    <span>1 Produk Perubatan &middot; 2 Konfigurasi Pembungkusan</span>
+    <input class="pf" type="text" placeholder="Tapis mengikut bahan atau kekuatan&#8230;" />
+  </div>
+
+  <defs><radialGradient id="cg2" cx="40%" cy="35%" r="55%"><stop offset="0%" stop-color="#fff" /><stop offset="100%" stop-color="#e0e9f5" /></radialGradient></defs>
+
+  <details class="pa" open="open">
+    <summary class="pah">
+      <span class="pnum">1</span>
+      <span class="pname">Amoksisilin 500 mg Kapsul</span><span class="psub">Amoksisilin trihidrat</span>
+      <div class="pbadges"><span class="chip ch-g">Aktif</span><span class="chip ch-gr">Oral &middot; Kapsul Keras</span></div>
+      <span class="pchev">&#9660;</span>
+    </summary>
+    <div class="pc">
+
+      <div class="is"><div class="isl">Bahan &amp; Bentuk</div><div class="isb"><div class="ifs">
+        <div class="inf"><span class="il">Bahan Aktif</span><span class="iv">Amoksisilin</span></div>
+        <div class="inf"><span class="il">Garam / Asas</span><span class="iv">Trihidrat</span></div>
+        <div class="inf"><span class="il">Kekuatan</span><span class="iv">500 mg</span></div>
+        <div class="inf"><span class="il">Bentuk Dos</span><span class="iv">Kapsul Keras</span></div>
+        <div class="inf"><span class="il">Laluan</span><span class="iv">Oral</span></div>
+        <div class="inf"><span class="il">Kod ATC</span><span class="iv">J01CA04</span></div>
+      </div></div></div>
+
+      <div class="is"><div class="isl">Bahan Tidak Aktif (Eksipien)</div><div class="isb"><div class="ec">
+        <div class="ei">Magnesium stearat</div><div class="ei">Silikon dioksida koloidal</div>
+        <div class="ei">Natrium kanji glikolat (Jenis A)</div><div class="ei">Gelatin (cangkang kapsul)</div>
+        <div class="ei">Titanium dioksida E171 (cangkang kapsul)</div><div class="ei"></div>
+      </div></div></div>
+
+      <div class="is"><div class="isl">Rupabentuk Fizikal</div><div class="isb"><div class="ap-in">
+        <div class="ap-data">
+          <div class="apf"><span class="al">Warna</span><span class="av">Putih / Putih</span></div>
+          <div class="apf"><span class="al">Bentuk</span><span class="av">Kapsul (Saiz 0)</span></div>
+          <div class="apf"><span class="al">Cetakan</span><span class="av">AMOX 500</span></div>
+          <div class="apf"><span class="al">Isi</span><span class="av">Serbuk putih</span></div>
+        </div>
+        <div class="tab-svgs">
+          <figure class="tab-fig">
+            <svg width="80" height="40" viewBox="0 0 80 40">
+              <rect x="1" y="8" width="78" height="24" rx="12" fill="url(#cg2)" stroke="#d1d5db" stroke-width="1.2"/>
+              <line x1="40" y1="8" x2="40" y2="32" stroke="#d1d5db" stroke-width="1" stroke-dasharray="2,2"/>
+            </svg>
+            <figcaption>Kapsul</figcaption>
+          </figure>
+        </div>
+      </div></div></div>
+
+      <div class="is"><div class="isl">Pembungkusan (2)</div><div class="isb"><div class="pkgs">
+        <div class="pkg">
+          <div class="pkg-row">
+            <div class="pki">
+              <div class="pn">Botol Kaca Kuning Pekat — 21 Kapsul</div>
+              <div class="pt" style="font-family:ui-monospace,'SF Mono',monospace;font-size:10px;margin-bottom:10px;">GTIN: 09501234560021 &nbsp;|&nbsp; SKU: AMX500-BTL-21-MY</div>
+              <div class="pkt">
+                <span class="chip ch-g">Aktif</span>
+                <span class="chip ch-gr" style="border-radius:4px;">Bil: 21</span>
+                <span class="chip ch-gr" style="border-radius:4px;font-weight:normal;">Bekas: Botol Kaca (Jenis III)</span>
+                <span class="chip ch-gr" style="border-radius:4px;font-weight:normal;">Penutup: Skru aluminium</span>
+              </div>
+            </div>
+            <figure class="pka"><div class="pka-box">
+              <svg width="40" height="38" viewBox="0 0 40 38">
+                <rect x="10" y="1" width="20" height="36" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+                <ellipse cx="20" cy="14" rx="9" ry="4" fill="#bfdbfe" opacity="0.6"/>
+                <rect x="14" y="29" width="12" height="4" rx="2" fill="#bfdbfe"/>
+              </svg>
+            </div><figcaption>Botol</figcaption></figure>
+          </div>
+        </div>
+        <div class="pkg">
+          <div class="pkg-row">
+            <div class="pki">
+              <div class="pn">Kotak Blister — 24 Kapsul (2 &times; 12)</div>
+              <div class="pt" style="font-family:ui-monospace,'SF Mono',monospace;font-size:10px;margin-bottom:10px;">GTIN: 09501234560024 &nbsp;|&nbsp; SKU: AMX500-BLI-24-MY</div>
+              <div class="pkt">
+                <span class="chip ch-g">Aktif</span>
+                <span class="chip ch-gr" style="border-radius:4px;">Bil: 24 (2 &times; 12)</span>
+                <span class="chip ch-gr" style="border-radius:4px;font-weight:normal;">Luar: Kotak Kadbod</span>
+                <span class="chip ch-gr" style="border-radius:4px;font-weight:normal;">Dalam: Blister PVC/Aluminium</span>
+              </div>
+            </div>
+            <figure class="pka"><div class="pka-box">
+              <svg width="44" height="32" viewBox="0 0 44 32">
+                <rect x="1" y="1" width="42" height="30" rx="3" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+                <rect x="5" y="5" width="34" height="9" rx="2" fill="#bbf7d0"/>
+                <text x="22" y="27" font-size="5" font-family="Arial" text-anchor="middle" fill="#6b7280">24 kapsul</text>
+              </svg>
+            </div><figcaption>Blister</figcaption></figure>
+          </div>
+        </div>
+      </div></div></div>
+
+      <div class="is" style="border-left:3px solid var(--green)">
+        <div class="isl" style="padding-bottom:6px;color:var(--green)">Jangka Hayat &amp; Syarat Penyimpanan</div>
+        <div style="padding:8px 14px 4px;display:flex;align-items:center;gap:10px">
+          <span class="shelf-pill"><span>&#128197;</span><span class="shelf-n">24</span><span style="font-size:.75rem;font-weight:600">bulan</span></span>
+          <span style="font-size:.8rem;color:var(--muted)">Jangka hayat produk perubatan yang telah dibungkus untuk dijual</span>
+        </div>
+        <div style="font-size:9px;color:var(--faint);padding:2px 14px 8px">
+          Sumber: <code style="font-family:ui-monospace,'SF Mono',monospace;font-size:9px;background:var(--sf2);padding:1px 4px;border-radius:3px">PackagedProductDefinition.shelfLifeStorage.period</code>
+        </div>
+        <div class="storage-grid">
+          <div class="storage-item"><span class="storage-icon">&#127777;</span><div class="storage-text"><div class="sl">Suhu</div><div class="sv">Simpan di bawah 25°C</div><div class="sd">Jangan sejukbekukan</div></div></div>
+          <div class="storage-item"><span class="storage-icon">&#128167;</span><div class="storage-text"><div class="sl">Kelembapan</div><div class="sv">Jauhkan daripada lembapan</div><div class="sd">Simpan dalam pembungkusan asal</div></div></div>
+          <div class="storage-item"><span class="storage-icon">&#9728;</span><div class="storage-text"><div class="sl">Cahaya</div><div class="sv">Lindungi daripada cahaya</div><div class="sd">Gunakan botol kaca kuning atau simpan dalam kotak</div></div></div>
+          <div class="storage-item"><span class="storage-icon">&#128100;</span><div class="storage-text"><div class="sl">Keselamatan</div><div class="sv">Jauhkan daripada kanak-kanak</div></div></div>
+        </div>
+        <div class="storage-src">Sumber FHIR: <code>PackagedProductDefinition.shelfLifeStorage</code> &rarr; jenis (<code>ShelfLifeType</code>) + syarat penyimpanan (<code>specialPrecautionsForStorage</code>)</div>
+      </div>
+
+      <div class="is"><div class="isl">Kebenaran Pasaran</div><div class="isb"><div class="mag">
+        <div class="mai"><div class="ml">Pemegang (PRH)</div><div class="mv">ASEAN Pharma (Malaysia) Sdn Bhd</div></div>
+        <div class="mai"><div class="ml">Nombor MAL</div><div class="mv mvm">MAL20260001X</div></div>
+        <div class="mai"><div class="ml">Bidang Kuasa</div><div class="mv">Malaysia &#127474;&#127486;</div></div>
+      </div></div></div>
+
+    </div>
+  </details>
+</div>
+
+<!-- ═══════════════ BUTIRAN KLINIKAL ═══════════════ -->
+<div id="pcl" class="panel">
+
+  <div class="csum">
+    <div class="cscard ci"><div><div class="csn" style="color:var(--accent)">4</div><div class="csl">Indikasi</div></div><div class="csi">&#127919;</div></div>
+    <div class="cscard cc"><div><div class="csn" style="color:var(--rose)">2</div><div class="csl">Kontraindikasi</div></div><div class="csi">&#9940;</div></div>
+    <div class="cscard cx"><div><div class="csn" style="color:var(--amber)">3</div><div class="csl">Interaksi</div></div><div class="csi">&#9889;</div></div>
+    <div class="cscard cu"><div><div class="csn" style="color:var(--purple)">9</div><div class="csl">Kesan Sampingan</div></div><div class="csi">&#128137;</div></div>
+    <div class="cscard cw"><div><div class="csn" style="color:#ea580c">3</div><div class="csl">Amaran</div></div><div class="csi">&#9888;</div></div>
+    <div class="cscard cd"><div><div class="csn" style="color:var(--teal)">2</div><div class="csl">Rejimen Dos</div></div><div class="csi">&#128138;</div></div>
+  </div>
+
+  <!-- Indikasi -->
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#127919;</span><span class="clstitle">Indikasi (Bahagian 1)</span><span class="clscount">4</span></div>
+    <div class="clsb">
+      <table class="ctbl">
+        <thead><tr><th>Indikasi</th><th>Populasi</th><th>Kod ICD-11</th></tr></thead>
+        <tbody>
+          <tr><td>Sinusitis bakteria akut</td><td>Dewasa &amp; kanak-kanak &ge;2 tahun</td><td>CA0Z</td></tr>
+          <tr><td>Otitis media akut</td><td>Dewasa &amp; kanak-kanak &ge;2 bulan</td><td>AA40</td></tr>
+          <tr><td>Pneumonia komuniti (CAP)</td><td>Dewasa &amp; kanak-kanak &ge;3 bulan</td><td>CA40.0Z</td></tr>
+          <tr><td>Jangkitan saluran kencing tidak rumit</td><td>Dewasa &amp; kanak-kanak &ge;3 bulan</td><td>GC08.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Kontraindikasi -->
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#9940;</span><span class="clstitle">Kontraindikasi (Bahagian 3)</span><span class="clscount">2</span></div>
+    <div class="clsb">
+      <div class="cxrow"><span class="cxicon">&#8856;</span><span>Alah kepada amoksisilin, mana-mana penisilin, atau mana-mana bahan kandungan ubat ini (Bahagian 8).</span></div>
+      <div class="cxrow"><span class="cxicon">&#8856;</span><span>Tindak balas alah teruk terdahulu (contoh: anafilaksis) terhadap antibiotik beta-laktam yang lain (sefalosporin, karbapenem, atau monobaktam).</span></div>
+    </div>
+  </div>
+
+  <!-- Interaksi -->
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#9889;</span><span class="clstitle">Interaksi Ubat (Bahagian 3 — Penggunaan Bersama Ubat Lain)</span><span class="clscount">3</span></div>
+    <div class="clsb">
+      <table class="ctbl">
+        <thead><tr><th>Bahan Berinteraksi</th><th>Mekanisme</th><th>Keparahan</th><th>Kesan Klinikal</th></tr></thead>
+        <tbody>
+          <tr><td>Probenesid</td><td>Farmakokinetik — pengurangan perkumuhan tubul buah pinggang</td><td><span class="sev-m">Sederhana</span></td><td>Paras amoksisilin dalam darah meningkat dan berpanjangan</td></tr>
+          <tr><td>Metotreksat</td><td>Farmakokinetik — pengurangan perkumuhan buah pinggang</td><td><span class="sev-h">Tinggi</span></td><td>Paras metotreksat meningkat; risiko keracunan — pantau dengan teliti</td></tr>
+          <tr><td>Warfarin / antikoagulan oral</td><td>Farmakodinamik — perubahan flora usus / vitamin K</td><td><span class="sev-m">Sederhana</span></td><td>Pemanjangan masa protrombin yang jarang berlaku; pantau INR</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Kesan Sampingan -->
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#128137;</span><span class="clstitle">Kesan Sampingan (Bahagian 6)</span><span class="clscount">9</span></div>
+    <div class="clsb">
+      <div class="soc"><div class="soc-hdr">Gangguan gastrousus</div>
+        <div class="soc-item"><span class="si-name">Cirit-birit</span><span class="si-freq">Sangat kerap (&ge;1/10)</span></div>
+        <div class="soc-item"><span class="si-name">Loya</span><span class="si-freq">Kerap (&ge;1/100)</span></div>
+        <div class="soc-item"><span class="si-name">Muntah</span><span class="si-freq">Kerap (&ge;1/100)</span></div>
+      </div>
+      <div class="soc"><div class="soc-hdr">Gangguan kulit dan tisu subkutaneus</div>
+        <div class="soc-item"><span class="si-name">Ruam kulit (makulopapular)</span><span class="si-freq">Kerap (&ge;1/100)</span></div>
+        <div class="soc-item"><span class="si-name">Gatal-gatal (urtikaria)</span><span class="si-freq">Tidak kerap (&ge;1/1,000)</span></div>
+        <div class="soc-item"><span class="si-name">Sindrom Stevens-Johnson</span><span class="si-freq">Tidak diketahui</span></div>
+      </div>
+      <div class="soc"><div class="soc-hdr">Gangguan sistem saraf</div>
+        <div class="soc-item"><span class="si-name">Pening</span><span class="si-freq">Tidak kerap (&ge;1/1,000)</span></div>
+        <div class="soc-item"><span class="si-name">Hiperaktiviti yang boleh pulih</span><span class="si-freq">Jarang (&ge;1/10,000)</span></div>
+        <div class="soc-item"><span class="si-name">Kejang (sawan)</span><span class="si-freq">Jarang (&ge;1/10,000)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Amaran -->
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#9888;</span><span class="clstitle">Amaran &amp; Langkah Berjaga-Jaga (Bahagian 3 &amp; 5)</span><span class="clscount">3</span></div>
+    <div class="clsb">
+      <div class="wbox"><span class="wicon">&#9650;</span><span><strong>Alah / Anafilaksis:</strong> Tindak balas alah yang teruk dan kadangkala membawa maut telah dilaporkan. Sebelum memulakan terapi, tanya pesakit tentang riwayat alah terhadap penisilin, sefalosporin atau alergen lain. Jika tindak balas alah berlaku, hentikan amoksisilin dan berikan rawatan segera.</span></div>
+      <div class="wbox"><span class="wicon">&#9650;</span><span><strong>Masalah Buah Pinggang:</strong> Pengurangan dos diperlukan bagi pesakit dengan gangguan buah pinggang yang teruk (eGFR &lt;30 mL/min/1.73 m&sup2;). Pengumpulan amoksisilin boleh menyebabkan toksisiti CNS termasuk sawan.</span></div>
+      <div class="wbox"><span class="wicon">&#9650;</span><span><strong>Cirit-Birit Berkaitan Clostridioides difficile (CDAD):</strong> CDAD telah dilaporkan dengan penggunaan hampir semua antibiotik dan boleh berkisar dari cirit-birit ringan hingga kolitis yang membawa maut. Hentikan amoksisilin jika CDAD disyaki atau disahkan.</span></div>
+    </div>
+  </div>
+
+  <!-- Rejimen Dos -->
+  <div class="cls" style="border-left:3px solid var(--teal)">
+    <div class="clsh">
+      <span class="clsicon">&#128138;</span>
+      <span class="clstitle">Rejimen Dos (Bahagian 4)</span>
+      <span class="clscount">2</span><span class="chip ch-mk" style="margin-left:6px;font-size:9px">MedicationKnowledge</span>
+    </div>
+    <div class="clsb">
+      <input type="radio" name="drtabs" id="dr-adult" class="dr-trd" checked>
+      <input type="radio" name="drtabs" id="dr-ped"   class="dr-trd">
+      <div class="dr-tabs">
+        <label class="dr-tb" for="dr-adult">Dewasa &amp; Remaja (&ge;18 tahun)</label>
+        <label class="dr-tb" for="dr-ped">Kanak-Kanak (3 bulan – 17 tahun)</label>
+      </div>
+
+      <div class="dr-panel dr-panel-adult">
+        <div class="dose-card">
+          <div class="dose-card-hdr"><span class="d-pop">Dewasa &amp; Remaja (&ge;18 tahun)</span><span class="dose-badge">Standard</span></div>
+          <div class="dose-body">
+            <div class="dose-row"><span class="dose-label">Dos tunggal</span><span class="dose-value">500 mg</span></div>
+            <div class="dose-row"><span class="dose-label">Selang dos</span><span class="dose-value">Setiap 8 jam (tiga kali sehari)</span></div>
+            <div class="dose-row"><span class="dose-label">Tempoh</span><span class="dose-value">5–10 hari bergantung kepada jenis jangkitan</span></div>
+            <div class="dose-row"><span class="dose-label">Jangkitan teruk</span><span class="dose-value">1,000 mg tiga kali sehari</span></div>
+            <div class="dose-row"><span class="dose-label">Laluan</span><span class="dose-value">Oral</span></div>
+            <div class="dose-row"><span class="dose-label">Pengambilan</span><span class="dose-value">Boleh diambil bersama atau tanpa makanan; telan dengan air yang cukup</span></div>
+            <div class="timing-strip">
+              <span class="timing-pill">&#128197; Pagi</span>
+              <span class="timing-pill">&#127752; Tengahari</span>
+              <span class="timing-pill">&#127761; Malam</span>
+              <span class="timing-pill max">&#9888; Lengkapkan kursus penuh</span>
+            </div>
+          </div>
+        </div>
+        <div class="mk-src">Sumber FHIR: <code>MedicationKnowledge/mk-amoksisilin-500mg</code> &rarr; <code>dosingGuideline[0].dosage[0]</code> (patientCharacteristic: umur &ge;18thn)</div>
+      </div>
+
+      <div class="dr-panel dr-panel-ped">
+        <div class="dose-card">
+          <div class="dose-card-hdr"><span class="d-pop">Kanak-Kanak &amp; Remaja (3 bulan – 17 tahun)</span><span class="dose-badge weight">Berasaskan Berat Badan</span></div>
+          <div class="dose-body">
+            <div class="dose-row"><span class="dose-label">Dos tunggal</span><span class="dose-value">25 mg/kg/hari dibahagi setiap 8 jam</span></div>
+            <div class="dose-row"><span class="dose-label">Dos tunggal maksimum</span><span class="dose-value">500 mg</span></div>
+            <div class="dose-row"><span class="dose-label">Dos harian maksimum</span><span class="dose-value">1,500 mg/hari (dos dewasa)</span></div>
+            <div class="dose-row"><span class="dose-label">Jangkitan teruk</span><span class="dose-value">40–45 mg/kg/hari dalam 3 dos terbahagi</span></div>
+            <div class="dose-row"><span class="dose-label">Laluan</span><span class="dose-value">Oral (ampaian disyorkan bagi &lt;6 tahun)</span></div>
+          </div>
+        </div>
+        <div class="dose-card" style="margin-top:8px">
+          <div class="dose-card-hdr"><span class="d-pop">Bayi (3 – 24 bulan)</span><span class="dose-badge weight">Berasaskan Berat Badan</span></div>
+          <div class="dose-body">
+            <div class="dose-row"><span class="dose-label">Dos</span><span class="dose-value">20–30 mg/kg/hari dalam 3 dos terbahagi</span></div>
+            <div class="dose-row"><span class="dose-label">Dos tunggal maksimum</span><span class="dose-value">125 mg</span></div>
+            <div class="dose-row"><span class="dose-label">Formulasi</span><span class="dose-value">Ampaian oral disyorkan</span></div>
+          </div>
+        </div>
+        <div class="mk-src">Sumber FHIR: <code>MedicationKnowledge/mk-amoksisilin-500mg</code> &rarr; <code>dosingGuideline[1].dosage[0]</code> (patientCharacteristic: umur 3bln–17thn)</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

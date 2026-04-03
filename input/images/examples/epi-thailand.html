@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>อะม็อกซีซิลลิน 500 มก. แคปซูล — แม่แบบประเทศไทย (ASEAN ePI IG)</title>
+  <meta name="description" content="ตัวอย่าง ePI FHIR R5 โดยใช้รูปแบบเอกสารกำกับยาสำหรับผู้ป่วยของประเทศไทย — Appendix 1 ASEAN eMedicinal Product Information IG" />
+  <link rel="stylesheet" href="../epi-styles.css" />
+  <style>
+    #t-d:checked  ~ .tabnav .tb[for="t-d"],
+    #t-c:checked  ~ .tabnav .tb[for="t-c"],
+    #t-o:checked  ~ .tabnav .tb[for="t-o"],
+    #t-p:checked  ~ .tabnav .tb[for="t-p"],
+    #t-cl:checked ~ .tabnav .tb[for="t-cl"] { color: var(--text); font-weight: 600; border-bottom-color: var(--accent); }
+    #t-d:checked  ~ #pd,
+    #t-c:checked  ~ #pc,
+    #t-o:checked  ~ #po,
+    #t-p:checked  ~ #pp,
+    #t-cl:checked ~ #pcl { display: block; }
+  </style>
+</head>
+<body>
+<!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+
+<div class="crumb">
+  <span class="ig">ASEAN eMedicinal Product Information IG</span>
+  <span class="sep">&#8250;</span><span>Appendix 1 Templates</span>
+  <span class="sep">&#8250;</span><span>แม่แบบประเทศไทย (Thailand)</span>
+  <span class="badge">HL7 FHIR R5</span>
+</div>
+
+<div class="notice-bar">
+  <span class="notice-icon">&#127481;&#127469;</span>
+  <span><strong>แม่แบบประเทศไทย</strong> &mdash; หัวข้อส่วนต่างๆ จัดทำขึ้นตามรูปแบบเอกสารกำกับยาสำหรับผู้ป่วยของประเทศไทย (Thai Patient Information Leaflet) ตามที่กำหนดในภาคผนวก 1 ของคู่มือ ASEAN ePI ตัวอย่างนี้ใช้ข้อมูลจำลองเพื่อการแสดงผลเท่านั้น</span>
+</div>
+
+<header class="hero">
+  <h1>อะม็อกซีซิลลิน 500 มก. แคปซูล (Amoxicillin)</h1>
+  <p class="sub">เอกสารกำกับยาสำหรับผู้ป่วย (Patient Information Leaflet) — แม่แบบประเทศไทย</p>
+  <div class="chips">
+    <span class="chip ch-g">&#9679; ใช้งานอยู่ (Active)</span>
+    <span class="chip ch-gr">เวอร์ชัน 1.0</span>
+    <span class="chip ch-gr">TH</span>
+    <span class="chip ch-b">แม่แบบประเทศไทย</span>
+    <span class="chip ch-b">ePI Type 3</span>
+    <span class="chip ch-am">&#127481;&#127469; ประเทศไทย</span>
+    <span class="chip ch-dk">ยาอันตราย (Prescription Only)</span>
+  </div>
+</header>
+
+<input type="radio" name="tabs" id="t-d" class="trd" checked>
+<input type="radio" name="tabs" id="t-c" class="trd">
+<input type="radio" name="tabs" id="t-o" class="trd">
+<input type="radio" name="tabs" id="t-p" class="trd">
+<input type="radio" name="tabs" id="t-cl" class="trd">
+
+<nav class="tabnav">
+  <div class="tabnav-inner">
+    <label class="tb" for="t-d">ข้อมูลเอกสาร</label>
+    <label class="tb" for="t-c">เอกสารกำกับยา</label>
+    <label class="tb" for="t-o">องค์กร</label>
+    <label class="tb" for="t-p">รายละเอียดผลิตภัณฑ์</label>
+    <label class="tb" for="t-cl">ข้อมูลทางคลินิก</label>
+  </div>
+</nav>
+
+<!-- ═══════════════ DOCUMENT (ข้อมูลเอกสาร) ═══════════════ -->
+<div id="pd" class="panel">
+  <div class="sc ab">
+    <div class="sc-lbl">อภิข้อมูลชุดข้อมูล (Bundle Metadata)</div>
+    <div class="sc-body">
+      <div class="dg dg4" style="margin-bottom:12px">
+        <div class="di"><label>รหัสทรัพยากร</label><div class="v vm">urn:uuid:b2c3d4e5-f6a7&#8230;</div></div>
+        <div class="di"><label>สถานะ</label><div class="v"><span class="chip ch-g">active</span></div></div>
+        <div class="di"><label>เวอร์ชัน</label><div class="v">1.0</div></div>
+        <div class="di"><label>วันที่</label><div class="v">2026-01-15</div></div>
+      </div>
+      <div class="dg dg4">
+        <div class="di"><label>ภาษา</label><div class="v">TH (th)</div></div>
+        <div class="di"><label>เขตอำนาจศาล</label><div class="v">ประเทศไทย &#127481;&#127469;</div></div>
+        <div class="di"><label>ผู้จัดทำเอกสาร</label><div class="v">บริษัท อาเซียน ฟาร์มา (ประเทศไทย) จำกัด</div></div>
+        <div class="di"><label>หน่วยงานตรวจสอบ</label><div class="v">อย. ประเทศไทย (Thai FDA)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc at">
+    <div class="sc-lbl">อภิข้อมูลส่วนประกอบ (Composition Metadata)</div>
+    <div class="sc-body">
+      <div class="dg dg3" style="margin-bottom:12px">
+        <div class="di"><label>รหัสอ้างอิง</label><div class="v vm">urn:uuid:e8f9a0b1-c2d3&#8230;</div></div>
+        <div class="di"><label>ชื่อเอกสาร</label><div class="v">เอกสารกำกับยาสำหรับผู้ป่วย อะม็อกซีซิลลิน 500 มก.</div></div>
+        <div class="di"><label>ประเภท</label><div class="v"><span class="chip ch-am">PIL / เอกสารกำกับยา</span></div></div>
+      </div>
+      <div class="dg dg4">
+        <div class="di"><label>สถานะ</label><div class="v"><span class="chip ch-g">active</span></div></div>
+        <div class="di"><label>เวอร์ชัน</label><div class="v">1.0</div></div>
+        <div class="di"><label>ภาษา</label><div class="v">TH (th)</div></div>
+        <div class="di"><label>แม่แบบ</label><div class="v">Thailand Template (Appendix 1)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sc aam">
+    <div class="sc-lbl">หัวข้อเอกสารกำกับยาแม่แบบประเทศไทย (Appendix 1)</div>
+    <div class="sc-body">
+      <p style="font-size:.82rem;color:var(--muted);margin-bottom:10px">
+        การจัดโครงสร้างเอกสารนี้อ้างอิงหัวข้อจาก <strong>แม่แบบประเทศไทย</strong> ในภาคผนวก 1 ของคู่มือ ASEAN ePI
+      </p>
+      <div class="dg dg2" style="gap:6px;font-size:.8rem;">
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>1.</strong> ยานี้คือยาอะไร</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>2.</strong> สิ่งที่ควรทราบก่อนใช้ยานี้</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>3.</strong> วิธีใช้ยานี้</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>4.</strong> ข้อควรปฏิบัติระหว่างใช้ยานี้</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>5.</strong> อันตรายที่อาจเกิดขึ้นจากการใช้ยา</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>6.</strong> วิธีเก็บรักษายานี้</div>
+        <div style="padding:5px 8px;border:1px solid var(--bd);border-radius:var(--r);"><strong>7.</strong> ลักษณะของยานี้และส่วนประกอบ</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ COMPOSITION (เอกสารกำกับยา) ═══════════════ -->
+<div id="pc" class="panel">
+
+  <!-- TOC box -->
+  <div class="sc aam" style="margin-bottom:18px">
+    <div class="sc-lbl">อะม็อกซีซิลลิน 500 มก. แคปซูลแข็ง (Amoxicillin trihydrate)</div>
+    <div class="sc-body">
+      <p style="font-size:.82rem;font-weight:600;margin-bottom:8px">สารบัญ</p>
+      <div class="dg dg2" style="gap:4px;font-size:.8rem;color:var(--muted)">
+        <div>1. ยานี้คือยาอะไร</div>
+        <div>2. สิ่งที่ควรทราบก่อนใช้ยานี้</div>
+        <div>3. วิธีใช้ยานี้</div>
+        <div>4. ข้อควรปฏิบัติระหว่างใช้ยานี้</div>
+        <div>5. อันตรายที่อาจเกิดขึ้นจากการใช้ยา</div>
+        <div>6. วิธีเก็บรักษายานี้</div>
+        <div>7. ลักษณะของยานี้และส่วนประกอบ</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bahagian 1 -->
+  <div class="ns ab">
+    <h3>1. ยานี้คือยาอะไร (What is this drug)</h3>
+    <p><strong>1.1 ชื่อยา (What is the name of this drug)</strong></p>
+    <p>ยาอะม็อกซีซิลลิน 500 มิลลิกรัม ชนิดแคปซูล (Amoxicillin 500 mg capsules)</p>
+    
+    <p style="margin-top:12px"><strong>1.2 ยานี้ใช้สำหรับอะไร (What is this drug use for)</strong></p>
+    <p>ยานี้เป็นยาปฏิชีวนะกลุ่มเพนิซิลลิน ใช้เพื่อรักษาโรคติดเชื้อแบคทีเรีย ยานี้มีกลไกในการฆ่าเชื้อแบคทีเรียที่เป็นสาเหตุของการติดเชื้อ ยานี้ใช้สำหรับรักษา:</p>
+    <ul>
+      <li>การติดเชื้อในระบบทางเดินหายใจส่วนบน (เช่น ทอนซิลอักเสบ ไซนัสอักเสบ หูชั้นกลางอักเสบ)</li>
+      <li>การติดเชื้อในระบบทางเดินหายใจส่วนล่าง (เช่น ปอดอักเสบชุมชน)</li>
+      <li>การติดเชื้อที่ผิวหนังและเนื้อเยื่ออ่อน</li>
+      <li>การติดเชื้อในทางเดินปัสสาวะ</li>
+    </ul>
+    <p><strong>โปรดทราบ:</strong> ยานี้ไม่สามารถใช้รักษาโรคติดเชื้อไวรัส เช่น ไข้หวัดทั่วไป หรือ โควิด-19</p>
+  </div>
+
+  <!-- Bahagian 2 -->
+  <div class="ns at">
+    <h3>2. สิ่งที่ควรทราบก่อนใช้ยานี้ (What you should know before use this drug)</h3>
+    
+    <p><strong>2.1 ห้ามใช้ยานี้เมื่อใด (When do not use this drug)</strong></p>
+    <ul>
+      <li>ผู้ที่มีประวัติแพ้ยาอะม็อกซีซิลลิน หรือยาปฏิชีวนะในกลุ่มเพนิซิลลิน (Penicillins) ตัวอื่นๆ</li>
+      <li>ผู้ที่มีประวัติแพ้ยาปฏิชีวนะกลุ่มเบตา-แลคแตมอื่นๆ อย่างรุนแรง (เช่น เซฟาโลสปอริน หรือ คาร์บาพีเนม)</li>
+    </ul>
+
+    <p style="margin-top:12px"><strong>2.2 คำเตือนและข้อควรระวัง (Warnings and precautions)</strong></p>
+    <p>แจ้งให้แพทย์หรือเภสัชกรทราบก่อนใช้ยานี้ หากคุณ:</p>
+    <ul>
+      <li>มีโรคไตทำงานบกพร่อง อาจต้องปรับลดขนาดยา และเพื่อป้องกันผลข้างเคียงต่อระบบประสาท (ชัก)</li>
+      <li>มีประวัติเป็นโรคหอบหืด หรือโรคภูมิแพ้รุนแรง</li>
+      <li>มีไข้ต่อมน้ำเหลืองโต (Infectious mononucleosis) อาจทำให้เกิดผื่นแดงตามตัวได้</li>
+      <li>กำลังตั้งครรภ์ วางแผนจะตั้งครรภ์ หรือกำลังให้นมบุตร</li>
+    </ul>
+    <p><strong>การใช้ยาร่วมกับยาอื่น:</strong> ยานี้อาจมีผลตีกันกับยาบางชนิดได้แก่ ยาเก๊าท์ (โพรเบเนซิด), ยารักษาข้ออักเสบ/มะเร็ง (เมโธเทรกเซท), ยาต้านการแข็งตัวของเลือด (วาร์ฟาริน) และยาคุมกำเนิด (อาจทำให้ประสิทธิภาพยาคุมลดลง ควรใช้วิธีคุมกำเนิดอื่นๆ ร่วมด้วย)</p>
+  </div>
+
+  <!-- Bahagian 3 -->
+  <div class="ns ap">
+    <h3>3. วิธีใช้ยานี้ (How to use this drug)</h3>
+
+    <p><strong>3.1 ขนาดยาและวิธีบริหารยา (Dose and administration)</strong></p>
+    <p>ใช้ยานี้ตามที่แพทย์หรือเภสัชกรสั่งอย่างเคร่งครัด หากไม่แน่ใจให้สอบถามแพทย์หรือเภสัชกรของคุณ</p>
+    <p><em>สำหรับผู้ใหญ่และเด็กอายุตั้งแต่ 18 ปีขึ้นไป:</em><br>
+    รับประทานครั้งละ 1 แคปซูล (500 มก.) วันละ 3 เวลา ทุกๆ 8 ชั่วโมง สำหรับการติดเชื้อที่รุนแรง อาจปรับเพิ่มเป็น 1,000 มก. วันละ 3 เวลา ตามดุลยพินิจของแพทย์</p>
+    <p>วิธีการรับประทาน: สามารถรับประทานก่อน หรือหลังอาหารก็ได้ กลืนยาทั้งแคปซูลพร้อมน้ำ 1 แก้ว</p>
+
+    <p style="margin-top:12px"><strong>3.2 หากลืมใช้ยานี้ (If you forget to take this drug)</strong></p>
+    <p>หากลืมรับประทานยา ให้รับประทานทันทีที่นึกได้ แต่ถ้านึกได้ในเวลาที่ใกล้เคียงกับมื้อต่อไป ให้ข้ามยามื้อที่ลืมไป แล้วรับประทานมื้อต่อไปในขนาดปกติ <strong>ห้ามรับประทานยาเป็น 2 เท่าเพื่อชดเชยมื้อที่ลืม</strong></p>
+
+    <p style="margin-top:12px"><strong>3.3 หากใช้ยาเกินขนาด (If you take this drug more than recommendation)</strong></p>
+    <p>อาการเมื่อรับประทานยาเกินขนาด ได้แก่ อาการคลื่นไส้ อาเจียน ท้องเสีย และพบผลึกยาในปัสสาวะ หากพบอาการเหล่านี้ ควรรีบไปพบแพทย์ทันที พร้อมนำยาที่เหลือไปด้วย</p>
+  </div>
+
+  <!-- Bahagian 4 -->
+  <div class="ns at">
+    <h3>4. ข้อควรปฏิบัติระหว่างใช้ยานี้ (What you should do during use this drug)</h3>
+    <ul>
+      <li>รับประทานยานี้ติดต่อกันจนหมดตามที่แพทย์สั่งอย่างเคร่งครัด แม้ว่าอาการจะดีขึ้นแล้วก็ตาม เพื่อป้องกันการกลับมาเป็นซ้ำและการดื้อยาของเชื้อแบคทีเรีย</li>
+      <li>หากมีอาการท้องเสียรุนแรง หรือถ่ายเป็นเลือดระหว่าง หรือหลังจากหยุดยา ให้รีบปรึกษาแพทย์ ห้ามซื้อยาหยุดถ่ายมารับประทานเอง</li>
+      <li>แจ้งให้แพทย์ ทันตแพทย์ หรือเภสัชกรทุกคนที่ดูแลคุณทราบว่าคุณกำลังใช้ยานี้</li>
+      <li>ห้ามแบ่งยานี้ให้ผู้อื่นใช้ แม้จะมีอาการคล้ายคลึงกัน</li>
+    </ul>
+  </div>
+
+  <!-- Bahagian 5 -->
+  <div class="ns ab">
+    <h3>5. อันตรายที่อาจเกิดขึ้นจากการใช้ยา (Danger that may occur)</h3>
+    
+    <p><strong>5.1 อาการที่ต้องหยุดยาและไปพบแพทย์ทันที (Symptoms that need to stop this drug and see the doctor immediately)</strong></p>
+    <p>หากมีอาการดังต่อไปนี้ ซึ่งแสดงถึงการแพ้ยาอย่างรุนแรง:</p>
+    <ul>
+      <li>มีผื่นแดง ตุ่มพอง คันตามผิวหนัง หรือผิวหนังลอก (Stevens-Johnson syndrome, Toxic epidermal necrolysis)</li>
+      <li>หายใจลำบาก แน่นหน้าอก หอบเหนื่อย</li>
+      <li>มีอาการบวมที่ใบหน้า หน้าอก ริมฝีปาก คอ หรือลิ้น</li>
+    </ul>
+
+    <p style="margin-top:12px"><strong>5.2 อาการที่อาจไม่จำเป็นต้องหยุดยา แต่ถ้ามีอาการรุนแรงให้ไปพบแพทย์ (Symptoms that may not need to stop this drug but if severe symptoms, go to see the doctor)</strong></p>
+    <ul>
+      <li>ท้องเสียรุนแรง เป็นน้ำ หรือมีเลือดปน</li>
+      <li>คลื่นไส้ อาเจียน ไม่สบายท้อง</li>
+      <li>ปวดศีรษะ เวียนศีรษะ</li>
+      <li>มีเชื้อราในช่องปาก หรือช่องคลอด (เกิดจากการที่สมดุลแบคทีเรียถูกทำลาย)</li>
+    </ul>
+
+    <div style="background:#f0f7ff;border:1px solid #bfdbfe;border-left:3px solid var(--accent);border-radius:var(--r);padding:10px 14px;margin-top:14px;font-size:.82rem;">
+      <p><strong>การรายงานอาการไม่พึงประสงค์ (ADR Reporting)</strong></p>
+      <p style="margin-top:4px">หากคุณพบผลข้างเคียงใดๆ ไม่ว่าจะระบุไว้ในเอกสารนี้หรือไม่ก็ตาม โปรดแจ้งแพทย์หรือเภสัชกรของคุณ คุณสามารถรายงานเหตุการณ์ไม่พึงประสงค์จากการใช้ยาผ่านทางศูนย์ควบคุมความปลอดภัยด้านผลิตภัณฑ์สุขภาพ อย. ด้วยการรายงานผลข้างเคียง คุณสามารถช่วยให้มีข้อมูลเกี่ยวกับความปลอดภัยของยานี้มากขึ้น</p>
+    </div>
+  </div>
+
+  <!-- Bahagian 6 -->
+  <div class="ns ag">
+    <h3>6. วิธีเก็บรักษายานี้ (How to store this drug)</h3>
+    <ul>
+      <li>เก็บยาในอุณหภูมิต่ำกว่า 25 องศาเซลเซียส</li>
+      <li>เก็บยาในภาชนะบรรจุเดิมที่ได้รับมา ปิดฝาให้สนิท ป้องกันยาจากแสงแดดและความชื้น</li>
+      <li>เก็บยาให้พ้นมือและสายตาของเด็ก</li>
+      <li>ห้ามใช้ยาหลังจากวันหมดอายุ (EXP) ที่ระบุไว้บนฉลาก วันหมดอายุหมายถึงวันสุดท้ายของเดือนนั้น</li>
+      <li>ห้ามทิ้งยานี้ลงในแหล่งน้ำหรือท่อระบายน้ำ เพื่อรักษาสิ่งแวดล้อม สอบถามเภสัชกรถึงวิธีกำจัดยาที่ถูกต้อง</li>
+    </ul>
+  </div>
+
+  <!-- Bahagian 7 -->
+  <div class="ns aam">
+    <h3>7. ลักษณะของยานี้และส่วนประกอบ (Appearance of this drug and excipients)</h3>
+
+    <p><strong>ลักษณะทางกายภาพ:</strong> ยาแคปซูลแข็ง ขนาด 0 ตัวแคปซูลและหมวกแคปซูลเป็นสีขาวทึบ ภายในบรรจุผงยาสีขาว มีพิมพ์อักษร "AMOX 500" บนตัวแคปซูล</p>
+
+    <p style="margin-top:12px"><strong>ส่วนประกอบของยา:</strong></p>
+    <p><em>ตัวยาสำคัญ (Active ingredient):</em> อะม็อกซีซิลลิน ไตรไฮเดรต (amoxicillin trihydrate) เทียบเท่ากับอะม็อกซีซิลลิน 500 มิลลิกรัม</p>
+    <p><em>ส่วนประกอบอื่นๆ (Excipients):</em> แมกนีเซียมสเตียเรต (magnesium stearate), โซเดียมสตาร์ชไกลโคเลตชนิดเอ (sodium starch glycolate Type A), คอลลอยดัลซิลิกอนไดออกไซด์ (colloidal silicon dioxide), เจลาตินจากสัตว์ (gelatin), ไทเทเนียมไดออกไซด์ E171 (titanium dioxide)</p>
+
+    <div style="border-top:1px solid var(--bd);margin-top:16px;padding-top:16px;">
+      <p style="margin-bottom:8px"><strong>ผู้ผลิต/ผู้นำเข้า/ผู้จัดจำหน่าย (Manufacturer/Importer/Distributor)</strong></p>
+      
+      <p><em>ผู้ผลิต (Manufacturer):</em><br>
+      Regional Manufacturing Solutions Sdn Bhd<br>
+      Lot 5, Jalan Industri 3/5, Taman Perindustrian Rawang, Selangor, Malaysia</p>
+      
+      <p style="margin-top:8px"><em>บริษัทผู้จดทะเบียน/ผู้นำเข้า (Marketing Authorization Holder / Importer):</em><br>
+      บริษัท อาเซียน ฟาร์มา (ประเทศไทย) จำกัด<br>
+      อาคารสาธร สแควร์ ชั้น 20 ถนนสาทรเหนือ แขวงสีลม เขตบางรัก กรุงเทพมหานคร 10500<br>
+      โทร: 02-123-4567</p>
+
+      <div class="dg dg2" style="margin-top:16px">
+        <div class="di"><label>เลขทะเบียนตำรับยา (Registration No.)</label><div class="v vm">1A 123/69 (NG)</div></div>
+        <div class="di"><label>วันที่แก้ไขปรับปรุงล่าสุด (Date of latest revision)</label><div class="v">15 มกราคม 2569 (2026-01-15)</div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════ ORGANIZATION (องค์กร) ═══════════════ -->
+<div id="po" class="panel">
+  <div class="og">
+    <div class="oc" style="border-left:3px solid var(--accent)">
+      <div class="och">
+        <div class="role" style="color:var(--accent)">บริษัทผู้จดทะเบียน (MAH)</div>
+        <div class="name">บริษัท อาเซียน ฟาร์มา (ประเทศไทย) จำกัด</div>
+      </div>
+      <div class="ocb">
+        <div class="or"><span class="ol">รหัสองค์กร (ID)</span><span class="ov ovm">ORG-ASEANPHARMA-THA-001 (OMS)</span></div>
+        <div class="or"><span class="ol">ประเภท</span><span class="ov"><span class="chip ch-b">ผู้ได้รับอนุญาต / MAH</span></span></div>
+        <div class="or"><span class="ol">ที่อยู่</span><span class="ov">อาคารสาธร สแควร์ ชั้น 20 ถนนสาทรเหนือ แขวงสีลม เขตบางรัก กรุงเทพมหานคร 10500</span></div>
+        <div class="or"><span class="ol">ประเทศ</span><span class="ov">ประเทศไทย &#127481;&#127469;</span></div>
+        <div class="or"><span class="ol">โทรศัพท์</span><span class="ov">02-123-4567</span></div>
+      </div>
+    </div>
+    <div class="oc" style="border-left:3px solid var(--green)">
+      <div class="och">
+        <div class="role" style="color:var(--green)">ผู้ผลิต (Manufacturer)</div>
+        <div class="name">Regional Manufacturing Solutions Sdn Bhd</div>
+      </div>
+      <div class="ocb">
+        <div class="or"><span class="ol">รหัสองค์กร (ID)</span><span class="ov ovm">ORG-RMS-MYS-002 (OMS)</span></div>
+        <div class="or"><span class="ol">ประเภท</span><span class="ov"><span class="chip ch-t">ผู้ผลิต</span></span></div>
+        <div class="or"><span class="ol">ที่อยู่</span><span class="ov">Lot 5, Jalan Industri 3/5, Taman Perindustrian Rawang, Selangor</span></div>
+        <div class="or"><span class="ol">ประเทศ</span><span class="ov">มาเลเซีย &#127474;&#127486;</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ PRODUCT DETAILS (รายละเอียดผลิตภัณฑ์) ═══════════════ -->
+<div id="pp" class="panel">
+  <div class="ps-row">
+    <span>1 ผลิตภัณฑ์ยา &middot; 2 รูปแบบบรรจุภัณฑ์</span>
+    <input class="pf" type="text" placeholder="ค้นหาตัวยาหรือความเข้มข้น&#8230;" />
+  </div>
+
+  <defs><radialGradient id="cg2" cx="40%" cy="35%" r="55%"><stop offset="0%" stop-color="#fff" /><stop offset="100%" stop-color="#e0e9f5" /></radialGradient></defs>
+
+  <details class="pa" open="open">
+    <summary class="pah">
+      <span class="pnum">1</span>
+      <span class="pname">อะม็อกซีซิลลิน 500 มก. แคปซูล</span><span class="psub">Amoxicillin trihydrate</span>
+      <div class="pbadges"><span class="chip ch-g">Active</span><span class="chip ch-gr">รับประทาน &middot; แคปซูลแข็ง</span></div>
+      <span class="pchev">&#9660;</span>
+    </summary>
+    <div class="pc">
+
+      <div class="is"><div class="isl">ตัวยาและรูปแบบ (Substance &amp; Form)</div><div class="isb"><div class="ifs">
+        <div class="inf"><span class="il">ตัวยาสำคัญ</span><span class="iv">Amoxicillin</span></div>
+        <div class="inf"><span class="il">เกลือ / เบส</span><span class="iv">Trihydrate</span></div>
+        <div class="inf"><span class="il">ความเข้มข้น</span><span class="iv">500 มก.</span></div>
+        <div class="inf"><span class="il">รูปแบบยา</span><span class="iv">แคปซูลแข็ง</span></div>
+        <div class="inf"><span class="il">วิธีให้ยา</span><span class="iv">รับประทาน (Oral)</span></div>
+        <div class="inf"><span class="il">รหัส ATC</span><span class="iv">J01CA04</span></div>
+      </div></div></div>
+
+      <div class="is"><div class="isl">ส่วนประกอบอื่นๆ (Excipients)</div><div class="isb"><div class="ec">
+        <div class="ei">Magnesium stearate</div><div class="ei">Colloidal silicon dioxide</div>
+        <div class="ei">Sodium starch glycolate (Type A)</div><div class="ei">Gelatin (capsule shell)</div>
+        <div class="ei">Titanium dioxide E171 (capsule shell)</div><div class="ei"></div>
+      </div></div></div>
+
+      <div class="is"><div class="isl">ลักษณะทางกายภาพ (Appearance)</div><div class="isb"><div class="ap-in">
+        <div class="ap-data">
+          <div class="apf"><span class="al">สี</span><span class="av">ขาวทึบ (White)</span></div>
+          <div class="apf"><span class="al">รูปร่าง</span><span class="av">แคปซูล ขนาด 0</span></div>
+          <div class="apf"><span class="al">รอยพิมพ์</span><span class="av">AMOX 500</span></div>
+          <div class="apf"><span class="al">ด้านใน</span><span class="av">ผงสีขาว</span></div>
+        </div>
+        <div class="tab-svgs">
+          <figure class="tab-fig">
+            <svg width="80" height="40" viewBox="0 0 80 40">
+              <rect x="1" y="8" width="78" height="24" rx="12" fill="url(#cg2)" stroke="#d1d5db" stroke-width="1.2"/>
+              <line x1="40" y1="8" x2="40" y2="32" stroke="#d1d5db" stroke-width="1" stroke-dasharray="2,2"/>
+            </svg>
+            <figcaption>แคปซูล (Capsule)</figcaption>
+          </figure>
+        </div>
+      </div></div></div>
+
+      <div class="is"><div class="isl">บรรจุภัณฑ์ (Packaging)</div><div class="isb"><div class="pkgs">
+        <div class="pkg">
+          <div class="pkg-row">
+            <div class="pki">
+              <div class="pn">ขวดแก้วสีชา — 21 แคปซูล</div>
+              <div class="pt" style="font-family:ui-monospace,'SF Mono',monospace;font-size:10px;margin-bottom:10px;">GTIN: 09501234560021 &nbsp;|&nbsp; SKU: AMX500-BTL-21-TH</div>
+              <div class="pkt">
+                <span class="chip ch-g">Active</span>
+                <span class="chip ch-gr" style="border-radius:4px;">จำนวน: 21</span>
+                <span class="chip ch-gr" style="border-radius:4px;font-weight:normal;">ภาชนะ: ขวดแก้วสีชา (Type III)</span>
+                <span class="chip ch-gr" style="border-radius:4px;font-weight:normal;">ฝา: หวัดเกลียวอะลูมิเนียม</span>
+              </div>
+            </div>
+            <figure class="pka"><div class="pka-box">
+              <svg width="40" height="38" viewBox="0 0 40 38">
+                <rect x="10" y="1" width="20" height="36" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+                <ellipse cx="20" cy="14" rx="9" ry="4" fill="#bfdbfe" opacity="0.6"/>
+                <rect x="14" y="29" width="12" height="4" rx="2" fill="#bfdbfe"/>
+              </svg>
+            </div><figcaption>ขวด (Bottle)</figcaption></figure>
+          </div>
+        </div>
+        <div class="pkg">
+          <div class="pkg-row">
+            <div class="pki">
+              <div class="pn">กล่องบลิสเตอร์ — 24 แคปซูล (2 &times; 12)</div>
+              <div class="pt" style="font-family:ui-monospace,'SF Mono',monospace;font-size:10px;margin-bottom:10px;">GTIN: 09501234560024 &nbsp;|&nbsp; SKU: AMX500-BLI-24-TH</div>
+              <div class="pkt">
+                <span class="chip ch-g">Active</span>
+                <span class="chip ch-gr" style="border-radius:4px;">จำนวน: 24 (2 &times; 12)</span>
+                <span class="chip ch-gr" style="border-radius:4px;font-weight:normal;">ชั้นนอก: กล่องกระดาษ</span>
+                <span class="chip ch-gr" style="border-radius:4px;font-weight:normal;">ชั้นใน: แผงบลิสเตอร์ (PVC/Aluminium)</span>
+              </div>
+            </div>
+            <figure class="pka"><div class="pka-box">
+              <svg width="44" height="32" viewBox="0 0 44 32">
+                <rect x="1" y="1" width="42" height="30" rx="3" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+                <rect x="5" y="5" width="34" height="9" rx="2" fill="#bbf7d0"/>
+                <text x="22" y="27" font-size="5" font-family="Arial" text-anchor="middle" fill="#6b7280">24 แคปซูล</text>
+              </svg>
+            </div><figcaption>แผง (Blister)</figcaption></figure>
+          </div>
+        </div>
+      </div></div></div>
+
+      <div class="is" style="border-left:3px solid var(--green)">
+        <div class="isl" style="padding-bottom:6px;color:var(--green)">อายุยาและการเก็บรักษา (Shelf Life &amp; Storage)</div>
+        <div style="padding:8px 14px 4px;display:flex;align-items:center;gap:10px">
+          <span class="shelf-pill"><span>&#128197;</span><span class="shelf-n">24</span><span style="font-size:.75rem;font-weight:600">เดือน</span></span>
+          <span style="font-size:.8rem;color:var(--muted)">อายุยาของผลิตภัณฑ์ที่บรรจุหีบห่อพร้อมขาย</span>
+        </div>
+        <div class="storage-grid">
+          <div class="storage-item"><span class="storage-icon">&#127777;</span><div class="storage-text"><div class="sl">อุณหภูมิ</div><div class="sv">เก็บในอุณหภูมิต่ำกว่า 25°C</div><div class="sd">ห้ามแช่แข็ง</div></div></div>
+          <div class="storage-item"><span class="storage-icon">&#128167;</span><div class="storage-text"><div class="sl">ความชื้น</div><div class="sv">ป้องกันจากความชื้น</div><div class="sd">เก็บในภาชนะบรรจุเดิมที่ปิดสนิท</div></div></div>
+          <div class="storage-item"><span class="storage-icon">&#9728;</span><div class="storage-text"><div class="sl">แสงแดด</div><div class="sv">ป้องกันจากแสงแดด</div></div></div>
+          <div class="storage-item"><span class="storage-icon">&#128100;</span><div class="storage-text"><div class="sl">ข้อควรระวัง</div><div class="sv">เก็บให้พ้นมือเด็ก</div></div></div>
+        </div>
+      </div>
+
+    </div>
+  </details>
+</div>
+
+<!-- ═══════════════ CLINICAL DETAILS (ข้อมูลทางคลินิก) ═══════════════ -->
+<div id="pcl" class="panel">
+
+  <!-- Summary count cards -->
+  <div class="csum">
+    <div class="cscard ci"><div><div class="csn" style="color:var(--accent)">4</div><div class="csl">ข้อบ่งใช้</div></div><div class="csi">&#127919;</div></div>
+    <div class="cscard cc"><div><div class="csn" style="color:var(--rose)">2</div><div class="csl">ข้อห้ามใช้</div></div><div class="csi">&#9940;</div></div>
+    <div class="cscard cx"><div><div class="csn" style="color:var(--amber)">3</div><div class="csl">ปฏิกิริยาระหว่างยา</div></div><div class="csi">&#9889;</div></div>
+    <div class="cscard cu"><div><div class="csn" style="color:var(--purple)">9</div><div class="csl">ผลข้างเคียง</div></div><div class="csi">&#128137;</div></div>
+    <div class="cscard cw"><div><div class="csn" style="color:#ea580c">3</div><div class="csl">คำเตือน</div></div><div class="csi">&#9888;</div></div>
+    <div class="cscard cd"><div><div class="csn" style="color:var(--teal)">2</div><div class="csl">ขนาดยา</div></div><div class="csi">&#128138;</div></div>
+  </div>
+
+  <!-- Indikasi -->
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#127919;</span><span class="clstitle">ข้อบ่งใช้ยา (Indications)</span><span class="clscount">4</span></div>
+    <div class="clsb">
+      <table class="ctbl">
+        <thead><tr><th>ข้อบ่งใช้</th><th>ประชากรเป้าหมาย</th><th>รหัส ICD-11</th></tr></thead>
+        <tbody>
+          <tr><td>ไซนัสอักเสบจากเชื้อแบคทีเรีย</td><td>ผู้ใหญ่และเด็ก &ge;2 ปี</td><td>CA0Z</td></tr>
+          <tr><td>หูชั้นกลางอักเสบเฉียบพลัน</td><td>ผู้ใหญ่และเด็ก &ge;2 เดือน</td><td>AA40</td></tr>
+          <tr><td>ปอดอักเสบติดเชื้อในชุมชน (CAP)</td><td>ผู้ใหญ่และเด็ก &ge;3 เดือน</td><td>CA40.0Z</td></tr>
+          <tr><td>โรคติดเชื้อทางเดินปัสสาวะที่ไม่ซับซ้อน</td><td>ผู้ใหญ่และเด็ก &ge;3 เดือน</td><td>GC08.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Kontraindikasi -->
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#9940;</span><span class="clstitle">ข้อห้ามใช้ (Contraindications)</span><span class="clscount">2</span></div>
+    <div class="clsb">
+      <div class="cxrow"><span class="cxicon">&#8856;</span><span>มีประวัติแพ้ยาอะม็อกซีซิลลิน, เพนิซิลลิน หรือส่วนประกอบใดๆ ของยานี้</span></div>
+      <div class="cxrow"><span class="cxicon">&#8856;</span><span>เคยมีประวัติแพ้ยาต้านจุลชีพกลุ่มเบต้า-แลคแตมอื่น (เช่น เซฟาโลสปอริน หรือคาร์บาพีเนม) อย่างรุนแรงและฉับพลัน (เช่น การเกิด Anaphylaxis)</span></div>
+    </div>
+  </div>
+
+  <!-- Interaksi -->
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#9889;</span><span class="clstitle">ปฏิกิริยาระหว่างยา (Drug Interactions)</span><span class="clscount">3</span></div>
+    <div class="clsb">
+      <table class="ctbl">
+        <thead><tr><th>ยาที่มีอันตรกิริยา</th><th>กลไก</th><th>ระดับความรุนแรง</th><th>ผลทางคลินิก</th></tr></thead>
+        <tbody>
+          <tr><td>Probenecid</td><td>Pharmacokinetic — ลดการขับออกทางไต</td><td><span class="sev-m">ปานกลาง</span></td><td>ระดับยาอะม็อกซีซิลลินในเลือดเพิ่มขึ้นและอยู่นานขึ้น</td></tr>
+          <tr><td>Methotrexate</td><td>Pharmacokinetic — ลดการขับออกทางไต</td><td><span class="sev-h">รุนแรง</span></td><td>ระดับยาเมโธเทรกเซทในเลือดเพิ่มสูง เสี่ยงต่อความเป็นพิษ — ต้องติดตามอย่างใกล้ชิด</td></tr>
+          <tr><td>Warfarin / ยาต้านการแข็งตัวของเลือด</td><td>Pharmacodynamic — เปลี่ยนแปลงแบคทีเรียในลำไส้ / วิตามินเค</td><td><span class="sev-m">ปานกลาง</span></td><td>อาจพบค่า Prothrombin time เพิ่มขึ้นได้นานๆ ครั้ง; ให้ติดตามค่า INR</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Kesan Sampingan -->
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#128137;</span><span class="clstitle">ผลข้างเคียงหรืออันตรายที่อาจเกิดขึ้น (Adverse Effects)</span><span class="clscount">9</span></div>
+    <div class="clsb">
+      <div class="soc"><div class="soc-hdr">ความผิดปกติของระบบทางเดินอาหาร (Gastrointestinal)</div>
+        <div class="soc-item"><span class="si-name">ท้องเสีย (Diarrhoea)</span><span class="si-freq">พบบ่อยมาก (&ge;1/10)</span></div>
+        <div class="soc-item"><span class="si-name">คลื่นไส้ (Nausea)</span><span class="si-freq">พบบ่อย (&ge;1/100)</span></div>
+        <div class="soc-item"><span class="si-name">อาเจียน (Vomiting)</span><span class="si-freq">พบบ่อย (&ge;1/100)</span></div>
+      </div>
+      <div class="soc"><div class="soc-hdr">ความผิดปกติของผิวหนังและเนื้อเยื่อใต้ผิวหนัง (Skin)</div>
+        <div class="soc-item"><span class="si-name">ผื่นแดง (Maculopapular rash)</span><span class="si-freq">พบบ่อย (&ge;1/100)</span></div>
+        <div class="soc-item"><span class="si-name">ลมพิษ (Urticaria)</span><span class="si-freq">พบน้อย (&ge;1/1,000)</span></div>
+        <div class="soc-item"><span class="si-name">ภาวะแพ้ทางผิวหนังรุนแรง (Stevens-Johnson syndrome)</span><span class="si-freq">ไม่สามารถระบุได้</span></div>
+      </div>
+      <div class="soc"><div class="soc-hdr">ความผิดปกติของระบบประสาท (Nervous System)</div>
+        <div class="soc-item"><span class="si-name">เวียนศีรษะ (Dizziness)</span><span class="si-freq">พบน้อย (&ge;1/1,000)</span></div>
+        <div class="soc-item"><span class="si-name">อยู่ไม่นิ่งชั่วคราว (Reversible hyperactivity)</span><span class="si-freq">พบน้อยมาก (&ge;1/10,000)</span></div>
+        <div class="soc-item"><span class="si-name">อาการชัก (Convulsions)</span><span class="si-freq">พบน้อยมาก (&ge;1/10,000)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Amaran -->
+  <div class="cls">
+    <div class="clsh"><span class="clsicon">&#9888;</span><span class="clstitle">คำเตือนและข้อควรระวัง (Warnings &amp; Precautions)</span><span class="clscount">3</span></div>
+    <div class="clsb">
+      <div class="wbox"><span class="wicon">&#9650;</span><span><strong>Anaphylaxis (อาการแพ้รุนแรงเฉียบพลัน):</strong> มีรายงานการเกิดปฏิกิริยาแพ้อย่างรุนแรงและบางครั้งถึงแก่ชีวิตในผู้ป่วยที่ได้รับยาเพนิซิลลิน ก่อนเริ่มยาต้องซักประวัติการแพ้ยาเพนิซิลลินหรือเซฟาโลสปอรินอย่างละเอียด หากเกิดอาการแพ้ ให้หยุดยาทันทีและรีบให้การรักษาฉุกเฉิน</span></div>
+      <div class="wbox"><span class="wicon">&#9650;</span><span><strong>การทำงานของไตบกพร่อง:</strong> ผู้ป่วยที่มีการทำงานของไตบกพร่องรุนแรง (eGFR &lt;30 mL/min/1.73 m&sup2;) ต้องปรับลดขนาดยา การสะสมของยาในปริมาณสูงอาจทำให้เกิดผลข้างเคียงต่อระบบประสาทส่วนกลาง รวมถึงอาการชักได้</span></div>
+      <div class="wbox"><span class="wicon">&#9650;</span><span><strong>ลำไส้อักเสบจากการติดเชื้อ Clostridioides difficile (CDAD):</strong> อาจเกิดอาการท้องเสียได้ตั้งแต่ระดับอ่อนๆ ไปจนถึงลำไส้ใหญ่อักเสบรุนแรงถึงชีวิต หากสงสัยหรือได้รับการยืนยันว่าเป็น CDAD ให้หยุดยานี้และเริ่มการรักษาสมดุลของน้ำและอิเล็กโทรไลต์ที่เหมาะสม</span></div>
+    </div>
+  </div>
+
+  <!-- Rejimen Dos -->
+  <div class="cls" style="border-left:3px solid var(--teal)">
+    <div class="clsh">
+      <span class="clsicon">&#128138;</span>
+      <span class="clstitle">ขนาดยาและวิธีบริหารยา (Dosage Regimen)</span>
+      <span class="clscount">2</span><span class="chip ch-mk" style="margin-left:6px;font-size:9px">MedicationKnowledge</span>
+    </div>
+    <div class="clsb">
+      <input type="radio" name="drtabs" id="dr-adult" class="dr-trd" checked>
+      <input type="radio" name="drtabs" id="dr-ped"   class="dr-trd">
+      <div class="dr-tabs">
+        <label class="dr-tb" for="dr-adult">ผู้ใหญ่ &amp; วัยรุ่น (&ge;18 ปี)</label>
+        <label class="dr-tb" for="dr-ped">เด็ก &amp; วัยรุ่น (3 เดือน – 17 ปี)</label>
+      </div>
+
+      <!-- Adults panel -->
+      <div class="dr-panel dr-panel-adult">
+        <div class="dose-card">
+          <div class="dose-card-hdr"><span class="d-pop">ผู้ใหญ่และเด็กรุ่นอายุตั้งแต่ 18 ปีขึ้นไป</span><span class="dose-badge">ขนาดยามาตรฐาน</span></div>
+          <div class="dose-body">
+            <div class="dose-row"><span class="dose-label">ขนาดยาต่อครั้ง</span><span class="dose-value">500 มิลลิกรัม</span></div>
+            <div class="dose-row"><span class="dose-label">ช่วงเวลาห่างของการให้ยา</span><span class="dose-value">ทุก 8 ชั่วโมง (วันละ 3 เวลา)</span></div>
+            <div class="dose-row"><span class="dose-label">ระยะเวลาการรักษา</span><span class="dose-value">5–10 วัน ขึ้นอยู่กับชนิดของการติดเชื้อ</span></div>
+            <div class="dose-row"><span class="dose-label">กรณีติดเชื้อรุนแรง</span><span class="dose-value">1,000 มิลลิกรัม วันละ 3 เวลา</span></div>
+            <div class="dose-row"><span class="dose-label">วิธีใช้ยา</span><span class="dose-value">รับประทาน (Oral)</span></div>
+            <div class="dose-row"><span class="dose-label">การบริหารยา</span><span class="dose-value">รับประทานก่อนหรือหลังอาหารก็ได้ กลืนพร้อมน้ำสะอาดให้เพียงพอ</span></div>
+            <div class="timing-strip">
+              <span class="timing-pill">&#128197; เช้า</span>
+              <span class="timing-pill">&#127752; กลางวัน</span>
+              <span class="timing-pill">&#127761; เย็น</span>
+              <span class="timing-pill max">&#9888; รับประทานยาให้ครบตามแพทย์สั่ง</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paediatric panel -->
+      <div class="dr-panel dr-panel-ped">
+        <div class="dose-card">
+          <div class="dose-card-hdr"><span class="d-pop">เด็ก และ วัยรุ่น (3 เดือน – 17 ปี)</span><span class="dose-badge weight">ตามน้ำหนักตัว</span></div>
+          <div class="dose-body">
+            <div class="dose-row"><span class="dose-label">ขนาดยาต่อครั้ง</span><span class="dose-value">25 มิลลิกรัม/กิโลกรัม/วัน แบ่งให้ทุก 8 ชั่วโมง</span></div>
+            <div class="dose-row"><span class="dose-label">ขนาดยาสูงสุดต่อครั้ง</span><span class="dose-value">500 มิลลิกรัม</span></div>
+            <div class="dose-row"><span class="dose-label">ขนาดยาสูงสุดต่อวัน</span><span class="dose-value">1,500 มิลลิกรัม/วัน (เท่าขนาดผู้ใหญ่)</span></div>
+            <div class="dose-row"><span class="dose-label">กรณีติดเชื้อรุนแรง</span><span class="dose-value">40–45 มิลลิกรัม/กิโลกรัม/วัน แบ่งให้ 3 ครั้ง</span></div>
+            <div class="dose-row"><span class="dose-label">วิธีใช้ยา</span><span class="dose-value">รับประทาน (สำหรับเด็ก &lt;6 ปี แนะนำให้ใช้รูปแบบยาน้ำแขวนตะกอน)</span></div>
+          </div>
+        </div>
+        <div class="dose-card" style="margin-top:8px">
+          <div class="dose-card-hdr"><span class="d-pop">ทารก (3 เดือน – 2 ปี)</span><span class="dose-badge weight">ตามน้ำหนักตัว</span></div>
+          <div class="dose-body">
+            <div class="dose-row"><span class="dose-label">ขนาดยา</span><span class="dose-value">20–30 มิลลิกรัม/กิโลกรัม/วัน แบ่งให้ 3 ครั้ง</span></div>
+            <div class="dose-row"><span class="dose-label">ขนาดยาสูงสุดต่อครั้ง</span><span class="dose-value">125 มก.</span></div>
+            <div class="dose-row"><span class="dose-label">รูปแบบยาที่เหมาะสม</span><span class="dose-value">ยาน้ำแขวนตะกอน (Oral suspension)</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
