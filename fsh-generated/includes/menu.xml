@@ -16,14 +16,24 @@
   <li>
     <a href="usecases.html">Use Cases</a>
   </li>
-  <li>
-    <a href="terminology.html">Terminology</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">ePI Creation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="epiElements.html">ePI Elements</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+    </ul>
   </li>
   <li>
-    <a href="epiElements.html">ePI Elements</a>
+    <a href="TechStyleGuide.html">Best Practice</a>
   </li>
   <li>
-    <a href="TechStyleGuide.html">Technical Style Guide</a>
+    <a href="showcase.html">Showcase</a>
   </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Appendices
@@ -33,9 +43,18 @@
       <li>
         <a href="appendix1.html">Appendix 1</a>
       </li>
+      <li>
+        <a href="appendix2.html">Appendix 2</a>
+      </li>
     </ul>
   </li>
   <li>
     <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="credits.html">Credits</a>
   </li>
 </ul>
