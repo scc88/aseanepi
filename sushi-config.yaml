@@ -22,6 +22,8 @@ pages:
     title: Terminology
   TechStyleGuide.md:
     title: Best Practice
+  buildguide.md:
+    title: ePI Build Guide (SG)
   appendix1.md:
     title: Appendix 1
   appendix2.md:
@@ -40,6 +42,7 @@ menu:
     ePI Elements: epiElements.html
     Terminology: terminology.html
   Best Practice: TechStyleGuide.html
+  Build Guide: buildguide.html
   Showcase: showcase.html
   Appendices:
     Appendix 1: appendix1.html

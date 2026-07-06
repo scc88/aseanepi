@@ -72,6 +72,11 @@
           "generation": "markdown"
         },
         {
+          "nameUrl": "buildguide.html",
+          "title": "ePI Build Guide (SG)",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "appendix1.html",
           "title": "Appendix 1",
           "generation": "markdown"

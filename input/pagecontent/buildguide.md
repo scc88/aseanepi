@@ -1,8 +1,6 @@
-# Building a Singapore ePI (Type 4) — A Step-by-Step Blueprint
-
 ### Worked reference: the PAXLOVID Summary of Product Characteristics (SmPC)
 
-**Reference instance:** [`input/instances/Bundle-epi-paxlovid-sgp-smpc.xml`](../input/instances/Bundle-epi-paxlovid-sgp-smpc.xml)
+**Reference instance:** [Bundle-epi-paxlovid-sgp-smpc](Bundle-epi-paxlovid-sgp-smpc.html)
 **FHIR release:** R5 · **Bundle type:** `document` · **Standard:** HL7 FHIR ePI (Vulcan Global Core ePI) as adopted for APAC / HSA Singapore
 
 ---
@@ -44,7 +42,7 @@ Bundle (document)
 
 ### Why this is "ePI Type 4"
 
-Per the [Use Cases page](../input/pagecontent/usecases.md), **Type 4** is the fully-structured, digital-first tier: *"all content is encoded as discrete data elements using standardized terminologies… incorporates the Dose Structure for machine-readable dosing."* This instance qualifies because:
+Per the [Use Cases page](usecases.html), **Type 4** is the fully-structured, digital-first tier: *"all content is encoded as discrete data elements using standardized terminologies… incorporates the Dose Structure for machine-readable dosing."* This instance qualifies because:
 
 - Every clinical particular (indications, contraindications, interactions, warnings, adverse reactions) is a **coded `ClinicalUseDefinition`**, not just narrative.
 - Dosing is captured as **machine-readable `MedicationKnowledge`** (dose amounts, timing, eGFR thresholds), not only prose.
@@ -571,7 +569,7 @@ Finally, assemble the document Bundle. **The Composition must be the first entry
 
 ### Recommended enhancement — bind to the Vulcan ePI profiles
 
-The reference instance does **not** tag resources with `meta.profile`. For formal conformance and better validation, consider adding the Vulcan Global Core ePI profile canonical URLs to each resource's `meta.profile` (see the [Artifacts page](../input/pagecontent/epiElements.md) and <https://hl7.org/fhir/uv/emedicinal-product-info/>). Confirm the expected profile set with HSA for the pilot.
+The reference instance does **not** tag resources with `meta.profile`. For formal conformance and better validation, consider adding the Vulcan Global Core ePI profile canonical URLs to each resource's `meta.profile` (see the [ePI Elements](epiElements.html) and [Artifacts](artifacts.html) pages, and <https://hl7.org/fhir/uv/emedicinal-product-info/>). Confirm the expected profile set with HSA for the pilot.
 
 ---
 
