@@ -26,6 +26,8 @@ pages:
     title: Appendix 1
   appendix2.md:
     title: Appendix 2
+  showcase.md:
+    title: Showcase
   credits.md:
     title: Credits
 
@@ -38,6 +40,7 @@ menu:
     ePI Elements: epiElements.html
     Terminology: terminology.html
   Best Practice: TechStyleGuide.html
+  Showcase: showcase.html
   Appendices:
     Appendix 1: appendix1.html
     Appendix 2: appendix2.html
