@@ -1,15 +1,14 @@
 id: hl7.fhir.uv.epi-asean
 canonical: http://hl7.org/fhir/uv/epi-asean
-name: aseanepi
-title: ePI IG for APAC markets
+name: APACePI
+title: "ePI Implementation Guide for the Asia Partnership Conference of Pharmaceutical Associations (APAC)"
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2024+
 releaseLabel: ci-build
 publisher:
-  name: Gravitate Health Project
-  url: https://www.gravitatehealth.eu/
+  name: Asia Partnership Conference of Pharmaceutical Associations (APAC)
 
 pages:
    index.md:
