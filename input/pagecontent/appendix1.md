@@ -1,5 +1,45 @@
-## APPENDIX 1: SECTION HEADINGS FROM NATIONAL LABEL TEMPLATES
-### ASEAN Template Section Headings
+<style>
+.epi-page *, .epi-page *::before, .epi-page *::after { box-sizing:border-box; }
+.epi-page { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; color:#111827; }
+.epi-page .hero { text-align:center; padding:40px 20px 30px; border-bottom:1px solid #e5e7eb; margin-bottom:36px; }
+.epi-page .hero .eyebrow { font-size:.72em; font-weight:700; text-transform:uppercase; letter-spacing:.2em; color:#003087; margin-bottom:12px; }
+.epi-page .hero h1 { font-size:2em; font-weight:800; color:#111827; margin:0 0 12px; line-height:1.15; }
+.epi-page .hero h1 span { background:linear-gradient(135deg,#003087,#2563eb); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.epi-page .hero p { font-size:.95em; color:#6b7280; max-width:620px; margin:0 auto; line-height:1.6; }
+.epi-page .section-title { font-size:1.15em; font-weight:700; color:#111827; margin:38px 0 16px; display:flex; align-items:center; gap:8px; scroll-margin-top:80px; }
+.epi-page .section-title::after { content:''; flex:1; height:1px; background:#e5e7eb; margin-left:8px; }
+.epi-page .page-nav { background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:14px 18px; margin-bottom:32px; display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.epi-page .page-nav .lbl { font-size:.78em; font-weight:700; color:#6b7280; }
+.epi-page .page-nav a { font-size:.78em; font-weight:600; color:#2563eb; text-decoration:none; padding:4px 10px; border-radius:6px; background:#f0f4ff; }
+.epi-page .card { background:#f9fafb; border:1px solid #e5e7eb; border-radius:10px; padding:20px 24px; margin-bottom:28px; }
+.epi-page .card p { color:#374151; font-size:.9em; line-height:1.7; margin:0 0 12px; }
+.epi-page .card ol, .epi-page .card ul { margin:0 0 4px; padding-left:1.5em; }
+.epi-page .card li { line-height:1.7; color:#374151; margin:2px 0; font-size:.9em; }
+.epi-page .card strong { color:#003087; }
+.epi-page .card a { color:#2563eb; }
+</style>
+
+<div class="epi-page" markdown="1">
+
+<div class="hero">
+  <div class="eyebrow">Appendix 1</div>
+  <h1>National Label <span>Templates</span></h1>
+  <p>Section headings from the national Patient Information Leaflet templates across the ASEAN region — the ASEAN core plus Malaysia, the Philippines, Thailand and Indonesia.</p>
+</div>
+
+<div class="page-nav">
+  <span class="lbl">Jump to</span>
+  <a href="#asean">ASEAN</a>
+  <a href="#malaysia">Malaysia</a>
+  <a href="#philippines">Philippines</a>
+  <a href="#thailand">Thailand</a>
+  <a href="#indonesia">Indonesia</a>
+</div>
+
+<div class="section-title" id="asean">ASEAN Template Section Headings</div>
+
+<div class="card" markdown="1">
+
 1. Name of the Medicinal Product  
     1.1 Product name  
     1.2 Strength  
@@ -33,7 +73,12 @@
 9. Date of First Authorization/Renewal of the Authorization  
 10. Date of Revision of the Text  
 
-### Malaysia Template Section Headings
+</div>
+
+<div class="section-title" id="malaysia">Malaysia Template Section Headings</div>
+
+<div class="card" markdown="1">
+
 Consumer Medication Information Leaflet (RiMUP)
 PRODUCT NAME®                                                 
 Active Ingredient/ generic name (Strengths) 
@@ -86,7 +131,12 @@ Storage and Disposal of [product name]
 12. Serial Number 
     - NPRA (Rx/x)xxxxxx/xxxxx 
 
-### Philippines Template Section Headings
+</div>
+
+<div class="section-title" id="philippines">Philippines Template Section Headings</div>
+
+<div class="card" markdown="1">
+
 PIL shall be prepared and written in layman's terms, and shall contain the following minimum information:  
 l) Name of the Product  
 2) Description of the Product  
@@ -110,7 +160,12 @@ l) Name of the Product
 20) Date of First Authorization/Renewal of the Authorization  
 21) Date of Revision of Patient Information Leaflet  
 
-### Thailand Template Section Headings
+</div>
+
+<div class="section-title" id="thailand">Thailand Template Section Headings</div>
+
+<div class="card" markdown="1">
+
 1. What is this drug  
     1.1 What is the name of this drug  
     1.2 What is this drug use for  
@@ -133,7 +188,12 @@ l) Name of the Product
 
 Link to Thai template sample [To be added]
 
-### Indonesia Template Section Headings
+</div>
+
+<div class="section-title" id="indonesia">Indonesia Template Section Headings</div>
+
+<div class="card" markdown="1">
+
 CHAPTER IV  
 INCLUSION OF INFORMATION  
 ON PRODUCT INFORMATION FOR PATIENTS 
@@ -291,4 +351,9 @@ If the drug is a licensed drug, include the name of licensor industry. 
 If the drug is a licensed drug, include the address (city and country) of the licensor industry. 
 
 **Y. Special Warning**  
-Special warnings are included in accordance with the Summary of Product Characteristics/Brochure. 
+Special warnings are included in accordance with the Summary of Product Characteristics/Brochure.
+
+</div>
+
+</div>
+ 

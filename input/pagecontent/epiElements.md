@@ -1,18 +1,68 @@
-<html>
-<p>The base FHIR specification describes a set of <a href="https://hl7.org/fhir/resourcelist.html">base resources</a> used in many different use cases.</p>
-<p>A FHIR profile is a customized version of a resource. It defines specific rules and constraints for how a resource should be used in a particular context (ePI in this case). This customization ensures ßthat the data exchanged is consistent and meets the specific needs of different  organizations or systems.</p>
+<style>
+.epi-page *, .epi-page *::before, .epi-page *::after { box-sizing:border-box; }
+.epi-page { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; color:#111827; }
 
-<p>As noted in the <a href="https://build.fhir.org/ig/cander2/aseanepi/usecases.html#recommendation">Use Cases/Recommendations section</a>, ePI Type 2 (A, B, C, and D) is recommended as the ideal approach for countries in the APAC region to benefit from FHIR ePI.</p>
+.epi-page .hero { text-align:center; padding:40px 20px 30px; border-bottom:1px solid #e5e7eb; margin-bottom:36px; }
+.epi-page .hero .eyebrow { font-size:.72em; font-weight:700; text-transform:uppercase; letter-spacing:.2em; color:#003087; margin-bottom:12px; }
+.epi-page .hero h1 { font-size:2em; font-weight:800; color:#111827; margin:0 0 12px; line-height:1.15; }
+.epi-page .hero h1 span { background:linear-gradient(135deg,#003087,#2563eb); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.epi-page .hero p { font-size:.95em; color:#6b7280; max-width:620px; margin:0 auto; line-height:1.6; }
 
-<p>The following content serves as a business friendly version of the recommended ePI Type 2 profile. The real ePI profile (i.e., the structured version) can be found on the Artifacts page; along with sample data.</p>
-    <h3>ePI Type 2 Resources and Elements</h3>
-    <h4>Bundle</h4>
+.epi-page .section-title { font-size:1.15em; font-weight:700; color:#111827; margin:38px 0 16px; display:flex; align-items:center; gap:8px; scroll-margin-top:20px; }
+.epi-page .section-title::after { content:''; flex:1; height:1px; background:#e5e7eb; margin-left:8px; }
+
+.epi-page p { line-height:1.7; color:#374151; margin:0 0 14px; }
+.epi-page .lead { font-size:1.02em; color:#4b5563; }
+.epi-page a { color:#2563eb; }
+
+.epi-page .page-nav { background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:14px 18px; margin-bottom:32px; display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.epi-page .page-nav .lbl { font-size:.78em; font-weight:700; color:#6b7280; }
+.epi-page .page-nav a { font-size:.78em; font-weight:600; color:#2563eb; text-decoration:none; padding:4px 10px; border-radius:6px; background:#f0f4ff; }
+
+.epi-page table.styled { width:100%; border-collapse:collapse; font-size:.86em; margin:0 0 24px; background:#fff; border:1px solid #e5e7eb; border-radius:10px; overflow:hidden; }
+.epi-page table.styled thead { background:#f0f4ff; }
+.epi-page table.styled th { padding:10px 14px; font-weight:700; color:#374151; font-size:.82em; text-transform:uppercase; letter-spacing:.04em; border-bottom:1px solid #e5e7eb; text-align:left; }
+.epi-page table.styled td { padding:10px 14px; border-bottom:1px solid #f3f4f6; color:#374151; vertical-align:top; line-height:1.6; }
+.epi-page table.styled td p { margin:0; line-height:1.6; }
+.epi-page table.styled tr:last-child td { border-bottom:none; }
+
+.epi-page code { font-family:ui-monospace,'SF Mono',monospace; font-size:.88em; background:#f0f4ff; color:#2563eb; padding:1px 5px; border-radius:3px; }
+</style>
+
+<div class="epi-page" markdown="0">
+
+<div class="hero">
+  <div class="eyebrow">ePI Type 2 &middot; Recommended Profile</div>
+  <h1>ePI <span>Elements</span></h1>
+  <p>A business-friendly walkthrough of the recommended ePI Type 2 profile and the FHIR resources and data elements that make up an electronic product information document.</p>
+</div>
+
+<nav class="page-nav">
+  <span class="lbl">Jump to:</span>
+    <a href="#bundle">Bundle</a>
+    <a href="#composition">Composition</a>
+    <a href="#regulated-authorization">Regulated Authorization</a>
+    <a href="#organization">Organization</a>
+    <a href="#medicinal-product-definition">Medicinal Product Definition</a>
+    <a href="#manufactured-item-definition">Manufactured Item Definition</a>
+    <a href="#ingredient">Ingredient</a>
+    <a href="#substance-definition">Substance Definition</a>
+</nav>
+
+<p class="lead">The base FHIR specification describes a set of <a href="https://hl7.org/fhir/resourcelist.html">base resources</a> used in many different use cases.</p>
+<p class="lead">A FHIR profile is a customized version of a resource. It defines specific rules and constraints for how a resource should be used in a particular context (ePI in this case). This customization ensures that the data exchanged is consistent and meets the specific needs of different  organizations or systems.</p>
+
+<p class="lead">As noted in the <a href="https://build.fhir.org/ig/cander2/aseanepi/usecases.html#recommendation">Use Cases/Recommendations section</a>, ePI Type 2 (A, B, C, and D) is recommended as the ideal approach for countries in the APAC region to benefit from FHIR ePI.</p>
+
+<p class="lead">The following content serves as a business friendly version of the recommended ePI Type 2 profile. The real ePI profile (i.e., the structured version) can be found on the Artifacts page; along with sample data.</p>
+    <div class="section-title" id="epi-type-2-resources-and-elements">ePI Type 2 Resources and Elements</div>
+    <div class="section-title" id="bundle">Bundle</div>
     <p>The Bundle resource is a container for all resources with an ePI. There are different types of Bundle but for ePI, the Bundle type is always "Document". There can only be one Bundle per ePI.</p>
-    <table border="1" style="border: 1px solid grey; border-collapse: collapse;">
+    <table class="styled">
         <thead>
             <tr>
-                <th style="border: 1px solid grey; background-color: #e0e0e0;">FHIR Resource and Data Element</th>
-                <th style="border: 1px solid grey; background-color: #e0e0e0;">Description</th>
+                <th>FHIR Resource and Data Element</th>
+                <th>Description</th>
             </tr>
         </thead>
             <tbody>
@@ -78,13 +128,13 @@
                 </tr>
             </tbody>
         </table>
-    <h4>Composition</h4>
+    <div class="section-title" id="composition">Composition</div>
     <p>The Composition resource is the basic structure for an ePI document since it carries the section headings, images, and narrrative content (e.g., text, tables, bulleted/numbered lists). There can only be one Composition per ePI Document Bundle</p>
-    <table border="1" style="border: 1px solid grey; border-collapse: collapse;">
+    <table class="styled">
         <thead>
             <tr>
-                <th style="border: 1px solid grey; background-color: #e0e0e0;">FHIR Resource and Data Element</th>
-                <th style="border: 1px solid grey; background-color: #e0e0e0;">Description</th>
+                <th>FHIR Resource and Data Element</th>
+                <th>Description</th>
             </tr>
         </thead>
             <tbody>
@@ -420,13 +470,13 @@
                 </tr>
             </tbody>
         </table>
-    <h4>Regulated Authorization</h4>
+    <div class="section-title" id="regulated-authorization">Regulated Authorization</div>
     <p>The Regulated Authorization resource describes a regulatory approval or licence related to a regulated medicinal product (E.g., a Market Authorization). There must be one or more Regulated Authorizations in an ePI.</p>
-    <table border="1" style="border: 1px solid grey; border-collapse: collapse;">
+    <table class="styled">
         <thead>
             <tr>
-                <th style="border: 1px solid grey; background-color: #e0e0e0;">FHIR Resource and Data Element</th>
-                <th style="border: 1px solid grey; background-color: #e0e0e0;">Description</th>
+                <th>FHIR Resource and Data Element</th>
+                <th>Description</th>
             </tr>
         </thead>
         <tbody>
@@ -480,13 +530,13 @@
             </tr>
         </tbody>
     </table>           
-    <h4>Organization</h4>
+    <div class="section-title" id="organization">Organization</div>
     <p>The Organization Resource describes the company name, identifier, address, and type. There must be one or more Organizations in an ePI.</p>
-    <table border="1" style="border: 1px solid grey; border-collapse: collapse;">
+    <table class="styled">
         <thead>
             <tr>
-                <th style="border: 1px solid grey; background-color: #e0e0e0;">FHIR Resource and Data Element</th>
-                <th style="border: 1px solid grey; background-color: #e0e0e0;">Description</th>
+                <th>FHIR Resource and Data Element</th>
+                <th>Description</th>
             </tr>
         </thead>
             <tbody>
@@ -672,13 +722,13 @@
                 </tr>
             </tbody>
         </table>    
-<h4>Medicinal Product Definition</h4>
+<div class="section-title" id="medicinal-product-definition">Medicinal Product Definition</div>
 <p>The Medicinal Product Definition resource describes regulatory details about the product (e.g., name, route of administration, legal/marketing status). There must be one or more Medicinal Product Definition.</p>
-    <table border="1" style="border: 1px solid grey; border-collapse: collapse;">
+    <table class="styled">
         <thead>
             <tr>
-                <th style="border: 1px solid grey; background-color: #e0e0e0;">FHIR Resource and Data Element</th>
-                <th style="border: 1px solid grey; background-color: #e0e0e0;">Description</th>
+                <th>FHIR Resource and Data Element</th>
+                <th>Description</th>
             </tr>
         </thead>
             <tbody>
@@ -1260,13 +1310,13 @@
                 </tr>
             </tbody>
         </table>    
-<h4>Manufactured Item Definition</h4>
+<div class="section-title" id="manufactured-item-definition">Manufactured Item Definition</div>
 <p>The Manufactured Item Definition resource describes the physical properties of the pharmaceutical dose form in its primary package (e.g., strength, ingredients, size, colour, shape). There must be one or more Manufactured Item Definitions in an ePI.</p>
-    <table border="1" style="border: 1px solid grey; border-collapse: collapse;">
+    <table class="styled">
         <thead>
             <tr>
-                <th style="border: 1px solid grey; background-color: #e0e0e0;">FHIR Resource and Data Element</th>
-                <th style="border: 1px solid grey; background-color: #e0e0e0;">Description</th>
+                <th>FHIR Resource and Data Element</th>
+                <th>Description</th>
             </tr>
         </thead>
             <tbody>
@@ -1506,13 +1556,13 @@
                 </tr>
             </tbody>
         </table>
-<h4>Ingredient</h4>
+<div class="section-title" id="ingredient">Ingredient</div>
 <p>The Ingredient resource uniquely describes all ingredients contained in the Manufactured Item. This includes ingredient name, identifier, role (active, inactive, adjuvant), manufacturer, and strength. There must be at least one or more Ingredients in an ePI.</p>
-    <table border="1" style="border: 1px solid grey; border-collapse: collapse;">
+    <table class="styled">
         <thead>
             <tr>
-                <th style="border: 1px solid grey; background-color: #e0e0e0;">FHIR Resource and Data Element</th>
-                <th style="border: 1px solid grey; background-color: #e0e0e0;">Description</th>
+                <th>FHIR Resource and Data Element</th>
+                <th>Description</th>
             </tr>
         </thead>
             <tbody>
@@ -2621,13 +2671,13 @@
         </table>
 
 
-<h4>Substance Definition</h4>
+<div class="section-title" id="substance-definition">Substance Definition</div>
 <p>The Substance Definition resource describes an ingredient in more detail (e.g., molecular weight, chemical structure). There must be one or more Substance Definitions in an ePI.</p>
-    <table border="1" style="border: 1px solid grey; border-collapse: collapse;">
+    <table class="styled">
         <thead>
             <tr>
-                <th style="border: 1px solid grey; background-color: #e0e0e0;">FHIR Resource and Data Element</th>
-                <th style="border: 1px solid grey; background-color: #e0e0e0;">Description</th>
+                <th>FHIR Resource and Data Element</th>
+                <th>Description</th>
             </tr>
         </thead>
             <tbody>
@@ -2681,4 +2731,5 @@
                 </tr>
             </tbody>
         </table>
-</html>
+
+</div>
