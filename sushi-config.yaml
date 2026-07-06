@@ -9,7 +9,14 @@ copyrightYear: 2024+
 releaseLabel: ci-build
 publisher:
   name: Asia Partnership Conference of Pharmaceutical Associations (APAC)
+  url: http://www.hl7.org/Special/committees/rcrim
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
+
+# HL7 universal-realm IGs must declare a sponsoring work group. This IG extends
+# the BR&R Vulcan Global Core ePI IG, so it is sponsored by BR&R (rcrim).
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+    valueCode: brr
 
 pages:
   index.md:
