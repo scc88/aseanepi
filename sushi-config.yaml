@@ -1,42 +1,52 @@
 id: hl7.fhir.uv.epi-asean
 canonical: http://hl7.org/fhir/uv/epi-asean
-name: aseanepi
-title: ePI IG for APAC markets
+name: APACePI
+title: "ePI Implementation Guide for the Asia Partnership Conference of Pharmaceutical Associations (APAC)"
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2024+
 releaseLabel: ci-build
 publisher:
-  name: Gravitate Health Project
-  url: https://www.gravitatehealth.eu/
+  name: Asia Partnership Conference of Pharmaceutical Associations (APAC)
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 
 pages:
-   index.md:
-     title: Home
-   usecases.md:
-     title: Use Cases
-   terminology.md:
-    title: Terminology
-   epiElements.md:
+  index.md:
+    title: Home
+  usecases.md:
+    title: Use Cases
+  epiElements.md:
     title: ePI Elements
-   TechStyleGuide.md:
-    title: Technical Style Guide
-   appendix1.md:
+  terminology.md:
+    title: Terminology
+  TechStyleGuide.md:
+    title: Best Practice
+  appendix1.md:
     title: Appendix 1
-   appendix2.md:
+  appendix2.md:
     title: Appendix 2
+  showcase.md:
+    title: Showcase
+  credits.md:
+    title: Credits
 
+# Navigation modelled on the Vulcan Global Core ePI IG
+# (Home, Use Case, ePI Creation, Best Practice, Artifacts, Downloads, Credits)
 menu:
   Home: index.html
   Use Cases: usecases.html
-  Terminology: terminology.html
-  ePI Elements: epiElements.html
-  Technical Style Guide: TechStyleGuide.html
-  Appendices: 
+  ePI Creation:
+    ePI Elements: epiElements.html
+    Terminology: terminology.html
+  Best Practice: TechStyleGuide.html
+  Showcase: showcase.html
+  Appendices:
     Appendix 1: appendix1.html
     Appendix 2: appendix2.html
   Artifacts: artifacts.html
+  Downloads: downloads.html
+  Credits: credits.html
 
 instanceOptions:
   manualSliceOrdering: true
