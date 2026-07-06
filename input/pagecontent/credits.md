@@ -29,7 +29,6 @@
 <div class="hero">
   <div class="eyebrow">About</div>
   <h1>Credits</h1>
-  <p>Who publishes this Implementation Guide, the global core it builds on, and the people and organisations that made it possible.</p>
 </div>
 
 <p class="lead">This Implementation Guide is published by the <b>Asia Partnership Conference of Pharmaceutical Associations (APAC)</b> to facilitate the implementation and understanding of electronic Product Information (ePI) across APAC markets.</p>
@@ -45,9 +44,7 @@ This IG is an extension of, and is designed to be consistent with, the <b><a hre
 
 <ul class="ack">
   <li>Asia Partnership Conference of Pharmaceutical Associations (APAC) member associations</li>
-  <li>Gravitate Health Project — <a href="https://www.gravitatehealth.eu/">https://www.gravitatehealth.eu/</a></li>
   <li>HL7 International and the Vulcan Accelerator</li>
-  <li>Regulatory and industry contributors from the APAC region</li>
 </ul>
 
 <div class="section-title">Contact</div>

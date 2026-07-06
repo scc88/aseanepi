@@ -30,26 +30,16 @@
     </ul>
   </li>
   <li>
-    <a href="TechStyleGuide.html">Best Practice</a>
-  </li>
-  <li>
     <a href="buildguide.html">Build Guide</a>
   </li>
   <li>
-    <a href="showcase.html">Showcase</a>
+    <a href="sg-epi-pilot.html">SG ePI Pilot</a>
   </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Appendices
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="appendix1.html">Appendix 1</a>
-      </li>
-      <li>
-        <a href="appendix2.html">Appendix 2</a>
-      </li>
-    </ul>
+  <li>
+    <a href="appendix1.html">National Label Templates</a>
+  </li>
+  <li>
+    <a href="appendix2.html">Regional Showcase</a>
   </li>
   <li>
     <a href="artifacts.html">Artifacts</a>

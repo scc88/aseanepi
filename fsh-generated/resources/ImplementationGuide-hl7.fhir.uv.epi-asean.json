@@ -84,33 +84,43 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "TechStyleGuide.html",
-          "title": "Best Practice",
-          "generation": "markdown"
-        },
-        {
           "nameUrl": "buildguide.html",
           "title": "ePI Build Guide (SG)",
           "generation": "markdown"
         },
         {
+          "nameUrl": "sg-epi-pilot.html",
+          "title": "SG ePI Pilot",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "appendix1.html",
-          "title": "Appendix 1",
+          "title": "National Label Templates",
           "generation": "markdown"
         },
         {
           "nameUrl": "appendix2.html",
-          "title": "Appendix 2",
+          "title": "Regional Showcase",
           "generation": "markdown"
         },
         {
-          "nameUrl": "showcase.html",
-          "title": "Showcase",
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
           "generation": "markdown"
         },
         {
           "nameUrl": "credits.html",
           "title": "Credits",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "TechStyleGuide.html",
+          "title": "Best Practice",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "showcase.html",
+          "title": "Showcase",
           "generation": "markdown"
         }
       ]

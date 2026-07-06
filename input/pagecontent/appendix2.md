@@ -27,8 +27,8 @@
 <div class="epi-page" markdown="1">
 
 <div class="hero">
-  <div class="eyebrow">Appendix 2</div>
-  <h1>Regional Showcase &amp; Business <span>Benefits</span></h1>
+  <div class="eyebrow">Reference</div>
+  <h1>Regional <span>Showcase</span></h1>
   <p>How a single FHIR ePI data file adapts to five distinct regional leaflet formats across the ASEAN region while sharing the exact same underlying technology.</p>
 </div>
 

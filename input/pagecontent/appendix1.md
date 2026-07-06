@@ -22,7 +22,7 @@
 <div class="epi-page" markdown="1">
 
 <div class="hero">
-  <div class="eyebrow">Appendix 1</div>
+  <div class="eyebrow">Reference</div>
   <h1>National Label <span>Templates</span></h1>
   <p>Section headings from the national Patient Information Leaflet templates across the ASEAN region — the ASEAN core plus Malaysia, the Philippines, Thailand and Indonesia.</p>
 </div>
