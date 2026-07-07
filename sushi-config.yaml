@@ -4,9 +4,16 @@ name: APACePI
 title: "ePI Implementation Guide for the Asia Partnership Conference of Pharmaceutical Associations (APAC)"
 status: draft
 version: 0.1.0
-fhirVersion: 4.0.1
+fhirVersion: 5.0.0
 copyrightYear: 2024+
 releaseLabel: ci-build
+
+# The ePI reference Bundles (SmPC & PIL) use FHIR R5 resource types
+# (MedicinalProductDefinition, ClinicalUseDefinition, etc.), so this IG is R5.
+parameters:
+  autoload-resources: true
+  path-resource:
+    - input/instances
 publisher:
   name: Asia Partnership Conference of Pharmaceutical Associations (APAC)
   url: http://www.hl7.org/Special/committees/rcrim

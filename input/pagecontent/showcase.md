@@ -126,6 +126,6 @@ The renderings below are interactive <b>ePI Type 3</b> showcases. They feature t
 
 The structured FHIR example instance published with this Implementation Guide:
 
-- **[Bundle: Paxlovid — Singapore SmPC](Bundle-epi-paxlovid-sgp-smpc.html)** — a complete ePI document Bundle. See the [Artifacts](artifacts.html) page for the full list of published examples and profiles.
+- **[Bundle: Paxlovid — Singapore SmPC](Bundle-paxlovid-sgp-smpc-epi.html)** — a complete ePI document Bundle. See the [Artifacts](artifacts.html) page for the full list of published examples and profiles.
 
 </div>

@@ -63,7 +63,7 @@
 </div>
 
 <div class="ref-meta">
-  <span class="chip"><strong>Reference instance:</strong> <a href="Bundle-epi-paxlovid-sgp-smpc.html">Bundle-epi-paxlovid-sgp-smpc</a></span>
+  <span class="chip"><strong>Reference instance:</strong> <a href="Bundle-paxlovid-sgp-smpc-epi.html">Bundle-epi-paxlovid-sgp-smpc</a></span>
   <span class="chip"><strong>FHIR release:</strong> R5</span>
   <span class="chip"><strong>Bundle type:</strong> <code>document</code></span>
   <span class="chip"><strong>Standard:</strong> HL7 FHIR ePI (Vulcan Global Core ePI), as adopted for APAC / HSA Singapore</span>

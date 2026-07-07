@@ -37,7 +37,7 @@
   ],
   "packageId": "hl7.fhir.uv.epi-asean",
   "fhirVersion": [
-    "4.0.1"
+    "5.0.0"
   ],
   "definition": {
     "resource": [
@@ -47,7 +47,7 @@
         },
         "name": "MyPatient",
         "description": "An example profile of the Patient resource.",
-        "exampleBoolean": false
+        "isExample": false
       },
       {
         "reference": {
@@ -55,87 +55,126 @@
         },
         "name": "PatientExample",
         "description": "An example of a patient with a license to krill.",
-        "exampleCanonical": "http://hl7.org/fhir/uv/epi-asean/StructureDefinition/MyPatient"
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/uv/epi-asean/StructureDefinition/MyPatient"
+        ]
       }
     ],
     "page": {
-      "nameUrl": "toc.html",
       "title": "Table of Contents",
       "generation": "html",
       "page": [
         {
-          "nameUrl": "index.html",
           "title": "Home",
-          "generation": "markdown"
+          "generation": "markdown",
+          "name": "index.html",
+          "sourceUrl": "index.html"
         },
         {
-          "nameUrl": "usecases.html",
           "title": "Use Cases",
-          "generation": "markdown"
+          "generation": "markdown",
+          "name": "usecases.html",
+          "sourceUrl": "usecases.html"
         },
         {
-          "nameUrl": "epiElements.html",
           "title": "ePI Elements",
-          "generation": "markdown"
+          "generation": "markdown",
+          "name": "epiElements.html",
+          "sourceUrl": "epiElements.html"
         },
         {
-          "nameUrl": "terminology.html",
           "title": "Terminology",
-          "generation": "markdown"
+          "generation": "markdown",
+          "name": "terminology.html",
+          "sourceUrl": "terminology.html"
         },
         {
-          "nameUrl": "buildguide.html",
           "title": "ePI Build Guide (SG)",
-          "generation": "markdown"
+          "generation": "markdown",
+          "name": "buildguide.html",
+          "sourceUrl": "buildguide.html"
         },
         {
-          "nameUrl": "sg-epi-pilot.html",
           "title": "SG ePI Pilot",
-          "generation": "markdown"
+          "generation": "markdown",
+          "name": "sg-epi-pilot.html",
+          "sourceUrl": "sg-epi-pilot.html"
         },
         {
-          "nameUrl": "appendix1.html",
           "title": "National Label Templates",
-          "generation": "markdown"
+          "generation": "markdown",
+          "name": "appendix1.html",
+          "sourceUrl": "appendix1.html"
         },
         {
-          "nameUrl": "appendix2.html",
           "title": "Regional Showcase",
-          "generation": "markdown"
+          "generation": "markdown",
+          "name": "appendix2.html",
+          "sourceUrl": "appendix2.html"
         },
         {
-          "nameUrl": "downloads.html",
           "title": "Downloads",
-          "generation": "markdown"
+          "generation": "markdown",
+          "name": "downloads.html",
+          "sourceUrl": "downloads.html"
         },
         {
-          "nameUrl": "credits.html",
           "title": "Credits",
-          "generation": "markdown"
+          "generation": "markdown",
+          "name": "credits.html",
+          "sourceUrl": "credits.html"
         },
         {
-          "nameUrl": "TechStyleGuide.html",
           "title": "Best Practice",
-          "generation": "markdown"
+          "generation": "markdown",
+          "name": "TechStyleGuide.html",
+          "sourceUrl": "TechStyleGuide.html"
         },
         {
-          "nameUrl": "showcase.html",
           "title": "Showcase",
-          "generation": "markdown"
+          "generation": "markdown",
+          "name": "showcase.html",
+          "sourceUrl": "showcase.html"
         }
-      ]
+      ],
+      "name": "toc.html",
+      "sourceUrl": "toc.html"
     },
     "parameter": [
       {
-        "code": "copyrightyear",
+        "code": {
+          "code": "copyrightyear",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
         "value": "2024+"
       },
       {
-        "code": "releaselabel",
+        "code": {
+          "code": "releaselabel",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
         "value": "ci-build"
       },
       {
-        "code": "path-history",
+        "code": {
+          "code": "autoload-resources",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
+        "value": "true"
+      },
+      {
+        "code": {
+          "code": "path-resource",
+          "system": "http://hl7.org/fhir/guide-parameter-code"
+        },
+        "value": "input/instances"
+      },
+      {
+        "code": {
+          "code": "path-history",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
         "value": "http://hl7.org/fhir/uv/epi-asean/history.html"
       }
     ]

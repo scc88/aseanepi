@@ -87,7 +87,7 @@ This pilot and its reference materials are illustrative and under active develop
 
 <div class="section-title">How to take part</div>
 <div class="steps">
-  <div class="step"><div class="num"></div><div class="sbody"><div class="st">Read the reference instance</div><p>Review the worked <a href="Bundle-epi-paxlovid-sgp-smpc.html">PAXLOVID Singapore SmPC Bundle</a> — the golden-standard ePI document for the pilot.</p></div></div>
+  <div class="step"><div class="num"></div><div class="sbody"><div class="st">Read the reference instance</div><p>Review the worked <a href="Bundle-paxlovid-sgp-smpc-epi.html">PAXLOVID Singapore SmPC Bundle</a> — the golden-standard ePI document for the pilot.</p></div></div>
   <div class="step"><div class="num"></div><div class="sbody"><div class="st">Follow the Build Guide</div><p>The <a href="buildguide.html">ePI Build Guide (SG)</a> explains, resource by resource and in build order, how the reference document was constructed and what you change for your own product.</p></div></div>
   <div class="step"><div class="num"></div><div class="sbody"><div class="st">Apply terminology &amp; best practice</div><p>Bind elements to the <a href="terminology.html">preferred controlled terminologies</a> and structure narrative per the guide's technical best practices.</p></div></div>
 </div>
@@ -96,13 +96,13 @@ This pilot and its reference materials are illustrative and under active develop
 <p>The pilot's golden-standard ePIs are two PAXLOVID Singapore document Bundles built from the <b>same product data</b> — the healthcare-professional <b>SmPC</b> and the <b>patient leaflet (PIL)</b>. Only the Bundle and Composition differ between them; all product, ingredient and clinical resources are shared. Browse each rendered resource, or view and download the raw FHIR source from GitHub.</p>
 <p style="font-size:.82em;font-weight:700;color:#003087;margin:0 0 6px;">SmPC — for healthcare professionals</p>
 <div class="link-row">
-  <a href="Bundle-epi-paxlovid-sgp-smpc.html">📄 Rendered Bundle</a>
+  <a href="Bundle-paxlovid-sgp-smpc-epi.html">📄 Rendered Bundle</a>
   <a class="gh" href="https://github.com/scc88/aseanepi/blob/main/input/instances/Bundle-epi-paxlovid-sgp-smpc.xml">↗ Source XML on GitHub</a>
   <a href="https://raw.githubusercontent.com/scc88/aseanepi/main/input/instances/Bundle-epi-paxlovid-sgp-smpc.xml">⬇ Raw XML</a>
 </div>
 <p style="font-size:.82em;font-weight:700;color:#003087;margin:0 0 6px;">PIL — for patients</p>
 <div class="link-row">
-  <a href="Bundle-epi-paxlovid-sgp-pil.html">📄 Rendered Bundle</a>
+  <a href="Bundle-paxlovid-sgp-pil-epi.html">📄 Rendered Bundle</a>
   <a class="gh" href="https://github.com/scc88/aseanepi/blob/main/input/instances/Bundle-epi-paxlovid-sgp-pil.xml">↗ Source XML on GitHub</a>
   <a href="https://raw.githubusercontent.com/scc88/aseanepi/main/input/instances/Bundle-epi-paxlovid-sgp-pil.xml">⬇ Raw XML</a>
 </div>
@@ -110,8 +110,8 @@ This pilot and its reference materials are illustrative and under active develop
 <div class="section-title" id="showcase">Singapore ePI showcase</div>
 <p>See the pilot's structured PAXLOVID data rendered as interactive Singapore ePIs — the same source data presented for two audiences.</p>
 <div class="link-row">
-  <a href="Bundle-epi-paxlovid-sgp-smpc.html">📱 Paxlovid — SmPC (healthcare professional)</a>
-  <a href="Bundle-epi-paxlovid-sgp-pil.html">📱 Paxlovid — PIL (patient leaflet)</a>
+  <a href="Bundle-paxlovid-sgp-smpc-epi.html">📱 Paxlovid — SmPC (healthcare professional)</a>
+  <a href="Bundle-paxlovid-sgp-pil-epi.html">📱 Paxlovid — PIL (patient leaflet)</a>
 </div>
 
 <div class="section-title" id="concepts">Concept mockups — dynamic ePI</div>
@@ -133,12 +133,6 @@ This pilot and its reference materials are illustrative and under active develop
   <a href="examples/mockup-version-diff.html" target="_blank" rel="noopener">🔀 Version diff &amp; change tracking</a>
   <a href="examples/mockup-portfolio-query.html" target="_blank" rel="noopener">🔎 Portfolio surveillance queries</a>
   <a href="examples/mockup-conformance.html" target="_blank" rel="noopener">✅ Conformance dashboard</a>
-</div>
-
-<div class="section-title" id="build">Build instructions</div>
-<p>The <a href="buildguide.html">ePI Build Guide (SG)</a> is the step-by-step, resource-by-resource walkthrough of how the reference PAXLOVID Bundle was constructed — the recipe to follow when building an ePI FHIR document for your own product.</p>
-<div class="link-row">
-  <a href="buildguide.html">🏗️ Open the ePI Build Guide (SG)</a>
 </div>
 
 <div class="section-title" id="sg-terminology">Singapore-specific terminology</div>
