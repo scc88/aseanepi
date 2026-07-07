@@ -32,6 +32,12 @@
   .epi-page .step .num::before { content:counter(step); }
   .epi-page .step .sbody .st { font-weight:700; color:#111827; font-size:.92em; margin-bottom:3px; }
   .epi-page .step .sbody p { font-size:.86em; color:#4b5563; margin:0; }
+  .epi-page .link-row { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:22px; }
+  .epi-page .link-row a { font-size:.84em; font-weight:600; color:#1d4ed8; text-decoration:none; padding:8px 14px; border-radius:6px; background:#eff6ff; border:1px solid #bfdbfe; }
+  .epi-page .link-row a.gh { background:#111827; color:#fff; border-color:#111827; }
+  .epi-page .placeholder { border:1px dashed #cbd5e1; background:#f8fafc; border-radius:10px; padding:20px 22px; margin-bottom:24px; }
+  .epi-page .placeholder .ph-tag { display:inline-block; font-size:.68em; font-weight:800; text-transform:uppercase; letter-spacing:.1em; color:#9a6700; background:#fff8c5; border:1px solid #fde68a; border-radius:99px; padding:3px 10px; margin-bottom:10px; }
+  .epi-page .placeholder p { color:#64748b; margin:0; font-size:.9em; line-height:1.65; }
 </style>
 
 <div class="epi-page" markdown="1">
@@ -85,6 +91,42 @@ This pilot and its reference materials are illustrative and under active develop
   <div class="step"><div class="num"></div><div class="sbody"><div class="st">Follow the Build Guide</div><p>The <a href="buildguide.html">ePI Build Guide (SG)</a> explains, resource by resource and in build order, how the reference document was constructed and what you change for your own product.</p></div></div>
   <div class="step"><div class="num"></div><div class="sbody"><div class="st">Apply terminology &amp; best practice</div><p>Bind elements to the <a href="terminology.html">preferred controlled terminologies</a> and structure narrative per the guide's technical best practices.</p></div></div>
   <div class="step"><div class="num"></div><div class="sbody"><div class="st">Preview the rendering</div><p>See how structured ePI data renders into localized leaflets on the <a href="appendix2.html">Regional Showcase</a>.</p></div></div>
+</div>
+
+<div class="section-title" id="reference">Reference instance &amp; source</div>
+<p>The pilot's golden-standard ePI is the PAXLOVID Singapore SmPC document Bundle. Browse the rendered resource in this guide, or view and download the raw FHIR source directly from GitHub.</p>
+<div class="link-row">
+  <a href="Bundle-epi-paxlovid-sgp-smpc.html">📄 Rendered Bundle</a>
+  <a class="gh" href="https://github.com/scc88/aseanepi/blob/main/input/instances/Bundle-epi-paxlovid-sgp-smpc.xml">↗ Source XML on GitHub</a>
+  <a href="https://raw.githubusercontent.com/scc88/aseanepi/main/input/instances/Bundle-epi-paxlovid-sgp-smpc.xml">⬇ Raw XML</a>
+</div>
+
+<div class="section-title" id="showcase">Interactive HTML showcase</div>
+<p>See how a single structured ePI data set renders into locally-compliant, patient-friendly digital leaflets across the region. Open any interactive HTML rendering below, or browse them all on the <a href="appendix2.html">Regional Showcase</a>.</p>
+<div class="link-row">
+  <a href="examples/epi-asean-template.html">ASEAN Core Template</a>
+  <a href="examples/epi-indonesia-template.html">Indonesia (BPOM)</a>
+  <a href="examples/epi-malaysia-rimup.html">Malaysia (RiMUP)</a>
+  <a href="examples/epi-thailand.html">Thailand PIL</a>
+  <a href="examples/epi-philippines-template.html">Philippines PIL</a>
+</div>
+
+<div class="section-title" id="build">Build instructions</div>
+<p>The <a href="buildguide.html">ePI Build Guide (SG)</a> is the step-by-step, resource-by-resource walkthrough of how the reference PAXLOVID Bundle was constructed — the recipe to follow when building an ePI FHIR document for your own product.</p>
+<div class="link-row">
+  <a href="buildguide.html">🏗️ Open the ePI Build Guide (SG)</a>
+</div>
+
+<div class="section-title" id="sg-terminology">Singapore-specific terminology</div>
+<div class="placeholder">
+  <span class="ph-tag">Placeholder · to be confirmed with HSA</span>
+  <p>This section will document any Singapore-specific controlled terminology, local code systems, and value-set bindings that apply to HSA ePI submissions — supplementing the regional <a href="terminology.html">preferred terminologies</a>. Content to be added.</p>
+</div>
+
+<div class="section-title" id="sg-best-practice">Singapore-specific best practices</div>
+<div class="placeholder">
+  <span class="ph-tag">Placeholder · to be confirmed with HSA</span>
+  <p>This section will capture Singapore-specific authoring conventions, structural rules, and submission requirements for HSA ePI — supplementing the general technical best practices. Content to be added.</p>
 </div>
 
 <div class="alert alert-note" markdown="1">
