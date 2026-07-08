@@ -57,16 +57,16 @@
 <div class="epi-page" markdown="1">
 
 <div class="hero">
-  <div class="eyebrow">HSA Singapore · Worked Reference</div>
+  <div class="eyebrow">Singapore · Worked Reference</div>
   <h1>ePI Build <span>Guide</span></h1>
-  <p>Worked reference: the PAXLOVID Summary of Product Characteristics (SmPC) — a resource-by-resource, ideal-build-order walkthrough of how the ePI FHIR document was constructed, and the golden-standard blueprint for the HSA ePI pilot.</p>
+  <p>Worked reference: the PAXLOVID Summary of Product Characteristics (SmPC) — a resource-by-resource, ideal-build-order walkthrough of how the ePI FHIR document was constructed, and the golden-standard blueprint for the Singapore ePI pilot.</p>
 </div>
 
 <div class="ref-meta">
   <span class="chip"><strong>Reference instance:</strong> <a href="Bundle-paxlovid-sgp-smpc-epi.html">Bundle-epi-paxlovid-sgp-smpc</a></span>
   <span class="chip"><strong>FHIR release:</strong> R5</span>
   <span class="chip"><strong>Bundle type:</strong> <code>document</code></span>
-  <span class="chip"><strong>Standard:</strong> HL7 FHIR ePI (Vulcan Global Core ePI), as adopted for APAC / HSA Singapore</span>
+  <span class="chip"><strong>Standard:</strong> HL7 FHIR ePI (Vulcan Global Core ePI), as adopted for APAC / Singapore</span>
 </div>
 
 <nav class="page-nav">
@@ -83,7 +83,7 @@
 
 <div class="section-title" id="sec-0">0. Purpose &amp; how to use this document</div>
 
-This document explains, **resource by resource and in the ideal build order**, how the PAXLOVID ePI XML was constructed. It is the **golden-standard blueprint** for the HSA ePI pilot: pharmaceutical companies should follow this recipe to build ePI FHIR documents for their own products.
+This document explains, **resource by resource and in the ideal build order**, how the PAXLOVID ePI XML was constructed. It is the **golden-standard blueprint** for the Singapore ePI pilot: pharmaceutical companies should follow this recipe to build ePI FHIR documents for their own products.
 
 - **What is fixed** — the *shape* of the document: which FHIR resources are used, how they reference each other, which terminologies are used, and the section skeleton of the SmPC.
 - **What you change** — the *content*: your company, your product, your substances, your clinical particulars, your dosing.
@@ -95,7 +95,7 @@ This document explains, **resource by resource and in the ideal build order**, h
 
 <div class="alert alert-important">
   <span class="alabel">⚠️ Draft-data disclaimer</span>
-  The reference instance is an illustrative sample. Identifiers such as the registration number <code>PAXH-SIN-0126</code>, the document id <code>PAXH-SIN-0126/0</code>, and the HSA local code-system URLs (<code>https://www.hsa.gov.sg/epi/…</code>) are <strong>placeholders to be confirmed with HSA</strong>. Do not treat them as approved values.
+  The reference instance is an illustrative sample. Identifiers such as the registration number <code>PAXH-SIN-0126</code>, the document id <code>PAXH-SIN-0126/0</code>, and the local code-system URLs (<code>https://www.hsa.gov.sg/epi/…</code>) are <strong>placeholders to be confirmed with the health authority</strong>. Do not treat them as approved values.
 </div>
 
 <div class="section-title" id="sec-1">1. What you are building — the FHIR document model</div>
@@ -107,7 +107,7 @@ Bundle (document)
 ├── Composition ......... the SmPC spine — sections 1–7, narrative + references  ← MUST be first entry
 ├── Organization ........ the product owner / marketing authorisation holder
 ├── MedicinalProductDefinition ... the product's identity
-├── RegulatedAuthorization ....... the HSA marketing authorisation
+├── RegulatedAuthorization ....... the marketing authorisation
 ├── SubstanceDefinition (×n) ..... each active + reference excipient substance
 ├── Ingredient (×n) .............. actives (with strength) + excipients
 ├── ManufacturedItemDefinition (×n) ... each physical tablet (colour/shape/imprint)
@@ -144,9 +144,9 @@ Per the [Use Cases page](usecases.html), **Type 4** is the fully-structured, dig
 | Language | `urn:ietf:bcp:47` | `en` English |
 | Name-part / role / type enums | `http://hl7.org/fhir/…` | FHIR-defined code systems |
 
-<div class="subsection-title">2.2 HSA local (Singapore) code systems</div>
+<div class="subsection-title">2.2 Local (Singapore) code systems</div>
 
-The reference uses draft HSA namespaces for locally-governed concepts. **Confirm the final URLs and codes with HSA** before production:
+The reference uses draft local namespaces for locally-governed concepts. **Confirm the final URLs and codes with the health authority** before production:
 
 - `https://www.hsa.gov.sg/epi/document-id` · `…/document-type` · `…/section-code`
 - `https://www.hsa.gov.sg/epi/registration-number` · `…/organisation` · `…/substance`
@@ -243,9 +243,9 @@ The anchor of the whole ePI: nearly everything ultimately points back to it. It 
 </MedicinalProductDefinition>
 ```
 
-**SG note:** the `usage.country`/`jurisdiction` is `SG`, and `identifier` carries the HSA registration number. For your product, set these to your HSA registration.
+**SG note:** the `usage.country`/`jurisdiction` is `SG`, and `identifier` carries the registration number. For your product, set these to your registration.
 
-<div class="subsection-title">Step 3 — <code>RegulatedAuthorization</code> (the HSA marketing authorisation)</div>
+<div class="subsection-title">Step 3 — <code>RegulatedAuthorization</code> (the marketing authorisation)</div>
 
 Ties the product (`subject`) to its authorisation holder (`holder`). In the reference the identifier is explicitly flagged as draft.
 
@@ -254,7 +254,7 @@ Ties the product (`subject`) to its authorisation holder (`holder`). In the refe
   <id value="regauth-paxlovid"/>
   <identifier>
     <system value="https://www.hsa.gov.sg/epi/registration-number"/>
-    <value value="PAXH-SIN-0126 (draft — HSA to confirm)"/>
+    <value value="PAXH-SIN-0126 (draft — to confirm)"/>
   </identifier>
   <subject><reference value="MedicinalProductDefinition/mpd-paxlovid"/></subject>
   <status><coding><system value="http://hl7.org/fhir/publication-status"/>
@@ -512,7 +512,7 @@ Machine-readable dosing — the defining feature of Type 4. It groups dosing int
 
 <div class="subsection-title">Step 11 — <code>Composition</code> (assemble the SmPC spine)</div>
 
-Now wire everything together. The Composition carries document-level metadata and a **nested tree of `section`s** mirroring the SmPC (sections 1–7). Each `section` has: a `title`, a `code` (HSA `section-code`), a `text` narrative (`xhtml`), and — where structured data exists — one or more `entry` references to the resources you built above.
+Now wire everything together. The Composition carries document-level metadata and a **nested tree of `section`s** mirroring the SmPC (sections 1–7). Each `section` has: a `title`, a `code` (local `section-code`), a `text` narrative (`xhtml`), and — where structured data exists — one or more `entry` references to the resources you built above.
 
 **Document header:**
 
@@ -613,7 +613,7 @@ Finally, assemble the document Bundle. **The Composition must be the first entry
 4. **Bundle identifier & version** — `document-id` uses `…/{registration}/{version}` (here `PAXH-SIN-0126/0`); increment the trailing version for each reissue.
 5. **One fact per resource** — especially for `ClinicalUseDefinition`; that granularity is what "Type 4" buys you.
 6. **Narrative + structure** — populate both: human-readable `text` in each Composition section **and** the coded `entry` resources.
-7. **Terminology discipline** — prefer the international systems in §2.1; use HSA local systems only for locally-governed concepts, and confirm those URLs with HSA.
+7. **Terminology discipline** — prefer the international systems in §2.1; use local systems only for locally-governed concepts, and confirm those URLs with the health authority.
 
 <div class="section-title" id="sec-6">6. Validation &amp; submission checklist</div>
 
@@ -625,12 +625,12 @@ Finally, assemble the document Bundle. **The Composition must be the first entry
 - [ ] Clinical particulars complete: indication(s), contraindications, interactions, warnings, undesirable effects — each a `ClinicalUseDefinition`.
 - [ ] `MedicationKnowledge` dosing guidelines cover all patient bands (e.g. renal function).
 - [ ] Codes validate against their systems (EDQM, SNOMED CT, UNII, ATC, LOINC, UCUM, ISO 3166).
-- [ ] HSA local ids (registration number, document id) confirmed with HSA.
+- [ ] Local ids (registration number, document id) confirmed with the health authority.
 - [ ] Runs clean through the HL7 FHIR R5 validator (and, ideally, the Vulcan ePI IG profiles — see §7).
 
 <div class="section-title" id="sec-7">7. How to adapt this for your product (the reusable recipe)</div>
 
-1. **Swap the product identity** — replace `Organization`, `MedicinalProductDefinition`, `RegulatedAuthorization` with your company, product, and HSA registration.
+1. **Swap the product identity** — replace `Organization`, `MedicinalProductDefinition`, `RegulatedAuthorization` with your company, product, and registration.
 2. **List your substances & ingredients** — one `SubstanceDefinition` per coded substance (use UNII); one `Ingredient` per active (with strength) and per excipient.
 3. **Describe your dosage forms & pack** — `ManufacturedItemDefinition` per physical unit, one `AdministrableProductDefinition`, one `PackagedProductDefinition` per pack.
 4. **Encode your clinical particulars** — one `ClinicalUseDefinition` per indication / contraindication / interaction / warning / adverse reaction. This is the bulk of the work; be exhaustive and atomic.
@@ -640,8 +640,8 @@ Finally, assemble the document Bundle. **The Composition must be the first entry
 
 <div class="subsection-title">Recommended enhancement — bind to the Vulcan ePI profiles</div>
 
-The reference instance does **not** tag resources with `meta.profile`. For formal conformance and better validation, consider adding the Vulcan Global Core ePI profile canonical URLs to each resource's `meta.profile` (see the [ePI Elements](epiElements.html) and [Artifacts](artifacts.html) pages, and <https://hl7.org/fhir/uv/emedicinal-product-info/>). Confirm the expected profile set with HSA for the pilot.
+The reference instance does **not** tag resources with `meta.profile`. For formal conformance and better validation, consider adding the Vulcan Global Core ePI profile canonical URLs to each resource's `meta.profile` (see the [ePI Elements](epiElements.html) and [Artifacts](artifacts.html) pages, and <https://hl7.org/fhir/uv/emedicinal-product-info/>). Confirm the expected profile set with the health authority for the pilot.
 
-*This blueprint documents the structure of the PAXLOVID SmPC reference instance for the HSA ePI pilot. Content values shown are illustrative; regulatory identifiers and HSA code systems must be confirmed with HSA before production use.*
+*This blueprint documents the structure of the PAXLOVID SmPC reference instance for the Singapore ePI pilot. Content values shown are illustrative; regulatory identifiers and local code systems must be confirmed with the health authority before production use.*
 
 </div>

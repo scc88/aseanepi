@@ -43,7 +43,7 @@ This IG is an extension of, and is designed to be consistent with, the <b><a hre
 <div class="section-title">Acknowledgements</div>
 
 <ul class="ack">
-  <li>Asia Partnership Conference of Pharmaceutical Associations (APAC) member associations</li>
+  <li>Asia Partnership Conference of Pharmaceutical Associations (APAC)</li>
   <li>HL7 International and the Vulcan Accelerator</li>
 </ul>
 

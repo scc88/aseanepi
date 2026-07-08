@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PAXLOVID film-coated tablets — Package Leaflet: Information for the patient</title>
+  <meta name="description" content="Patient Information Leaflet (PIL) for PAXLOVID (nirmatrelvir / ritonavir) film-coated tablets — a deliberately simple ePI render for the Singapore ePI pilot.">
+  <style>
+  :root{
+    --ground:#ffffff; --rail:#f8fafc; --ink:#1f2937; --muted:#64748b; --faint:#94a3b8;
+    --line:#e5e7eb; --accent:#1d4ed8; --accent-ink:#1e40af; --accent-tint:#eff4ff;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);line-height:1.65;scroll-behavior:smooth}
+  a{color:var(--accent-ink)}
+  .appbar{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;padding:10px 20px}
+  .appbar .name{font-weight:700} .appbar .tag{font-family:var(--mono);font-size:11px;color:var(--accent-ink);background:var(--accent-tint);border:1px solid #dbe4ff;padding:2px 8px;border-radius:999px}
+  .appbar .back{margin-left:auto;font-size:12px;color:var(--muted);text-decoration:none;font-family:var(--mono)}
+  .tocToggle{display:none}
+  .layout{display:grid;grid-template-columns:244px 1fr;max-width:1120px;margin:0 auto}
+  .toc{position:sticky;top:53px;align-self:start;height:calc(100vh - 53px);overflow:auto;padding:22px 12px 40px;border-right:1px solid var(--line);background:var(--rail)}
+  .toc .th{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:700;padding:0 10px 8px}
+  .toc a{display:block;font-size:.85rem;color:var(--muted);text-decoration:none;padding:5px 10px;border-left:2px solid transparent;border-radius:0 6px 6px 0;line-height:1.35}
+  .toc a:hover{color:var(--ink);background:#eef2f7}
+  .toc a.active{color:var(--accent-ink);border-left-color:var(--accent);background:var(--accent-tint);font-weight:600}
+  .toc a.sub{padding-left:24px;font-size:.8rem}
+  main{padding:28px 40px 60px;max-width:840px}
+  .doc-head h1{font-size:1.6rem;margin:0 0 4px} .doc-head .sub{color:var(--muted);font-size:.92rem}
+  .simple-note{font-size:.82rem;color:var(--muted);background:var(--rail);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:16px 0 26px}
+  .simple-note b{color:var(--ink)}
+  section{scroll-margin-top:64px;margin-bottom:26px}
+  section h2{font-size:1.18rem;margin:0 0 8px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+  section h3{font-size:.98rem;margin:18px 0 6px}
+  section p{margin:0 0 10px} section ul,section ol{margin:0 0 10px;padding-left:22px} section li{margin-bottom:4px}
+  .excerpt{font-size:.8rem;color:var(--muted);font-style:italic;border-left:3px solid var(--line);padding:4px 0 4px 12px;margin:8px 0}
+  table.t{width:100%;border-collapse:collapse;font-size:.85rem;margin:6px 0 14px}
+  table.t th,table.t td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
+  table.t th{background:var(--rail)}
+  .wrap-x{overflow-x:auto}
+  .meta h2{font-size:1.18rem;border-bottom:1px solid var(--line);padding-bottom:6px}
+  .meta .intro{font-size:.85rem;color:var(--muted);margin:6px 0 16px}
+  .mcards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .mcard{border:1px solid var(--line);border-radius:10px;overflow:hidden;align-self:start}
+  .mcard .mh{padding:9px 14px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-bottom:1px solid var(--line)}
+  .mcard .mh small{display:block;font-family:var(--sans);font-weight:600;text-transform:none;letter-spacing:0;color:var(--muted);font-size:10px;margin-top:2px}
+  .mcard.t1 .mh{background:#eef4ff;color:#1e40af} .mcard.t2 .mh{background:#ecfdf5;color:#047857} .mcard.t3 .mh{background:#f5f3ff;color:#6d28d9}
+  .mrow{display:flex;justify-content:space-between;gap:10px;padding:7px 14px;border-bottom:1px solid #f1f5f9;font-size:.82rem}
+  .mrow:last-child{border-bottom:none} .mrow .k{color:var(--muted)} .mrow .v{font-weight:600;text-align:right}
+  .mrow .v.mono{font-family:var(--mono);font-size:.78rem;color:var(--accent-ink)}
+  footer{border-top:1px solid var(--line);padding:18px 40px 44px}
+  .disc{font-family:var(--mono);font-size:11px;color:var(--faint);line-height:1.7;max-width:80ch}
+  @media (max-width:800px){
+    .layout{grid-template-columns:1fr}
+    .toc{position:fixed;top:47px;left:0;right:0;height:auto;max-height:70vh;border-right:none;border-bottom:1px solid var(--line);display:none;z-index:15}
+    body.toc-open .toc{display:block}
+    .tocToggle{display:inline-block;background:none;border:1px solid var(--line);border-radius:7px;padding:5px 10px;font-size:12px;cursor:pointer}
+    main{padding:22px 18px 50px} .mcards{grid-template-columns:1fr}
+  }
+  </style>
+</head>
+<body>
+  <div class="appbar">
+    <button class="tocToggle" id="tocToggle" aria-expanded="false" aria-controls="toc">☰ Contents</button>
+    <span class="name">PAXLOVID</span>
+    <span class="tag">Simple ePI render</span>
+    <a class="back" href="../sg-epi-pilot.html" target="_top">↩ ePI Pilot</a>
+  </div>
+  <div class="layout">
+    <nav class="toc" id="toc" aria-label="Table of contents">
+      <div class="th">Contents</div>
+      <a href="#s1">1 · What PAXLOVID is and what it is used for</a>
+      <a href="#s2">2 · What you need to know before you take PAXLOVID</a>
+      <a href="#s3">3 · How to take PAXLOVID</a>
+      <a href="#s4">4 · Possible side effects</a>
+      <a href="#s5">5 · How to store PAXLOVID</a>
+      <a href="#s6">6 · Contents of the pack and other information</a>
+      <a href="#metadata">Document metadata</a>
+    </nav>
+    <main>
+      <div class="doc-head">
+        <h1>PAXLOVID film-coated tablets — Package Leaflet: Information for the patient</h1>
+        <div class="sub">nirmatrelvir / ritonavir · Patient Information Leaflet (PIL)</div>
+      </div>
+      <div class="simple-note"><b>A deliberately simple render.</b> The same structured ePI Bundle powers the richer interactive showcases on the ePI Pilot page — here it is a plain, readable document with a contents pane and a metadata summary.</div>
+
+      <p><b>Read all of this leaflet carefully before you start taking this medicine because it contains important information for you.</b></p>
+      <ul>
+        <li>Keep this leaflet. You may need to read it again.</li>
+        <li>If you have any further questions, ask your doctor or pharmacist.</li>
+        <li>This medicine has been prescribed for you only. Do not pass it on to others. It may harm them, even if their signs of illness are the same as yours.</li>
+        <li>If you get any side effects, talk to your doctor or pharmacist. This includes any possible side effects not listed in this leaflet. See section 4.</li>
+      </ul>
+
+      <section id="s1">
+        <h2>1 · What PAXLOVID is and what it is used for</h2>
+        <p>PAXLOVID contains two active substances, <b>nirmatrelvir</b> and <b>ritonavir</b>. It is an antiviral medicine used to treat mild-to-moderate coronavirus disease 2019 (COVID-19) in adults who are at high risk of their illness becoming severe.</p>
+        <p>PAXLOVID works by stopping the virus that causes COVID-19 from multiplying in your body. This can help your body fight the infection and may keep your illness from getting worse.</p>
+        <p>Talk to your doctor if you do not feel better, or if you feel worse, after 5 days.</p>
+      </section>
+
+      <section id="s2">
+        <h2>2 · What you need to know before you take PAXLOVID</h2>
+
+        <h3>Do not take PAXLOVID</h3>
+        <p>Do not take PAXLOVID if you are allergic to nirmatrelvir, ritonavir, or any of the other ingredients of this medicine (listed in section 6). Also do not take PAXLOVID if you are taking certain other medicines, because it can cause serious or life-threatening effects when combined with them. These include, for example:</p>
+        <ul>
+          <li>alfuzosin (used for an enlarged prostate)</li>
+          <li>colchicine (used for gout)</li>
+          <li>certain medicines for heart-rhythm problems, such as amiodarone</li>
+          <li>simvastatin or lovastatin (used to lower cholesterol)</li>
+          <li>ergot medicines for migraine (such as ergotamine, dihydroergotamine)</li>
+          <li>sildenafil, when used for pulmonary arterial hypertension (high blood pressure in the lungs)</li>
+          <li>midazolam or triazolam taken by mouth (used to help you sleep)</li>
+          <li>rifampin (an antibiotic for tuberculosis)</li>
+          <li>carbamazepine (used for epilepsy)</li>
+          <li>the herbal remedy St John's wort (Hypericum perforatum)</li>
+        </ul>
+        <p class="excerpt">This is an excerpt for illustration — the full list of medicines you must not take with PAXLOVID is captured in the structured ePI.</p>
+
+        <h3>Warnings and precautions</h3>
+        <p>Talk to your doctor or pharmacist before taking PAXLOVID if any of the following applies to you:</p>
+        <ul>
+          <li><b>Allergic reactions.</b> Serious allergic reactions (including anaphylaxis) have happened in people taking PAXLOVID, sometimes even after only one dose. Stop taking PAXLOVID and get medical help straight away if you have trouble breathing, swelling of the face, lips, tongue or throat, tightness in the throat, or a skin rash.</li>
+          <li><b>Liver disease.</b> Tell your doctor if you have any liver problems.</li>
+          <li><b>Kidney disease.</b> Tell your doctor if you have any kidney problems, as your dose may need to be adjusted (see section 3).</li>
+          <li><b>Untreated HIV.</b> If you have HIV-1 infection that is not being treated, taking PAXLOVID may increase the risk that the HIV virus becomes resistant to some HIV medicines.</li>
+          <li><b>Children and adolescents.</b> PAXLOVID is not for use in anyone under 18 years of age.</li>
+        </ul>
+
+        <h3>Other medicines and PAXLOVID</h3>
+        <p>Tell your doctor or pharmacist if you are taking, have recently taken or might take any other medicines. Many medicines can interact with PAXLOVID. Keep a list of all the medicines you take and show it to your doctor or pharmacist. Do not start taking a new medicine while on PAXLOVID without first telling your doctor or pharmacist.</p>
+
+        <h3>Pregnancy and breast-feeding</h3>
+        <p>Avoid becoming pregnant while taking PAXLOVID and for 7 days after your last dose. If you use hormonal contraception (such as the pill), use an additional or alternative non-hormonal method of contraception during this time. Do not breast-feed while taking PAXLOVID and for 48 hours after your last dose. Ask your doctor or pharmacist for advice before taking this medicine if you are pregnant, think you may be pregnant, or are breast-feeding.</p>
+
+        <h3>Driving and using machines</h3>
+        <p>The effects of PAXLOVID on the ability to drive and use machines have not been specifically studied.</p>
+
+        <h3>PAXLOVID contains lactose</h3>
+        <p>PAXLOVID tablets contain lactose. If you have been told by your doctor that you have an intolerance to some sugars, contact your doctor before taking this medicine.</p>
+      </section>
+
+      <section id="s3">
+        <h2>3 · How to take PAXLOVID</h2>
+        <p>Always take this medicine exactly as your doctor or pharmacist has told you. Check with your doctor or pharmacist if you are not sure.</p>
+        <p>A course of PAXLOVID lasts <b>5 days</b>. Swallow the tablets whole with water. Do not chew, break or crush them. You can take PAXLOVID with or without food.</p>
+        <p>The recommended dose depends on your kidney function:</p>
+        <div class="wrap-x">
+          <table class="t">
+            <thead>
+              <tr><th>Your kidneys</th><th>Each dose</th><th>How often</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>No or mild kidney disease</td><td>2 pink nirmatrelvir tablets + 1 white ritonavir tablet (taken together)</td><td>Twice a day for 5 days</td></tr>
+              <tr><td>Moderate kidney disease</td><td>1 pink nirmatrelvir tablet + 1 white ritonavir tablet (taken together)</td><td>Twice a day for 5 days (your pack may contain more tablets than you need)</td></tr>
+              <tr><td>Severe kidney disease</td><td>Day 1: 2 pink + 1 white once. Days 2–5: 1 pink + 1 white once daily</td><td>Once a day</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><b>If you forget to take a dose:</b> if you remember within 8 hours of the time it was due, take it as soon as you remember. If more than 8 hours have passed, skip the missed dose and take your next dose at the usual time. Do not take a double dose to make up for a forgotten one.</p>
+        <p>Do not stop taking PAXLOVID without talking to your doctor first, even if you feel better.</p>
+      </section>
+
+      <section id="s4">
+        <h2>4 · Possible side effects</h2>
+        <p>Like all medicines, this medicine can cause side effects, although not everybody gets them.</p>
+        <h3>Common (may affect up to 1 in 10 people)</h3>
+        <ul>
+          <li>an altered sense of taste</li>
+          <li>headache</li>
+          <li>diarrhoea</li>
+          <li>feeling sick (nausea)</li>
+        </ul>
+        <h3>Uncommon (may affect up to 1 in 100 people)</h3>
+        <ul>
+          <li>allergic reactions (such as itching or a rash)</li>
+          <li>increased blood pressure</li>
+          <li>being sick (vomiting)</li>
+          <li>abdominal (tummy) pain</li>
+        </ul>
+        <h3>Rare (may affect up to 1 in 1,000 people)</h3>
+        <ul>
+          <li>a serious allergic reaction (anaphylaxis)</li>
+          <li>feeling generally unwell</li>
+          <li>a serious skin reaction (Stevens-Johnson syndrome or toxic epidermal necrolysis)</li>
+        </ul>
+        <h3>Reporting of side effects</h3>
+        <p>If you get any side effects, tell your doctor or pharmacist. This includes any possible side effects not listed in this leaflet. By reporting side effects you can help provide more information on the safety of this medicine.</p>
+      </section>
+
+      <section id="s5">
+        <h2>5 · How to store PAXLOVID</h2>
+        <ul>
+          <li>Keep this medicine out of the sight and reach of children.</li>
+          <li>Do not use this medicine after the expiry date shown on the pack.</li>
+          <li>Store at or below 30 °C.</li>
+          <li>Do not refrigerate or freeze.</li>
+        </ul>
+      </section>
+
+      <section id="s6">
+        <h2>6 · Contents of the pack and other information</h2>
+        <h3>What PAXLOVID contains</h3>
+        <p>The active substances are:</p>
+        <ul>
+          <li><b>Nirmatrelvir</b> 150 mg — the pink tablet.</li>
+          <li><b>Ritonavir</b> 100 mg — the white tablet.</li>
+        </ul>
+        <p>The other ingredients include lactose and other tablet-forming and coating excipients (see "PAXLOVID contains lactose" in section 2).</p>
+        <h3>What PAXLOVID looks like and contents of the pack</h3>
+        <p>Each pack contains 30 tablets arranged as 5 daily-dose blister cards. The nirmatrelvir tablets are pink and oval, marked "PFE" on one side and "3CL" on the other. The ritonavir tablets are white and capsule-shaped, marked "H" on one side and "R9" on the other.</p>
+        <h3>Product owner</h3>
+        <p>Pfizer Inc., New York, US.</p>
+        <p>This leaflet was last revised in January 2026.</p>
+      </section>
+
+      <section id="metadata" class="meta">
+        <h2>Document metadata</h2>
+        <p class="intro">An ePI carries layered metadata drawn from the same structured Bundle — Type 1 describes the document, Type 2 the product &amp; organisation, Type 3 the clinical content. A simple render can surface as much or as little as needed.</p>
+        <div class="mcards">
+          <div class="mcard t1"><div class="mh">Type 1<small>Document metadata</small></div>
+            <div class="mrow"><span class="k">Document type</span><span class="v">Patient Information Leaflet (pil)</span></div>
+            <div class="mrow"><span class="k">Version</span><span class="v">PIL/0</span></div>
+            <div class="mrow"><span class="k">Language</span><span class="v">English (en)</span></div>
+            <div class="mrow"><span class="k">Status</span><span class="v">final</span></div>
+            <div class="mrow"><span class="k">Date</span><span class="v">2026-01-14</span></div>
+            <div class="mrow"><span class="k">Document id</span><span class="v mono">PAXH-SIN-0126/PIL/0</span></div>
+          </div>
+          <div class="mcard t2"><div class="mh">Type 2<small>Product &amp; organisation</small></div>
+            <div class="mrow"><span class="k">Product</span><span class="v">PAXLOVID film-coated tablets</span></div>
+            <div class="mrow"><span class="k">Active substances</span><span class="v">nirmatrelvir 150 mg; ritonavir 100 mg</span></div>
+            <div class="mrow"><span class="k">Marketing auth. holder</span><span class="v">Pfizer Inc., New York, US</span></div>
+            <div class="mrow"><span class="k">Authorisation</span><span class="v mono">PAXH-SIN-0126</span></div>
+            <div class="mrow"><span class="k">Pack</span><span class="v">30 tablets · 5 daily blister cards</span></div>
+          </div>
+          <div class="mcard t3"><div class="mh">Type 3<small>Clinical content</small></div>
+            <div class="mrow"><span class="k">Clinical Use Definitions</span><span class="v">118 total</span></div>
+            <div class="mrow"><span class="k">· Indication</span><span class="v">1</span></div>
+            <div class="mrow"><span class="k">· Contraindications</span><span class="v">41</span></div>
+            <div class="mrow"><span class="k">· Interactions</span><span class="v">58</span></div>
+            <div class="mrow"><span class="k">· Adverse effects</span><span class="v">14</span></div>
+            <div class="mrow"><span class="k">· Warnings</span><span class="v">4</span></div>
+            <div class="mrow"><span class="k">Structured dosing</span><span class="v">MedicationKnowledge (renal-adjusted) — 300 mg / 100 mg twice daily × 5 days</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <p class="disc">Illustrative simple render for the Singapore ePI pilot — not medical advice. Content derived from the PAXLOVID reference ePI (document PAXH-SIN-0126). Identifiers and local code-system URLs are placeholders to be confirmed with the health authority. Long structured lists are shown in excerpt; the full set lives in the ePI's structured resources.</p>
+  </footer>
+  <script src="mockup-render.js"></script>
+</body>
+</html>

@@ -43,7 +43,7 @@
 <div class="epi-page" markdown="1">
 
 <div class="hero">
-  <div class="eyebrow">Singapore · Health Sciences Authority</div>
+  <div class="eyebrow">Singapore ePI Pilot</div>
   <h1>SG ePI <span>Pilot</span></h1>
   <p>Singapore's pilot to move Product Information from static PDF labels to structured HL7 FHIR ePI, built on the Vulcan Global Core ePI standard as adopted for the APAC region.</p>
   <a class="btn" href="buildguide.html">Open the ePI Build Guide →</a>
@@ -51,12 +51,12 @@
 
 <div class="alert alert-important" markdown="1">
 <span class="alabel">⚠️ Draft pilot</span>
-This pilot and its reference materials are illustrative and under active development. Identifiers, local code-system URLs, and registration numbers used in the reference instance are <b>placeholders to be confirmed with HSA</b> and must not be treated as approved values.
+This pilot and its reference materials are illustrative and under active development. Identifiers, local code-system URLs, and registration numbers used in the reference instance are <b>placeholders to be confirmed with the health authority</b> and must not be treated as approved values.
 </div>
 
 <div class="section-title">At a glance</div>
 <div class="facts">
-  <div class="fact"><div class="fl">Regulator</div><div class="fv">HSA Singapore</div></div>
+  <div class="fact"><div class="fl">Regulator</div><div class="fv">Singapore</div></div>
   <div class="fact"><div class="fl">Standard</div><div class="fv">HL7 FHIR ePI (Vulcan Global Core)</div></div>
   <div class="fact"><div class="fl">FHIR release</div><div class="fv">R5</div></div>
   <div class="fact"><div class="fl">Reference product</div><div class="fv">PAXLOVID SmPC</div></div>
@@ -108,14 +108,14 @@ This pilot and its reference materials are illustrative and under active develop
 </div>
 
 <div class="section-title" id="showcase">Singapore ePI showcase</div>
-<p>See the pilot's structured PAXLOVID data rendered as interactive Singapore ePIs — the same source data presented for two audiences.</p>
+<p>See the pilot's structured PAXLOVID data rendered as readable Singapore ePIs — the same source data presented for two audiences.</p>
 <div class="link-row">
-  <a href="Bundle-paxlovid-sgp-smpc-epi.html">📱 Paxlovid — SmPC (healthcare professional)</a>
-  <a href="Bundle-paxlovid-sgp-pil-epi.html">📱 Paxlovid — PIL (patient leaflet)</a>
+  <a href="examples/mockup-render-smpc.html" target="_blank" rel="noopener">📱 Paxlovid — SmPC (healthcare professional)</a>
+  <a href="examples/mockup-render-pil.html" target="_blank" rel="noopener">📱 Paxlovid — PIL (patient leaflet)</a>
 </div>
 
 <div class="section-title" id="concepts">Concept mockups — dynamic ePI</div>
-<p>Because the ePI is structured data and no longer a static PDF, the same PAXLOVID dataset can be presented in dynamic, interactive ways tailored to each audience. These are working, self-contained concept mockups built on the pilot data — each opens in a new tab. (Illustrative only; not medical advice.)</p>
+<p>Because the ePI is structured data and no longer a static PDF, the same PAXLOVID dataset can be presented in many ways — from a deliberately plain document through to rich, interactive tools tailored to each audience. This shows an ePI can be as basic or as advanced as needed. These are working, self-contained concept mockups built on the pilot data — each opens in a new tab. (Illustrative only; not medical advice.)</p>
 <p style="font-size:.82em;font-weight:700;color:#003087;margin:0 0 6px;">For patients</p>
 <div class="link-row">
   <a href="examples/mockup-adaptive-leaflet.html" target="_blank" rel="noopener">🧬 Adaptive “My Leaflet”</a>
@@ -128,11 +128,16 @@ This pilot and its reference materials are illustrative and under active develop
   <a href="examples/mockup-renal-calculator.html" target="_blank" rel="noopener">🧮 Renal-dose calculator</a>
   <a href="examples/mockup-cds-alert.html" target="_blank" rel="noopener">🔔 CDS / EMR prescribing alert</a>
 </div>
-<p style="font-size:.82em;font-weight:700;color:#003087;margin:0 0 6px;">For HSA / regulator</p>
+<p style="font-size:.82em;font-weight:700;color:#003087;margin:0 0 6px;">For the regulator</p>
 <div class="link-row">
   <a href="examples/mockup-version-diff.html" target="_blank" rel="noopener">🔀 Version diff &amp; change tracking</a>
   <a href="examples/mockup-portfolio-query.html" target="_blank" rel="noopener">🔎 Portfolio surveillance queries</a>
   <a href="examples/mockup-conformance.html" target="_blank" rel="noopener">✅ Conformance dashboard</a>
+</div>
+<p style="font-size:.82em;font-weight:700;color:#003087;margin:0 0 6px;">Simple render — the same ePI as a plain document</p>
+<div class="link-row">
+  <a href="examples/mockup-render-smpc.html" target="_blank" rel="noopener">📄 SmPC — simple render</a>
+  <a href="examples/mockup-render-pil.html" target="_blank" rel="noopener">📄 PIL — simple render</a>
 </div>
 <p style="font-size:.82em;font-weight:700;color:#003087;margin:0 0 6px;">ePI authoring &amp; lifecycle</p>
 <div class="link-row">
@@ -141,14 +146,14 @@ This pilot and its reference materials are illustrative and under active develop
 
 <div class="section-title" id="sg-terminology">Singapore-specific terminology</div>
 <div class="placeholder">
-  <span class="ph-tag">Placeholder · to be confirmed with HSA</span>
-  <p>This section will document any Singapore-specific controlled terminology, local code systems, and value-set bindings that apply to HSA ePI submissions — supplementing the regional <a href="terminology.html">preferred terminologies</a>. Content to be added.</p>
+  <span class="ph-tag">Placeholder · to be confirmed with the health authority</span>
+  <p>This section will document any Singapore-specific controlled terminology, local code systems, and value-set bindings that apply to ePI submissions — supplementing the regional <a href="terminology.html">preferred terminologies</a>. Content to be added.</p>
 </div>
 
 <div class="section-title" id="sg-best-practice">Singapore-specific best practices</div>
 <div class="placeholder">
-  <span class="ph-tag">Placeholder · to be confirmed with HSA</span>
-  <p>This section will capture Singapore-specific authoring conventions, structural rules, and submission requirements for HSA ePI — supplementing the general technical best practices. Content to be added.</p>
+  <span class="ph-tag">Placeholder · to be confirmed with the health authority</span>
+  <p>This section will capture Singapore-specific authoring conventions, structural rules, and submission requirements for ePI — supplementing the general technical best practices. Content to be added.</p>
 </div>
 
 <div class="alert alert-note" markdown="1">
