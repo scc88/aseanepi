@@ -97,14 +97,14 @@ This pilot and its reference materials are illustrative and under active develop
 <p style="font-size:.82em;font-weight:700;color:#003087;margin:0 0 6px;">SmPC — for healthcare professionals</p>
 <div class="link-row">
   <a href="Bundle-paxlovid-sgp-smpc-epi.html">📄 Rendered Bundle</a>
-  <a class="gh" href="https://github.com/scc88/aseanepi/blob/main/input/instances/Bundle-epi-paxlovid-sgp-smpc.xml">↗ Source XML on GitHub</a>
-  <a href="https://raw.githubusercontent.com/scc88/aseanepi/main/input/instances/Bundle-epi-paxlovid-sgp-smpc.xml">⬇ Raw XML</a>
+  <a class="gh" href="https://github.com/scc88/apacepi/blob/main/input/instances/Bundle-epi-paxlovid-sgp-smpc.xml">↗ Source XML on GitHub</a>
+  <a href="https://raw.githubusercontent.com/scc88/apacepi/main/input/instances/Bundle-epi-paxlovid-sgp-smpc.xml">⬇ Raw XML</a>
 </div>
 <p style="font-size:.82em;font-weight:700;color:#003087;margin:0 0 6px;">PIL — for patients</p>
 <div class="link-row">
   <a href="Bundle-paxlovid-sgp-pil-epi.html">📄 Rendered Bundle</a>
-  <a class="gh" href="https://github.com/scc88/aseanepi/blob/main/input/instances/Bundle-epi-paxlovid-sgp-pil.xml">↗ Source XML on GitHub</a>
-  <a href="https://raw.githubusercontent.com/scc88/aseanepi/main/input/instances/Bundle-epi-paxlovid-sgp-pil.xml">⬇ Raw XML</a>
+  <a class="gh" href="https://github.com/scc88/apacepi/blob/main/input/instances/Bundle-epi-paxlovid-sgp-pil.xml">↗ Source XML on GitHub</a>
+  <a href="https://raw.githubusercontent.com/scc88/apacepi/main/input/instances/Bundle-epi-paxlovid-sgp-pil.xml">⬇ Raw XML</a>
 </div>
 
 <div class="section-title" id="showcase">Singapore ePI showcase</div>
